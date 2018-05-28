@@ -30,7 +30,7 @@ mongoose.connect(dbURI, (err, db) => {
       role: 'manager',
       firstName: 'Will',
       lastName: 'Griffiths',
-      email: 'a@a',
+      email: 'will.griffiths@pixelcrayons.co.uk',
       password: 'a',
       passwordConfirmation: 'a',
       picture: 'https://i.imgur.com/QUIA9rO.jpg'
@@ -46,7 +46,8 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           hours: 8,
-          rate: 20,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         }, {
@@ -56,7 +57,8 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           hours: 8,
-          rate: 20,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },{
@@ -66,7 +68,8 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           hours: 8,
-          rate: 20,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         }

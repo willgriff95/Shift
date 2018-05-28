@@ -47,7 +47,7 @@ class Navbar extends React.Component {
       <div>
         <nav className="navbar ">
           <div className="navbar-brand">
-            <img className="logo" src="https://i.imgur.com/iURK7lx.png" />
+            <img className="logo" src="https://i.imgur.com/b1yhImo.png" />
             {/* <div className="navbar-burger burger" data-target="navMenubd-example">
             <span></span>
             <span></span>
