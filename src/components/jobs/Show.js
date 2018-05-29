@@ -121,9 +121,9 @@ class JobsShow extends React.Component {
                   {job.comments.map(comment =>
                     <div key={comment._id}>
                       <p className="commentsContent">{comment.content}</p>
-                      {/* {Auth.isCurrentUser(comment.createdBy)&&
+                      {Auth.isCurrentUser(comment)&&
                         <button className="button is-danger" onClick={() => this.handleCommentDelete(comment._id)}>Delete</button>
-                      } */}
+                      }
                       <hr />
                     </div>
                   )}

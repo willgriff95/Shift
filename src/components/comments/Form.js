@@ -7,9 +7,9 @@ const commentsForm = ({ handleCommentChange, handleCommentSubmit }) => {
         <label htmlFor="name" className="">Comment</label>
         <textarea id="content" name="content" className="textarea" placeholder="Enter your comments here..." onChange={handleCommentChange} /* value={data.content || ''}*/ />
       </div>
-      <div className="field">
-        <label htmlFor="rating">Rating</label>
-        {/* <div className="control">
+      {/* <div className="field"> */}
+      {/* <label htmlFor="rating">Rating</label> */}
+      {/* <div className="control">
           <div className="select">
             <select id="rating" name="rating" onChange={handleCommentChange} value={data.rating || ''}>
               <option className="disabled">Please select</option>
@@ -21,7 +21,7 @@ const commentsForm = ({ handleCommentChange, handleCommentSubmit }) => {
             </select>
           </div>
         </div> */}
-      </div>
+      {/* </div> */}
       <button className="button is-blue">Submit</button>
     </form>
   );

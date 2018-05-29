@@ -97,7 +97,7 @@ function commentCreateRoute(req, res, next) {
   req.body.createdBy = req.currentUser;
   Job
     .findById(req.params.id)
-    .populate('comment.createdBy')
+    .populate('comments.createdBy')
     .then(job => {
       job.comments.push(req.body);
       return job.save();
