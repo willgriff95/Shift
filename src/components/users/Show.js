@@ -33,77 +33,55 @@ class UsersShow extends React.Component {
         <div className="mainBody">
           <div className="columns">
             <div className="column is-half-desktop is-full-mobile is-two-third-tablet">
-              <div className="rightRegisterContent">
-                <div className="title1">SIGN UP</div>
+              <form onSubmit={this.handleSubmit}>
+                <div className="field firstName">
+                  <input
+                    type="text"
+                    className="input"
+                    name="firstName"
+                    placeholder="First name"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="field lastName">
+                  <input
+                    type="text"
+                    className="input"
+                    name="lastName"
+                    placeholder="Last Name"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="field">
+                  <input
+                    type="text"
+                    className="input"
+                    name="email"
+                    placeholder="Email"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="field">
+                  <input
+                    type="password"
+                    className="input"
+                    name="password"
+                    placeholder="Password"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="field">
+                  <input
+                    type="password"
+                    className="input"
+                    name="passwordConfirmation"
+                    placeholder="Password Confirmation"
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <button className="button signUp">Submit</button>
 
-                <form onSubmit={this.handleSubmit}>
-                  <div className="roleSelect">
-                    Which are you?
-                  </div>
-                  <div className="noMarginTop field role select is-rounded ">
-                    <select
-                      type="text"
-                      className="input"
-                      name="role"
-                      placeholder="Role"
-                      onChange={this.handleChange}
-                    >
-                      <option>Freelancer</option>
-                      <option>Manager</option>
-                    </select>
-                  </div>
-                  <div className="field firstName">
-                    <input
-                      type="text"
-                      className="input"
-                      name="firstName"
-                      placeholder="First name"
-                      onChange={this.handleChange}
-                    />
-                  </div>
-                  <div className="field lastName">
-                    <input
-                      type="text"
-                      className="input"
-                      name="lastName"
-                      placeholder="Last Name"
-                      onChange={this.handleChange}
-                    />
-                  </div>
-                  <div className="field">
-                    <input
-                      type="text"
-                      className="input"
-                      name="email"
-                      placeholder="Email"
-                      onChange={this.handleChange}
-                    />
-                  </div>
-                  <div className="field">
-                    <input
-                      type="password"
-                      className="input"
-                      name="password"
-                      placeholder="Password"
-                      onChange={this.handleChange}
-                    />
-                  </div>
-                  <div className="field">
-                    <input
-                      type="password"
-                      className="input"
-                      name="passwordConfirmation"
-                      placeholder="Password Confirmation"
-                      onChange={this.handleChange}
-                    />
-                  </div>
-                  <div className="register ">
-                    Already a member?<Link to="/"> Sign in here</Link>
-                  </div>
-                  <button className="button signUp">SIGN UP</button>
-
-                </form>
-              </div>
+              </form>
             </div>
           </div>
         </div>
