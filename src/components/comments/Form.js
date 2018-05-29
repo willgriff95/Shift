@@ -1,11 +1,11 @@
 import React from 'react';
 
-const commentsForm = ({ handleCommentChange, handleCommentSubmit, data }) => {
+const commentsForm = ({ handleCommentChange, handleCommentSubmit }) => {
   return (
     <form onSubmit={handleCommentSubmit}>
       <div className="field">
         <label htmlFor="name" className="">Comment</label>
-        <textarea id="content" name="content" className="textarea" placeholder="Enter your comments here..." onChange={handleCommentChange} value={data.content || ''} />
+        <textarea id="content" name="content" className="textarea" placeholder="Enter your comments here..." onChange={handleCommentChange} /* value={data.content || ''}*/ />
       </div>
       <div className="field">
         <label htmlFor="rating">Rating</label>

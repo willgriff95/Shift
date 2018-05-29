@@ -93,6 +93,34 @@ function jobsRelist(req, res, next){
     .catch(next);
 }
 
+function commentCreateRoute(req, res, next) {
+  req.body.createdBy = req.currentUser;
+  Job
+    .findById(req.params.id)
+    .populate('comment.createdBy')
+    .then(job => {
+      job.comments.push(req.body);
+      return job.save();
+    })
+    .then(job => res.json(job))
+    .catch(next);
+}
+
+function commentDeleteRoute(req, res, next) {
+  Job
+    .findById(req.params.id)
+    .then(job => {
+      const comment = job.comments.id(req.params.commentId);
+      // The throw new Error() takes you into the next catch block.
+      if(!comment.createdBy._id.equals(req.currentUser._id)) throw new Error('Unauthorized');
+      comment.remove();
+      return job.save();
+    })
+    .then(job => res.json(job))
+    .catch(next);
+}
+
+
 module.exports = {
   index: indexRoute,
   create: createRoute,
@@ -101,5 +129,7 @@ module.exports = {
   delete: deleteRoute,
   requestCreate: jobsRequestCreate,
   requestAccept: jobsRequestAccept,
-  relistJob: jobsRelist
+  relistJob: jobsRelist,
+  commentCreate: commentCreateRoute,
+  commentDelete: commentDeleteRoute
 };

@@ -9,6 +9,13 @@ const requestSchema = new mongoose.Schema({
   timestamps: true
 });
 
+const commentSchema = new mongoose.Schema({
+  content: { type: String, required: true },
+  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User' }
+}, {
+  timestamps: true
+});
+
 // only the manager is able to add a job
 const jobSchema = new mongoose.Schema({
   title: { type: String },
@@ -21,9 +28,16 @@ const jobSchema = new mongoose.Schema({
   description: { type: String, required: 'Description is required' },
   companyPicture: { type: String},
   manager: { type: mongoose.Schema.ObjectId, ref: 'User'},
-  requests: [ requestSchema ]
+  requests: [ requestSchema ],
+  comments: [ commentSchema ]
 
 });
+
+
+
+
+commentSchema.set('toJSON', { virtuals: true });
+
 
 jobSchema.virtual('createdAtRelative')
   .get(function(){

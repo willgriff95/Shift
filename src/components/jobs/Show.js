@@ -17,16 +17,16 @@ class JobsShow extends React.Component {
   componentDidMount() {
     // console.log(this.props.match.params.id);
     axios
-    .get(`/api/jobs/${this.props.match.params.id}`)
-    .then(res => this.setState({ job: res.data }));
+      .get(`/api/jobs/${this.props.match.params.id}`)
+      .then(res => this.setState({ job: res.data }));
   }
 
   handleDelete = () => {
     axios
-    .delete(`/api/jobs/${this.props.match.params.id}`, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}`}
-    })
-    .then(() => this.props.history.push('/jobs'));
+      .delete(`/api/jobs/${this.props.match.params.id}`, {
+        headers: { Authorization: `Bearer ${Auth.getToken()}`}
+      })
+      .then(() => this.props.history.push('/jobs'));
   }
 
   handleCommentChange = ({ target: { name, value }}) => {
@@ -38,33 +38,28 @@ class JobsShow extends React.Component {
     e.preventDefault();
     const { id } = this.props.match.params;
     axios
-    .post(`/api/jobs/${id}/comments`, this.state.comment, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}`}
-    })
-    .then(res => {
-      const job = res.data;
-      this.setState({ job, comment: {} });
-    });
+      .post(`/api/jobs/${id}/comments`, this.state.comment, {
+        headers: { Authorization: `Bearer ${Auth.getToken()}`}
+      })
+      .then(res => {
+        const job = res.data;
+        this.setState({ job, comment: {} });
+      });
   }
 
   handleCommentDelete = (commentId) => {
     axios
-    .delete(`/api/jobs/${this.props.match.params.id}/comments/${commentId}`, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}`}
-    })
-    .then(res => this.setState({ job: res.data }));
+      .delete(`/api/jobs/${this.props.match.params.id}/comments/${commentId}`, {
+        headers: { Authorization: `Bearer ${Auth.getToken()}`}
+      })
+      .then(res => this.setState({ job: res.data }));
   }
 
   render() {
     const { job } = this.state;
     console.log(job);
-    // var styles2 = {
-    //   backgroundImage: `url(${job.manager.picture})`
-    // };
-    // var styles = {
-    //   backgroundImage: 'url(http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg)'
-    // };
     if(!job) return null;
+
     return (
       <div>
         <Navbar />
@@ -103,7 +98,7 @@ class JobsShow extends React.Component {
             <div className="tile is-parent">
               <div className="tile is-child notification companyLogo">
                 <div className="managerDetails">
-                  <a className="emailIcon" href={"mailto:"+job.manager.email}>
+                  <a className="emailIcon" href={'mailto:'+job.manager.email}>
                     <i className="far fa-envelope"></i>
                   </a>
                   <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
@@ -122,10 +117,21 @@ class JobsShow extends React.Component {
           <div className="tile">
             <article className="tile is-child notification jobCommentsSection">
               <div className="content">
+                <div>
+                  {job.comments.map(comment =>
+                    <div key={comment._id}>
+                      <p className="commentsContent">{comment.content}</p>
+                      {/* {Auth.isCurrentUser(comment.createdBy)&&
+                        <button className="button is-danger" onClick={() => this.handleCommentDelete(comment._id)}>Delete</button>
+                      } */}
+                      <hr />
+                    </div>
+                  )}
+                </div>
                 <CommentForm
                   handleCommentChange={this.handleCommentChange}
                   handleCommentSubmit={this.handleCommentSubmit}
-                  data={this.state.comment}
+                  // data={this.state.comment}
                 />
               </div>
             </article>

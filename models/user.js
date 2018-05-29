@@ -7,28 +7,10 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  picture: { type: String },
-  comments: []
-});
-
-const commentSchema = new mongoose.Schema({
-  content: { type: String, required: true },
-  rating: { type: Number, required: true, min: 1, max: 5 },
-  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User' }
-}, {
-  timestamps: true
+  picture: { type: String }
 });
 
 
-commentSchema.set('toJSON', { virtuals: true });
-
-
-userSchema.virtual('averageRating')
-  .get(function(){
-    return Math.round(this.comments.reduce((sum, comment) => {
-      sum + comment.rating;
-    }, 0) / this.comments.length);
-  });
 
 userSchema.set('toJSON', { virtuals: true });
 

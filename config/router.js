@@ -29,8 +29,8 @@ router.route('/users/:id')
   .get(users.show)
   .put(secureRoute, users.update);
 
-// router.post('/jobs/:id/comments', jobs.commentCreate);
-// router.delete('/jobs/:id/comments/:commentId', jobs.commentDelete);
+router.post('/jobs/:id/comments', jobs.commentCreate);
+router.delete('/jobs/:id/comments/:commentId', jobs.commentDelete);
 
 router.post('/register', auth.register);
 router.post('/login', auth.login);
