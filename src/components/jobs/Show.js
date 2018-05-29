@@ -20,7 +20,7 @@ class JobsShow extends React.Component {
       .get(`/api/jobs/${this.props.match.params.id}`)
       .then(res => this.setState({ job: res.data }));
     // console.log(Auth.isCurrentUser('5b0d26bd8f8708a4dec8f707'));
-    console.log(Auth.isCurrentUser(Auth.getPayload().sub));
+    // console.log(Auth.isCurrentUser(Auth.getPayload().sub));
   }
 
   handleDelete = () => {
