@@ -63,6 +63,19 @@ li:active {
     background-position: center;
     background-size: cover;
 }
+.commentsProfilePicture {
+    height: 80px;
+    left: 15px;
+    width: 80px;
+    top: 10px;
+    border: 1px solid #F4F4F4;
+    border-radius: 40px;
+    z-index: 1000;
+    position: relative;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    background-position: center;
+    background-size: cover;
+}
 
 .navbar-item, .navbar-link {
     align-items: center;

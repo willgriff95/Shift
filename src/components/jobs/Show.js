@@ -5,7 +5,7 @@ import Map from '../common/Map';
 import Auth from '../../lib/Auth';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
-import CommentForm from '../comments/Form';
+import CommentShow from '../comments/Show';
 
 class JobsShow extends React.Component {
   // In fact, `class` is not like a constructor in itself. It actually just invokes `constructor()` inside itself, and that's where the real constructing of the object occurs. There's a lot of stuff that React is doing under the hood, like attaching the methods onto the object.
@@ -19,6 +19,8 @@ class JobsShow extends React.Component {
     axios
       .get(`/api/jobs/${this.props.match.params.id}`)
       .then(res => this.setState({ job: res.data }));
+    // console.log(Auth.isCurrentUser('5b0d26bd8f8708a4dec8f707'));
+    console.log(Auth.isCurrentUser(Auth.getPayload().sub));
   }
 
   handleDelete = () => {
@@ -109,7 +111,7 @@ class JobsShow extends React.Component {
                 </div>
                 <hr/>
                 <div className="jobDescription">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                 </div>
               </div>
             </div>
@@ -117,21 +119,12 @@ class JobsShow extends React.Component {
           <div className="tile">
             <article className="tile is-child notification jobCommentsSection">
               <div className="content">
-                <div>
-                  {job.comments.map(comment =>
-                    <div key={comment._id}>
-                      <p className="commentsContent">{comment.content}</p>
-                      {Auth.isCurrentUser(comment)&&
-                        <button className="button is-danger" onClick={() => this.handleCommentDelete(comment._id)}>Delete</button>
-                      }
-                      <hr />
-                    </div>
-                  )}
-                </div>
-                <CommentForm
+
+                <CommentShow
+                  handleCommentDelete={this.handleCommentDelete}
+                  job={this.state}
                   handleCommentChange={this.handleCommentChange}
                   handleCommentSubmit={this.handleCommentSubmit}
-                  // data={this.state.comment}
                 />
               </div>
             </article>

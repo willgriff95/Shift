@@ -19,6 +19,7 @@ function showRoute(req, res, next) {
   Job
     .findById(req.params.id)
     .populate('manager')
+    .populate('comments.createdBy')
     .then(job => res.json(job))
     .catch(next);
 }
@@ -94,6 +95,7 @@ function jobsRelist(req, res, next){
 }
 
 function commentCreateRoute(req, res, next) {
+  console.log('comment');
   req.body.createdBy = req.currentUser;
   Job
     .findById(req.params.id)
