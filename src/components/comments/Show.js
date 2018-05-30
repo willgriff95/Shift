@@ -5,6 +5,7 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
   // console.log(job.job.requests[0].user);
   // console.log(Auth.getPayload().sub);
   console.log(job);
+  console.log(job.requestButtonClicked);
   const request = job.job.requests.find(request => request.user === Auth.getPayload().sub);
   const requestMade = request && request.status === 'pending';
   return (
@@ -39,7 +40,12 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
         <button className="submitbutton"><i className="fas fa-comments"></i>  Submit</button>
       </form>
 
-      <button disabled={requestMade} onClick={handleRequestCreate} className="requestbutton" ><i className="fas fa-check"></i> Send Request</button>
+      {(job.requestButtonClicked === true) &&
+        <button  onClick={handleRequestCreate} disabled={requestMade} className="requestbutton" ><i className="fas fa-check"></i> Send Request</button>
+      }
+      {(job.requestButtonClicked === false) &&
+        <button  onClick={handleRequestCreate} disabled={requestMade} className="requestPendingButton" ><i className="fas fa-check"></i> Request Pending</button>
+      }
       {/* <button onClick={handleRequestCreate} className="requestbutton "><i className="fas fa-check"></i> Request Sent</button> */}
 
     </div>

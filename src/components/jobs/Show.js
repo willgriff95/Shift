@@ -11,7 +11,8 @@ class JobsShow extends React.Component {
   // In fact, `class` is not like a constructor in itself. It actually just invokes `constructor()` inside itself, and that's where the real constructing of the object occurs. There's a lot of stuff that React is doing under the hood, like attaching the methods onto the object.
 
   state = {
-    comment: {}
+    comment: {},
+    requestButtonClicked: false
   }
 
   componentDidMount() {
@@ -63,8 +64,8 @@ class JobsShow extends React.Component {
     axios
       .post(`/api/jobs/${id}/requests`, this.state.comment, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
-      }, console.log(this.state));
-
+      })
+      .then(() => this.setState({ requestButtonClicked: true }));
   }
 
 
