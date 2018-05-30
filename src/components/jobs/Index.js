@@ -41,6 +41,7 @@ class JobsIndex extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div>
         <Navbar />
@@ -58,18 +59,23 @@ class JobsIndex extends React.Component {
           {!this.state.listView &&
             <div className="columns is-multiline ">
               {this.sortedFilteredJobs().map(job =>
-                <div className="column is-one-third-desktop is-half-tablet indexList" key={job._id}>
+                <div className="column is-one-third-desktop is-full-tablet is-mobile indexList" key={job._id}>
                   <Link to={`/jobs/${job._id}`}>
-                    <div className="card">
-                      <div
-                        className="card-image"
-                      // style={{ backgroundImage: `url(${job.image})` }}
-                      ></div>
+                    <div className="card indexCards">
                       <div className="card-content">
                         <div className="media">
                           <div className="media-content">
-                            <p className="title is-4">{job.title}</p>
-                            <p className="subtitle is-6">{job.description}</p>
+                            {/* <img className="indexManagerProfilePicture" src={job.manager.picture} />
+                            <div className="indexManagerDetails">
+                              <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
+                              <div className="hiringManager">Hiring Manager</div>
+                              <div className="emailDetails">{job.manager.email}</div>
+                            </div> */}
+                            <p className="indexJobTitle">{job.title}</p>
+                            <p className="dayRateTextMoney">£{job.rate}</p>
+                            <div className="dayRateText2">/day rate</div>
+                            <p className="indexContract">{job.contract} months</p>
+                            <div className=" indexCompanyPicture" style={{ backgroundImage: `url(${job.companyPicture})`}} />
                           </div>
                         </div>
                       </div>

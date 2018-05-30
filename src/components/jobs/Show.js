@@ -57,9 +57,20 @@ class JobsShow extends React.Component {
       .then(res => this.setState({ job: res.data }));
   }
 
+  handleRequestCreate = () => {
+    console.log('request created');
+    const { id } = this.props.match.params;
+    axios
+      .post(`/api/jobs/${id}/requests`, this.state.comment, {
+        headers: { Authorization: `Bearer ${Auth.getToken()}`}
+      }, console.log(this.state));
+
+  }
+
+
   render() {
     const { job } = this.state;
-    console.log(job);
+    // console.log(job);
     if(!job) return null;
 
     return (
@@ -83,7 +94,7 @@ class JobsShow extends React.Component {
                       <div className="dayRateText">/day rate</div>
                     </div>
                     <hr/>
-                    <div className="contract">{job.hours} months</div>
+                    <div className="contract">{job.contract} months</div>
                   </div>
                 </div>
               </div>
@@ -100,7 +111,7 @@ class JobsShow extends React.Component {
             <div className="tile is-parent">
               <div className="tile is-child notification companyLogo">
                 <div className="managerDetails">
-                  <a className="emailIcon" href={'mailto:'+job.manager.email}>
+                  <a className="emailIcon" href={'mailto:' + `${job.manager.email}`}>
                     <i className="far fa-envelope"></i>
                   </a>
                   <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
@@ -121,6 +132,7 @@ class JobsShow extends React.Component {
               <div className="content">
 
                 <CommentShow
+                  handleRequestCreate={this.handleRequestCreate}
                   handleCommentDelete={this.handleCommentDelete}
                   job={this.state}
                   handleCommentChange={this.handleCommentChange}

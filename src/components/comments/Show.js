@@ -1,23 +1,33 @@
 import React from 'react';
 import Auth from '../../lib/Auth';
 
-
-const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleCommentChange}) => {
-  // console.log(Auth.isCurrentUser(comment.createdBy));
+const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleCommentChange, handleRequestCreate}) => {
+  // console.log(job.job.requests[0].user);
+  // console.log(Auth.getPayload().sub);
+  console.log(job);
+  const request = job.job.requests.find(request => request.user === Auth.getPayload().sub);
+  const requestMade = request && request.status === 'pending';
   return (
     <div>
 
       {job.job.comments.map(comment =>
         <div key={comment._id}>
-          <p className="commentsContent">{comment.createdBy.firstName} {comment.createdBy.lastName}</p>
-          <img className="commentsProfilePicture" src={comment.createdBy.picture} />
-          <p className="commentsContent">{comment.content}</p>
-          {Auth.isCurrentUser(comment.createdBy.id)&&
-            <div>
-              <button className="button is-danger" onClick={() => handleCommentDelete(comment._id)}>Delete</button>
-            </div>
-          }
-
+          {/* <p className="commentsContent">{comment.createdBy.firstName} {comment.createdBy.lastName}</p> */}
+          <img className="indexManagerProfilePicture" src={comment.createdBy.picture} />
+          <div className="indexManagerDetails">
+            {Auth.isCurrentUser(comment.createdBy.id)&&
+              <div className="deleteComment">
+                <a onClick={() => handleCommentDelete(comment._id)}>
+                  <i className="fas fa-times" onClick={() => handleCommentDelete(comment._id)}></i>
+                </a>
+              </div>
+            }
+            <div className="managerName">{comment.createdBy.firstName} {comment.createdBy.lastName}</div>
+            {/* <div className="hiringManager">Hiring Manager</div> */}
+            {/* <div className="emailDetails">{comment.createdBy.email}</div> */}
+            <p className="emailDetails">{comment.content}</p>
+          </div>
+          {/* <img className="commentsProfilePicture" src={comment.createdBy.picture} /> */}
           <hr />
         </div>
       )}
@@ -26,8 +36,12 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
           <label htmlFor="name" className="">Comment</label>
           <textarea id="content" name="content" className="textarea" placeholder="Enter your comments here..." onChange={handleCommentChange} /* value={data.content || ''}*/ />
         </div>
-        <button className="button is-blue">Submit</button>
+        <button className="submitbutton"><i className="fas fa-comments"></i>  Submit</button>
       </form>
+
+      <button disabled={requestMade} onClick={handleRequestCreate} className="requestbutton" ><i className="fas fa-check"></i> Send Request</button>
+      {/* <button onClick={handleRequestCreate} className="requestbutton "><i className="fas fa-check"></i> Request Sent</button> */}
+
     </div>
   );
 };

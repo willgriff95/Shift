@@ -12,6 +12,7 @@ import './scss/style.scss';
 
 import Home from './components/Home';
 import UsersEdit from './components/users/Edit';
+import UsersShow from './components/users/Show';
 import JobsIndex from './components/jobs/Index';
 import JobsNew from './components/jobs/New';
 import JobsShow from './components/jobs/Show';
@@ -31,7 +32,8 @@ class App extends React.Component {
             <FlashMessages />
             <Switch>
               {/* Decorator component => the BrowserRouter decorates the component with useful stuff like location, match, history which can be accessed with this.props inside of each component */}
-              <SecureRoute path="/users/:id" component={UsersEdit} />
+              <SecureRoute path="/users/:id/edit" component={UsersEdit} />
+              <SecureRoute path="/users/:id" component={UsersShow} />
               <SecureRoute path="/jobs/new" component={JobsNew} />
               <Route path="/jobs/:id" component={JobsShow} />
               <Route path="/jobs" component={JobsIndex} />

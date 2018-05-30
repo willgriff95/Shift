@@ -23,7 +23,7 @@ const jobSchema = new mongoose.Schema({
     lat: { type: Number },
     lng: { type: Number }
   },
-  hours: { type: Number, min: 1, max: 12, required: 'Pay is required' },
+  contract: { type: Number, min: 1, max: 12, required: 'Pay is required' },
   rate: { type: Number, required: 'Pay is required' },
   description: { type: String, required: 'Description is required' },
   companyPicture: { type: String},

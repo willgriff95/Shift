@@ -28,6 +28,7 @@ mongoose.connect(dbURI, (err, db) => {
     },
     {
       role: 'manager',
+      companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
       firstName: 'Will',
       lastName: 'Griffiths',
       email: 'will.griffiths@pixelcrayons.co.uk',
@@ -40,34 +41,238 @@ mongoose.connect(dbURI, (err, db) => {
       console.log(`${users.length} users were added to the DB.`);
       return Job.create([
         {
-          title: 'Bar Tender',
+          title: 'Web Developer',
           location: {
             lat: 51.518159,
             lng: -0.078075
           },
-          hours: 8,
+          contract: 8,
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         }, {
-          title: 'Bar Tender',
+          title: 'Web Developer',
           location: {
             lat: 52.518159,
             lng: -0.138075
           },
-          hours: 8,
+          contract: 8,
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },{
-          title: 'Bar Tender',
+          title: 'Web Developer',
           location: {
             lat: 53.518159,
             lng: -0.178075
           },
-          hours: 8,
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },
+        {
+          title: 'Web Developer',
+          location: {
+            lat: 51.518159,
+            lng: -0.078075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        }, {
+          title: 'Web Developer',
+          location: {
+            lat: 52.518159,
+            lng: -0.138075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },{
+          title: 'Web Developer',
+          location: {
+            lat: 53.518159,
+            lng: -0.178075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },
+        {
+          title: 'Web Developer',
+          location: {
+            lat: 51.518159,
+            lng: -0.078075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        }, {
+          title: 'Web Developer',
+          location: {
+            lat: 52.518159,
+            lng: -0.138075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },{
+          title: 'Web Developer',
+          location: {
+            lat: 53.518159,
+            lng: -0.178075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },
+        {
+          title: 'Web Developer',
+          location: {
+            lat: 51.518159,
+            lng: -0.078075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        }, {
+          title: 'Web Developer',
+          location: {
+            lat: 52.518159,
+            lng: -0.138075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },{
+          title: 'Web Developer',
+          location: {
+            lat: 53.518159,
+            lng: -0.178075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },
+        {
+          title: 'Web Developer',
+          location: {
+            lat: 51.518159,
+            lng: -0.078075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        }, {
+          title: 'Web Developer',
+          location: {
+            lat: 52.518159,
+            lng: -0.138075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },{
+          title: 'Web Developer',
+          location: {
+            lat: 53.518159,
+            lng: -0.178075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },
+        {
+          title: 'Web Developer',
+          location: {
+            lat: 51.518159,
+            lng: -0.078075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        }, {
+          title: 'Web Developer',
+          location: {
+            lat: 52.518159,
+            lng: -0.138075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },{
+          title: 'Web Developer',
+          location: {
+            lat: 53.518159,
+            lng: -0.178075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },
+        {
+          title: 'Web Developer',
+          location: {
+            lat: 51.518159,
+            lng: -0.078075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        }, {
+          title: 'Web Developer',
+          location: {
+            lat: 52.518159,
+            lng: -0.138075
+          },
+          contract: 8,
+          rate: 200,
+          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+          description: 'Cleaning, being my slave... blah blah blah',
+          manager: users[2]
+        },{
+          title: 'Web Developer',
+          location: {
+            lat: 53.518159,
+            lng: -0.178075
+          },
+          contract: 8,
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',

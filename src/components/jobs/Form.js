@@ -24,9 +24,9 @@ const JobForm = ({ handleChange, handlePlaceChange, handleSubmit, errors }) => {
             {errors.location && <small>{errors.location}</small>}
           </div>
           <div className="field">
-            <label htmlFor="hours">Hours</label>
-            <input id="hours" name="hours" className="input" placeholder="Restaurant" onChange={handleChange} /* value={job.hours || ''} */ />
-            {errors.hours && <small>{errors.hours}</small>}
+            <label htmlFor="contract">Contract</label>
+            <input id="contract" name="contract" className="input" placeholder="Restaurant" onChange={handleChange} /* value={job.contract || ''} */ />
+            {errors.contract && <small>{errors.contract}</small>}
           </div>
           <div className="field">
             <label htmlFor="rate">Rate</label>
