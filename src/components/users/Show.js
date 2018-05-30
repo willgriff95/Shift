@@ -26,6 +26,12 @@ class UsersShow extends React.Component {
       .then(res => this.setState({ user: res.data }));
   }
 
+  handleRequestAccept = (requestId) => {
+    const { id } = this.props.match.params;
+    axios
+      .put(`/jobs/${id}/requests/${requestId}`);
+  }
+
 
   render(){
     console.log(this.state);
@@ -79,6 +85,7 @@ class UsersShow extends React.Component {
                                 } */}
                                 <p>{request.user.firstName} {request.user.lastName}</p>
                                 <p>{request.status}</p>
+                                <button  className="acceptRequestbutton" ><i className="fas fa-check"></i></button>
                               </div>
                             </div>
                             {/* <img className="indexManagerProfilePicture" src={job.manager.picture} />
