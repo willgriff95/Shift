@@ -50,7 +50,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         }, {
           title: 'Web Developer',
           location: {
@@ -61,7 +61,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         },{
           title: 'Web Developer',
           location: {
@@ -72,7 +72,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         },
         {
           title: 'Web Developer',
@@ -84,7 +84,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         }, {
           title: 'Web Developer',
           location: {
@@ -95,7 +95,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         },{
           title: 'Web Developer',
           location: {
@@ -106,7 +106,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         },
         {
           title: 'Web Developer',
@@ -118,7 +118,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         }, {
           title: 'Web Developer',
           location: {
@@ -129,7 +129,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         },{
           title: 'Web Developer',
           location: {
@@ -140,7 +140,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         },
         {
           title: 'Web Developer',
@@ -152,7 +152,7 @@ mongoose.connect(dbURI, (err, db) => {
           rate: 200,
           companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[2]
+          manager: users[1]
         }, {
           title: 'Web Developer',
           location: {

@@ -17,6 +17,7 @@ function showRoute(req, res, next) {
         path: 'requests.user'
       }
     })
+    // .populate('requests.user')
     .exec()
     .then(user => {
       if(!user) return res.sendStatus(404);

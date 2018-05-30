@@ -11,14 +11,6 @@ const userSchema = new mongoose.Schema({
   companyPicture: { type: String}
 });
 
-
-
-userSchema.set('toJSON', { virtuals: true });
-
-
-userSchema.virtual('jobs');
-userSchema.set('toJSON', { virtuals: true });
-
 // Makes uniqueness into a ValidationError for the purposes of convenience.
 userSchema.plugin(require('mongoose-unique-validator'));
 
@@ -33,7 +25,7 @@ userSchema.set('toJSON', {
 
 userSchema.virtual('jobs', {
   localField: '_id',
-  foreignField: 'user',
+  foreignField: 'manager',
   ref: 'Job'
 });
 
