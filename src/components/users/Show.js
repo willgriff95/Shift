@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import Auth from '../../lib/Auth';
+import Auth from '../../lib/Auth';
 import Sidebar from '../Sidebar';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
@@ -20,18 +20,21 @@ class UsersShow extends React.Component {
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    console.log('mounted');
     axios
       .get(`/api/users/${id}`)
       .then(res => this.setState({ user: res.data }));
   }
 
-  handleRequestAccept = (requestId) => {
-    const { id } = this.props.match.params;
+  handleRequestAccept = (job, request) => {
+    console.log('this is the job id', job);
+    console.log('this is the request id', request);
+    console.log(this.state);
     axios
-      .put(`/jobs/${id}/requests/${requestId}`);
+      .put(`/jobs/${job}/requests/${request}`, {
+        headers: { Authorization: `Bearer ${Auth.getToken()}`}
+      })
+      .then(res => this.setState({ job: res.data }));
   }
-
 
   render(){
     console.log(this.state);
@@ -46,13 +49,25 @@ class UsersShow extends React.Component {
           data={this.state}
         />
         <div className="mainBody">
-          <div className="columns">
+          <div className="columns is-multiline">
             <div className="column is-four-fifths-desktop is-full-mobile is-two-third-tablet companyLogo">
               <div>
+                {Auth.isCurrentUser(!user._id)&&
+                <a className="emailIconShow" href={'mailto:' + `${user.email}`}>
+                  <i className="far fa-envelope"></i>
+                </a>
+                }
+                {Auth.isCurrentUser(user._id)&&
+                <a className="deleteIconShow" onClick={this.handleDelete}>
+                  <i  className="far fa-trash-alt"></i>
+                </a>
+                }
+                {Auth.isCurrentUser(user._id)&&
+                <a className="editIconShow" onClick={this.handleDelete}>
+                  <i className="far fa-edit"></i>
+                </a>
+                }
                 <div className="userShowProfileDetails">
-                  <a className="emailIcon" href={'mailto:' + `${user.email}`}>
-                    <i className="far fa-envelope"></i>
-                  </a>
                   <div className="managerName">{user.firstName} {user.lastName}</div>
                   <div className="hiringManager">Hiring Manager</div>
                   <div className="emailDetails">{user.email}</div>
@@ -68,41 +83,33 @@ class UsersShow extends React.Component {
               <img className="userShowProfilePicture" src={user.picture} />
             </div>
           </div>
-          <div className="columns ">
+          <div className="columns is-multiline">
             {user.jobs.map(job =>
               <div className="column is-four-fifths-desktop is-full-tablet is-mobile" key={job._id}>
-                <Link to={`/users/${user.id}`}>
-                  {job.requests.map( request =>
-                    <div key={request._id}>
-                      <div className="card usersShowRequests">
-                        <div className="card-content">
-                          <div className="media">
-                            <div className="media-content">
-                              <img className="userShowProfilePicture" src={request.user.picture} />
-                              <div className="userShowRequestsProfileDetails">
+                {job.requests.map( request =>
+                  <div key={request._id}>
+                    <div className="card usersShowRequests">
+                      <div className="card-content">
+                        <div className="media">
+                          <div className="media-content">
+                            <img className="userShowProfilePicture" src={request.user.picture} />
+                            <div className="userShowRequestsProfileDetails">
+                              <Link to={`/users/${request.user._id}`}>
                                 {/* {job.requests &&
                                   // <p>{job.requests}</p>
                                 } */}
+                                {console.log()}
                                 <p>{request.user.firstName} {request.user.lastName}</p>
                                 <p>{request.status}</p>
-                                <button  className="acceptRequestbutton" ><i className="fas fa-check"></i></button>
-                              </div>
+                              </Link>
+                              <button onClick={() => this.handleRequestAccept(job._id, request._id)}  className="acceptRequestbutton" ><i className="fas fa-check"></i></button>
                             </div>
-                            {/* <img className="indexManagerProfilePicture" src={job.manager.picture} />
-                            <div className="indexManagerDetails">
-                            <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
-                            <div className="hiringManager">Hiring Manager</div>
-                            <div className="emailDetails">{job.manager.email}</div>
-                          </div> */}
-                            {/* <p className="indexJobTitle">{job.contract}</p> */}
-                            {/* <img className="managerProfilePicture" src={request.picture} /> */}
-                            {/* <div className=" indexCompanyPicture" style={{ backgroundImage: `url(${job.companyPicture})`}} /> */}
                           </div>
                         </div>
                       </div>
                     </div>
-                  )}
-                </Link>
+                  </div>
+                )}
               </div>
             )}
           </div>

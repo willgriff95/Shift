@@ -23,7 +23,14 @@ li:active {
   height: 100vh;
   width: 100vw;
 }
-
+.background {
+    height: 50%;
+    width: 100%;
+    z-index: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #f9fafc;
+}
 .logo {
     position: relative;
     height: 30px;
@@ -474,10 +481,13 @@ input[type=password]:focus, textarea:focus {
     background-color: #209cee;
     color: #fff;
     position: absolute;
-    width: 100%;
+    width: 80%;
+    opacity: 0.6;
     top: 80px;
+    left: 50px;
     margin: 0 auto;
-    z-index: 10;
+    z-index: 10000;
+    border: none;
 }
 .flashMessage {
     width: 80%;
@@ -568,6 +578,34 @@ hr {
     right: 20px;
     top: 10px;
 }
+.deleteIcon {
+    width: 20px;
+    position: absolute;
+    float: right;
+    right: 20px;
+    top: 10px;
+}
+.emailIconShow {
+    width: 20px;
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 10px;
+}
+.deleteIconShow {
+    width: 20px;
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 10px;
+}
+.editIconShow {
+    width: 20px;
+    position: relative;
+    float: right;
+    right: 20px;
+    top: 10px;
+}
 .managerName {
     color: #6BA4F5;
     text-align: left;
@@ -575,6 +613,11 @@ hr {
     left: 85px;
     width: 60%;
     position: relative;
+}
+.notification a:not(.button) {
+    color: currentColor;
+    text-decoration: underline;
+    text-decoration: none;
 }
 .deleteComment {
     width: 10px;
@@ -619,11 +662,12 @@ hr {
     border-radius: 5px;
     float: right;
     bottom: 80px;
+    background-repeat: no-repeat;
     position: relative;
     background-position: center;
     background-size: contain;
+    border: 1px solid #F4F4F4;
 }
-
 .usersShowRequests {
     background-color: white;
     border-radius: 5px;

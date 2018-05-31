@@ -40,10 +40,10 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
         <button className="submitbutton"><i className="fas fa-comments"></i>  Submit</button>
       </form>
 
-      {(job.requestButtonClicked === true) &&
+      {(job.requestButtonClicked === false) &&
         <button  onClick={handleRequestCreate} disabled={requestMade} className="requestbutton" ><i className="fas fa-check"></i> Send Request</button>
       }
-      {(job.requestButtonClicked === false) &&
+      {(job.requestButtonClicked === true) &&
         <button  onClick={handleRequestCreate} disabled={requestMade} className="requestPendingButton" ><i className="fas fa-check"></i> Request Pending</button>
       }
       {/* <button onClick={handleRequestCreate} className="requestbutton "><i className="fas fa-check"></i> Request Sent</button> */}

@@ -3,6 +3,8 @@ import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
+// import Auth from '../../lib/Auth';
+
 
 import SortFilterBar from './SortFilterBar';
 import Sidebar from '../Sidebar';
@@ -75,7 +77,7 @@ class JobsIndex extends React.Component {
                             <p className="dayRateTextMoney">£{job.rate}</p>
                             <div className="dayRateText2">/day rate</div>
                             <p className="indexContract">{job.contract} months</p>
-                            <div className=" indexCompanyPicture" style={{ backgroundImage: `url(${job.companyPicture})`}} />
+                            <div className=" indexCompanyPicture" style={{ backgroundImage: `url(${job.manager.companyPicture})`}} />
                           </div>
                         </div>
                       </div>

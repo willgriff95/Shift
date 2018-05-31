@@ -11,24 +11,26 @@ mongoose.connect(dbURI, (err, db) => {
     {
       role: 'freelance',
       firstName: 'Elliot',
+      companyPicture: 'https://cdn.worldvectorlogo.com/logos/facebook-1.svg',
       lastName: 'Yandzio',
       email: 'c@c',
       password: 'c',
       passwordConfirmation: 'c',
-      picture: 'https://i.imgur.com/kXdfAyL.png'
+      picture: 'https://i.imgur.com/wYVZMiw.jpg?1'
     },
     {
       role: 'freelance',
+      companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
       firstName: 'Andrew',
       lastName: 'Xu',
       email: 'b@b',
       password: 'b',
       passwordConfirmation: 'b',
-      picture: 'https://thesocietypages.org/socimages/files/2009/05/vimeo.jpg'
+      picture: 'https://i.imgur.com/JblBJ51.jpg?2'
     },
     {
       role: 'manager',
-      companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
+      companyPicture: 'http://brandemia.org/sites/default/files/sites/default/files/logo_google-despues.jpg',
       firstName: 'Will',
       lastName: 'Griffiths',
       email: 'will.griffiths@pixelcrayons.co.uk',
@@ -48,7 +50,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         }, {
@@ -59,7 +60,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         },{
@@ -70,7 +70,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         },
@@ -82,7 +81,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         }, {
@@ -93,7 +91,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         },{
@@ -104,7 +101,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         },
@@ -116,7 +112,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         }, {
@@ -127,7 +122,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         },{
@@ -138,7 +132,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         },
@@ -150,7 +143,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[1]
         }, {
@@ -161,7 +153,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },{
@@ -172,7 +163,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },
@@ -184,7 +174,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         }, {
@@ -195,7 +184,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },{
@@ -206,7 +194,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },
@@ -218,7 +205,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         }, {
@@ -229,7 +215,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },{
@@ -240,7 +225,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },
@@ -252,7 +236,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         }, {
@@ -263,7 +246,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         },{
@@ -274,7 +256,6 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
           description: 'Cleaning, being my slave... blah blah blah',
           manager: users[2]
         }

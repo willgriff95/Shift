@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Map from '../common/Map';
 import Auth from '../../lib/Auth';
 import Sidebar from '../Sidebar';
@@ -39,6 +39,7 @@ class JobsShow extends React.Component {
 
   handleCommentSubmit = e => {
     e.preventDefault();
+    // console.log(e);
     const { id } = this.props.match.params;
     axios
       .post(`/api/jobs/${id}/comments`, this.state.comment, {
@@ -81,13 +82,14 @@ class JobsShow extends React.Component {
           showSearchBar={this.showSearchBar}
           showListView={this.showListView}
           hideListView={this.hideListView}
+          state={this.state}
         />
         <div className="mainBody">
           <div className="tile is-ancestor">
             <div className="tile is-vertical is-3">
               <div className="tile">
                 <div className="tile is-parent is-vertical">
-                  <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.companyPicture})`}}>
+                  <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
                   </div>
                   <div className="tile is-child  is-white companyLogo">
                     <div className="payDetails">
@@ -112,14 +114,23 @@ class JobsShow extends React.Component {
             <div className="tile is-parent">
               <div className="tile is-child notification companyLogo">
                 <div className="managerDetails">
+                  {!Auth.isCurrentUser(job.manager._id)&&
                   <a className="emailIcon" href={'mailto:' + `${job.manager.email}`}>
                     <i className="far fa-envelope"></i>
                   </a>
-                  <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
-                  <div className="hiringManager">Hiring Manager</div>
-                  <div className="emailDetails">{job.manager.email}</div>
-                  <div  /* style={styles2} */ />
-                  <img className="managerProfilePicture" src={job.manager.picture} />
+                  }
+                  {Auth.isCurrentUser(job.manager._id)&&
+                    <a className="deleteIcon" onClick={this.handleDelete}>
+                      <i  className="far fa-trash-alt"></i>
+                    </a>
+                  }
+                  <Link to={`/users/${job.manager._id}`}>
+                    <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
+                    <div className="hiringManager">Hiring Manager</div>
+                    <div className="emailDetails">{job.manager.email}</div>
+                    <div  /* style={styles2} */ />
+                    <img className="managerProfilePicture" src={job.manager.picture} />
+                  </Link>
                 </div>
                 <hr/>
                 <div className="jobDescription">

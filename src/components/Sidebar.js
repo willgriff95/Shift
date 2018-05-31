@@ -1,7 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../lib/Auth';
+
 
 const Sidebar = ({ showSearchBar, showListView, hideListView }) => {
+  console.log(Auth.getPayload().sub);
+  // console.log(state);
   return(
     <div className="columns is-fullheight sideBarMain">
       <div className="column is-2 is-sidebar-menu is-hidden-mobile">
@@ -37,11 +41,11 @@ const Sidebar = ({ showSearchBar, showListView, hideListView }) => {
                 <div className="listItem"><i className="fas fa-suitcase listIcon"></i> Jobs</div>
               </li>
             </Link>
-            {/* <Link to={`/users/${state.users._id}`}> */}
-            <li className="iconSidebar">
-              <div className="listItem"><i className="fas fa-user listIcon"></i> Account</div>
-            </li>
-            {/* </Link> */}
+            <Link to={`/users/${Auth.getPayload().sub}`}>
+              <li className="iconSidebar">
+                <div className="listItem"><i className="fas fa-user listIcon"></i> Account</div>
+              </li>
+            </Link>
 
           </ul>
         </aside>
