@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ProfileForm = ({ handleChange, handleSubmit, user }) => {
   // console.log(user.user);
@@ -11,6 +12,11 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
           {user &&
             <form onSubmit={handleSubmit}>
               <div>
+                <button id="profileeditCompletedButton">
+                  <a className="deleteIcon2">
+                    <i className="fas fa-check"></i>
+                  </a>
+                </button>
                 <div className="userShowProfileDetails">
                   <div className="profilemanagerName">
                     <input type="text" className="input" name="firstName" id="firstName3" value={user.firstName} onChange={handleChange} />
@@ -27,11 +33,10 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
               <hr />
               <div className="userShowBio">
                 <div className="userShowBioDetails">
-                  Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk
+                  <textarea id="bio" name="bio" className="textarea jobDescription" placeholder="Tell people about your professional career" onChange={handleChange} value={user.bio} />
                 </div>
               </div>
               <img className="userShowProfilePicture" src={user.picture} />
-              <button className="button signUp">Submit</button>
             </form>
           }
         </div>

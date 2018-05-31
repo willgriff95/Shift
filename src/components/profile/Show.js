@@ -50,12 +50,7 @@ class ProfileShow extends React.Component {
                 </a>
                 }
                 {Auth.isCurrentUser(user._id)&&
-                <a className="deleteIconShow" onClick={this.handleDelete}>
-                  <i  className="far fa-trash-alt"></i>
-                </a>
-                }
-                {Auth.isCurrentUser(user._id)&&
-                <Link className="editIconShow" to={`/profile/${user._id}/edit`}>
+                <Link className="profileeditIconShow" to={`/profile/${user._id}/edit`}>
                   <i className="far fa-edit"></i>
                 </Link>
                 }
@@ -69,7 +64,7 @@ class ProfileShow extends React.Component {
               <hr />
               <div className="userShowBio">
                 <div className="userShowBioDetails">
-                  Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk
+                  {user.bio}
                 </div>
               </div>
               <img className="userShowProfilePicture" src={user.picture} />

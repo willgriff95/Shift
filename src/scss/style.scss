@@ -14,15 +14,37 @@ li:active {
   font-family: "Circe";
 }
 
-#firstName3{
-
+#firstName3 {
+    color: #6BA4F5;
+    text-align: left;
+    font-size: 19px;
+    width: 10%;
+    position: relative;
+    padding:  0;
+    height: 30px;
 }
-#lastName3{
 
+#lastName3{
+  color: #6BA4F5;
+  text-align: left;
+  font-size: 19px;
+  padding:  0;
+  // left: 115px;
+  width: 30%;
+  height: 30px;
+  // top: 30px;
+  position: relative;
 }
 #email3{
-
-}
+      font-size: 12px;
+      text-align: left;
+      // left: 115px;
+      width: 70%;
+      // top: 30px;
+      padding: 0;
+      height: 20px;
+      position: relative;
+  }
 #rate {
     position: relative;
     top: -50px;
@@ -51,6 +73,23 @@ li:active {
     border: none;
     outline: none;
     right: 0;
+}
+#profileeditCompletedButton {
+    position: absolute;
+    top: 0;
+    border: none;
+    outline: none;
+    right: 0;
+}
+#bio {
+  padding: 0;
+}
+.deleteIcon2 {
+    width: 20px;
+    position: absolute;
+    float: right;
+    left: -200px;
+    top: 10px;
 }
 #description{
   padding-top: 0;
@@ -301,19 +340,22 @@ img {
     font-family: "circe rounded";
     color: #6BA4F5;
     /* border-color: #6BA4F5; */
-    font-size: 14px;
+    font-size: 16px;
     padding-top: 9px;
     border-radius: 30px;
     height: 40px;
     border: 1px solid #D3D3D3;
     top: 10px;
     right: 10px;
-    text-align: center;
+    padding-right: 10px;
+    text-align: right;
     position: absolute;
     width: 40px;
     border-radius: 30px;
 }
-
+.signUpSignInLink{
+  color: #6BA4F5;
+}
 .acceptRequestbutton:hover{
 
 }
@@ -362,10 +404,10 @@ select{
 }
 
 
-.register{
-  float: left;
+.register {
+    float: left;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-top: 15px;
 }
 input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 0);
@@ -718,6 +760,13 @@ hr {
     right: 30px;
     top: 10px;
 }
+.profileeditIconShow {
+    width: 20px;
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 10px;
+}
 .managerName {
     color: #6BA4F5;
     text-align: left;
@@ -904,8 +953,8 @@ hr {
     background-size: cover;
 }
 .searchBarBackground {
-    background: linear-gradient(white, rgba(255, 255, 255, 0));
-    height: 200px;
+    background: linear-gradient(white, rgba(255, 255, 255, 0.4));
+    height: 125px;
     width: 100%;
     position: fixed;
     top: 50px;
@@ -977,6 +1026,32 @@ hr {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 40px;
+}
+
+.companyLogo3 {
+    background-color: white;
+    border-radius: 5px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    height: 495px;
+    top: 100px;
+    z-index: 1000;
+}
+.companyLogo4 {
+    background-color: white;
+    border-radius: 5px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    height: 300px;
+    z-index: 1000;
 }
 .indexCards {
     background-color: white;

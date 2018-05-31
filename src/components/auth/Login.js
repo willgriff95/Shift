@@ -36,7 +36,7 @@ class AuthLogin extends React.Component {
           <div className="column is-half-desktop">
             <div className="leftLoginRegisterContent">
               <div className="leftLoginRegisterLogo">
-                <img src="../assets/Shift-logo.png" height="200px"/>
+                <img src="https://i.imgur.com/kaiUv3m.png" height="200px"/>
               </div>
               <div className="copyrightText">
                 Designed & Developed by <a href="https://www.linkedin.com/in/willgriff/">Will Griffiths</a>
@@ -44,7 +44,7 @@ class AuthLogin extends React.Component {
             </div>
           </div>
           <div className="column is-half-desktop">
-            <div className="rightLoginContent">
+            <div className="rightLoginContent companyLogo4">
               <div className="title1">SIGN IN</div>
 
               <form onSubmit={this.handleSubmit}>
@@ -83,7 +83,7 @@ class AuthLogin extends React.Component {
                   </p>
                 </div>
                 <div className="register">
-                  New to foodlet? <Link to="/register">Sign up now</Link>
+                  New to foodlet? <Link to="/register" className="signUpSignInLink">Sign up now</Link>
 
                 </div>
                 <button className="button">SIGN IN</button>

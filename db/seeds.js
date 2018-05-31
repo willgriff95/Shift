@@ -16,7 +16,8 @@ mongoose.connect(dbURI, (err, db) => {
       email: 'c@c',
       password: 'c',
       passwordConfirmation: 'c',
-      picture: 'https://i.imgur.com/wYVZMiw.jpg?1'
+      picture: 'https://i.imgur.com/wYVZMiw.jpg?1',
+      bio: 'Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk'
     },
     {
       role: 'freelance',
@@ -26,7 +27,8 @@ mongoose.connect(dbURI, (err, db) => {
       email: 'b@b',
       password: 'b',
       passwordConfirmation: 'b',
-      picture: 'https://i.imgur.com/JblBJ51.jpg?2'
+      picture: 'https://i.imgur.com/JblBJ51.jpg?2',
+      bio: 'Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk'
     },
     {
       role: 'manager',
@@ -36,7 +38,19 @@ mongoose.connect(dbURI, (err, db) => {
       email: 'will.griffiths@pixelcrayons.co.uk',
       password: 'a',
       passwordConfirmation: 'a',
-      picture: 'https://i.imgur.com/QUIA9rO.jpg'
+      picture: 'https://i.imgur.com/QUIA9rO.jpg',
+      bio: 'Responsible for building the function in the APAC region and focused on the growth of the business organisation and support functions in partnership with the regional executives and HR leaders to determine and drive the APAC people strategy. Leading a team of 40+ staffing professionals across India, China, South East Asia, Japan and Australia. Covering all hiring into sales, marketing, legal, public policy, corporate comms, finance, people operations and facilities.'
+    },
+    {
+      role: 'manager',
+      companyPicture: 'http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png',
+      firstName: 'Alex',
+      lastName: 'Poytner',
+      email: 'alex.poytner@ga.co.uk',
+      password: 'a',
+      passwordConfirmation: 'a',
+      picture: 'https://i.imgur.com/QUIA9rO.jpg',
+      bio: 'Responsible for building the function in the APAC region and focused on the growth of the business organisation and support functions in partnership with the regional executives and HR leaders to determine and drive the APAC people strategy. Leading a team of 40+ staffing professionals across India, China, South East Asia, Japan and Australia. Covering all hiring into sales, marketing, legal, public policy, corporate comms, finance, people operations and facilities.'
     }
   ])
     .then(users => {
@@ -49,8 +63,8 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
-          rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          rate: 350,
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
         }, {
           title: 'Web Developer',
@@ -60,7 +74,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
         },{
           title: 'Web Developer',
@@ -70,7 +84,38 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
+          manager: users[3]
+        },
+        {
+          title: 'Web Developer',
+          location: {
+            lat: 51.518159,
+            lng: -0.078075
+          },
+          contract: 8,
+          rate: 200,
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
+          manager: users[0]
+        }, {
+          title: 'Web Developer',
+          location: {
+            lat: 52.518159,
+            lng: -0.138075
+          },
+          contract: 8,
+          rate: 200,
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
+          manager: users[0]
+        },{
+          title: 'Web Developer',
+          location: {
+            lat: 53.518159,
+            lng: -0.178075
+          },
+          contract: 8,
+          rate: 200,
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
         },
         {
@@ -81,7 +126,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
         }, {
           title: 'Web Developer',
@@ -90,9 +135,9 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
-          rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-          manager: users[0]
+          rate: 400,
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
+          manager: users[3]
         },{
           title: 'Web Developer',
           location: {
@@ -101,7 +146,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
         },
         {
@@ -112,7 +157,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
         }, {
           title: 'Web Developer',
@@ -122,38 +167,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-          manager: users[0]
-        },{
-          title: 'Web Developer',
-          location: {
-            lat: 53.518159,
-            lng: -0.178075
-          },
-          contract: 8,
-          rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-          manager: users[0]
-        },
-        {
-          title: 'Web Developer',
-          location: {
-            lat: 51.518159,
-            lng: -0.078075
-          },
-          contract: 8,
-          rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-          manager: users[0]
-        }, {
-          title: 'Web Developer',
-          location: {
-            lat: 52.518159,
-            lng: -0.138075
-          },
-          contract: 8,
-          rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -163,7 +177,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         },
         {
@@ -174,7 +188,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         }, {
           title: 'Web Developer',
@@ -184,7 +198,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -194,7 +208,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         },
         {
@@ -205,7 +219,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         }, {
           title: 'Web Developer',
@@ -215,7 +229,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -225,7 +239,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         },
         {
@@ -236,7 +250,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         }, {
           title: 'Web Developer',
@@ -246,7 +260,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -256,7 +270,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+          description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
         }
       ]);
