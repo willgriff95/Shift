@@ -13,6 +13,16 @@ li:active {
 *{
   font-family: "Circe";
 }
+
+#firstName3{
+
+}
+#lastName3{
+
+}
+#email3{
+
+}
 #rate {
     position: relative;
     top: -50px;
@@ -34,6 +44,13 @@ li:active {
     padding-right: 0;
     height: 1.5em;
     margin-right: 5px;
+}
+#editCompletedButton {
+    position: absolute;
+    top: 0;
+    border: none;
+    outline: none;
+    right: 0;
 }
 #description{
   padding-top: 0;
@@ -698,7 +715,7 @@ hr {
     width: 20px;
     position: relative;
     float: right;
-    right: 20px;
+    right: 30px;
     top: 10px;
 }
 .managerName {
@@ -707,8 +724,72 @@ hr {
     font-size: 19px;
     left: 115px;
     width: 60%;
-    top: 20px;
+    // top: 20px;
     position: relative;
+}
+.hiringManager {
+    color: #D3D3D3;
+    font-size: 17px;
+    text-align: left;
+    left: 115px;
+    width: 70%;
+    // top: 20px;
+    position: relative;
+}
+.emailDetails{
+  font-size: 12px;
+  text-align: left;
+  left:115px;
+  width: 70%;
+  // top: 20px;
+  position: relative;
+}
+.profilemanagerName {
+    color: #6BA4F5;
+    text-align: left;
+    font-size: 19px;
+    left: 115px;
+    width: 60%;
+    top: 30px;
+    position: relative;
+}
+.profilehiringManager {
+    color: #D3D3D3;
+    font-size: 17px;
+    text-align: left;
+    left: 115px;
+    width: 70%;
+    top: 30px;
+    position: relative;
+}
+.profileemailDetails{
+  font-size: 12px;
+  text-align: left;
+  left:115px;
+  width: 70%;
+  top: 30px;
+  position: relative;
+}
+.jobshowmanagerProfilePicture{
+    height: 80px;
+    left: 35px;
+    width: 80px;
+    top: 20px;
+    border: 1px solid #F4F4F4;
+    border-radius: 40px;
+    z-index: 1000;
+    position: absolute;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    background-position: center;
+    background-size: cover;
+}
+.jobseditIconShow {
+    width: 20px;
+    position: absolute;
+    float: right;
+    right: 50px;
+    top: 10px;
+    z-index: 1000;
 }
 .deleteComment {
     width: 10px;
@@ -721,14 +802,7 @@ hr {
     padding: 1em;
     background-color: #f9fafc;
 }
-.emailDetails{
-  font-size: 12px;
-  text-align: left;
-  left:115px;
-  width: 70%;
-  top: 20px;
-  position: relative;
-}
+
 .managerDetails{
   height: 100px;
 }
@@ -749,10 +823,10 @@ hr {
 .userShowCompanyPicture {
     width: 120px;
     height: 120px;
-    right: 50px;
+    right: 70px;
     border-radius: 5px;
     float: right;
-    bottom: 80px;
+    bottom: 70px;
     background-repeat: no-repeat;
     position: relative;
     background-position: center;
@@ -820,7 +894,7 @@ hr {
     height: 80px;
     left: 50px;
     width: 80px;
-    top: 60px;
+    top: 65px;
     border: 1px solid #F4F4F4;
     border-radius: 40px;
     z-index: 1000;
@@ -851,15 +925,7 @@ hr {
     background-position: center;
     background-size: cover;
 }
-.hiringManager {
-    color: #D3D3D3;
-    font-size: 17px;
-    text-align: left;
-    left: 115px;
-    width: 70%;
-    top: 20px;
-    position: relative;
-}
+
 .map {
     position: relative;
     overflow: hidden;
@@ -895,6 +961,22 @@ hr {
     text-align: center;
     height: 100%;
     z-index: 1000;
+}
+.companyLogo2 {
+    background-color: white;
+    border-radius: 5px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+    text-align: left;
+    height: 100%;
+    z-index: 1000;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 40px;
 }
 .indexCards {
     background-color: white;

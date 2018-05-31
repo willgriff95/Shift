@@ -52,12 +52,17 @@ const JobForm = ({ handleChange, handlePlaceChange, handleSubmit, job  }) => {
             <div className="tile is-parent">
               <div className="tile is-child notification companyLogo">
                 <div className="managerDetails">
+                  <button id="editCompletedButton">
+                    <a className="deleteIcon">
+                      <i className="fas fa-check"></i>
+                    </a>
+                  </button>
                   {job.manager &&
                     <Link to={`/users/${job.manager._id}`}>
                       <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
-                      <div className="hiringManager">Hiring Manager</div>
+                      <div className="hiringManager">{job.manager.role}</div>
                       <div className="emailDetails">{job.manager.email}</div>
-                      <img className="managerProfilePicture" src={job.manager.picture} />
+                      <img className="jobshowmanagerProfilePicture" src={job.manager.picture} />
                     </Link>
                   }
                 </div>
@@ -68,17 +73,6 @@ const JobForm = ({ handleChange, handlePlaceChange, handleSubmit, job  }) => {
               </div>
             </div>
           </div>
-          <div className="field">
-            {/* `htmlFor` is used for the purpose of escaping `for` (as in for loop) in JS */}
-            <input id="title" title="title" className="input" placeholder="Name" onChange={handleChange} value={ job.title } />
-          </div>
-          <div className="field">
-          </div>
-          <div className="field">
-          </div>
-
-
-          <button className="button is-primary">Submit</button>
         </form>
       </div>
     </div>

@@ -60,9 +60,9 @@ class UsersShow extends React.Component {
                 </Link>
                 }
                 <div className="userShowProfileDetails">
-                  <div className="managerName">{user.firstName} {user.lastName}</div>
-                  <div className="hiringManager">{user.role}</div>
-                  <div className="emailDetails">{user.email}</div>
+                  <div className="profilemanagerName">{user.firstName} {user.lastName}</div>
+                  <div className="profilehiringManager">{user.role}</div>
+                  <div className="profileemailDetails">{user.email}</div>
                   <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
                 </div>
               </div>

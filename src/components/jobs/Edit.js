@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import ProfileForm from './Form';
+import JobsForm from './Form';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 import Auth from '../../lib/Auth';
@@ -48,7 +48,7 @@ class JobsEdit extends React.Component {
       <div>
         <Navbar />
         <Sidebar />
-        <ProfileForm
+        <JobsForm
           job={this.state}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}

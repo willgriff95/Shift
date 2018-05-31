@@ -115,6 +115,11 @@ class JobsShow extends React.Component {
                   </a>
                   }
                   {Auth.isCurrentUser(job.manager._id)&&
+                  <Link className="jobseditIconShow" to={`/jobs/${job._id}/edit`}>
+                    <i className="far fa-edit"></i>
+                  </Link>
+                  }
+                  {Auth.isCurrentUser(job.manager._id)&&
                     <a className="deleteIcon" onClick={this.handleDelete}>
                       <i  className="far fa-trash-alt"></i>
                     </a>
@@ -124,12 +129,12 @@ class JobsShow extends React.Component {
                     <div className="hiringManager">Hiring Manager</div>
                     <div className="emailDetails">{job.manager.email}</div>
                     <div  /* style={styles2} */ />
-                    <img className="managerProfilePicture" src={job.manager.picture} />
+                    <img className="jobshowmanagerProfilePicture" src={job.manager.picture} />
                   </Link>
                 </div>
                 <hr/>
                 <div className="jobDescription">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  {job.description}
                 </div>
               </div>
             </div>

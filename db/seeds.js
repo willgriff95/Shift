@@ -50,7 +50,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         }, {
           title: 'Web Developer',
@@ -60,7 +60,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         },{
           title: 'Web Developer',
@@ -70,7 +70,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         },
         {
@@ -81,7 +81,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         }, {
           title: 'Web Developer',
@@ -91,7 +91,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         },{
           title: 'Web Developer',
@@ -101,7 +101,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         },
         {
@@ -112,7 +112,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         }, {
           title: 'Web Developer',
@@ -122,7 +122,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         },{
           title: 'Web Developer',
@@ -132,7 +132,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         },
         {
@@ -143,7 +143,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[0]
         }, {
           title: 'Web Developer',
@@ -153,7 +153,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -163,7 +163,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         },
         {
@@ -174,7 +174,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         }, {
           title: 'Web Developer',
@@ -184,7 +184,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -194,7 +194,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         },
         {
@@ -205,7 +205,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         }, {
           title: 'Web Developer',
@@ -215,7 +215,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -225,7 +225,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         },
         {
@@ -236,7 +236,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         }, {
           title: 'Web Developer',
@@ -246,7 +246,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         },{
           title: 'Web Developer',
@@ -256,7 +256,7 @@ mongoose.connect(dbURI, (err, db) => {
           },
           contract: 8,
           rate: 200,
-          description: 'Cleaning, being my slave... blah blah blah',
+          description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
           manager: users[2]
         }
       ]);
