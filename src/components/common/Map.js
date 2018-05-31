@@ -122,8 +122,14 @@ class Map extends React.Component {
       map: this.map,
       icon: 'https://i.imgur.com/6OGWoXQ.png'
     });
-
     this.generateMarkers();
+
+    // this.marker.addListener('click', () => {
+    //   this.infoWindow.setContent(
+    //     <a>hello</a>
+    //   );
+    // });
+
   }
 
   generateMarkers = () => {

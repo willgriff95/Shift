@@ -55,9 +55,9 @@ class UsersShow extends React.Component {
                 </a>
                 }
                 {Auth.isCurrentUser(user._id)&&
-                <a className="editIconShow" to={`/users/${user._id}/edit`}>
+                <Link className="editIconShow" to={`/profile/${user._id}/edit`}>
                   <i className="far fa-edit"></i>
-                </a>
+                </Link>
                 }
                 <div className="userShowProfileDetails">
                   <div className="managerName">{user.firstName} {user.lastName}</div>

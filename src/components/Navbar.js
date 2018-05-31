@@ -12,6 +12,7 @@ class Navbar extends React.Component {
   // console.log(Auth.getPayload().sub)
 
   componentDidMount() {
+    if(!Auth.isAuthenticated()) return false;
     axios.get(`/api/users/${Auth.getPayload().sub}`)
       .then(res => this.setState({ users: res.data }));
   }
@@ -58,7 +59,7 @@ class Navbar extends React.Component {
                 {/* <span className="icon">
                 <i className="fas fa-user"></i>
               </span> */}
-                <button  className="logOutButton" onClick={this.handleLogout}>Log Out</button>
+                {/* <button  className="logOutButton" onClick={this.handleLogout}>Log Out</button> */}
                 <Link to={`/profile/${this.state.users._id}`} className="navbar-item" >
                   <div className="profilePicture" style={styles} />
                 </Link>

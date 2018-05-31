@@ -11,7 +11,7 @@ import 'bulma';
 import './scss/style.scss';
 
 import Home from './components/Home';
-import UsersEdit from './components/users/Edit';
+import ProfileEdit from './components/profile/Edit';
 import UsersShow from './components/users/Show';
 import ProfileShow from './components/profile/Show';
 import JobsIndex from './components/jobs/Index';
@@ -36,8 +36,8 @@ class App extends React.Component {
             <FlashMessages />
             <Switch>
               {/* Decorator component => the BrowserRouter decorates the component with useful stuff like location, match, history which can be accessed with this.props inside of each component */}
+              <SecureRoute path="/profile/:id/edit" component={ProfileEdit} />
               <SecureRoute path="/profile/:id" component={ProfileShow} />
-              <SecureRoute path="/users/:id/edit" component={UsersEdit} />
               <SecureRoute path="/users/:id" component={UsersShow} />
               <SecureRoute path="/jobs/new" component={JobsNew} />
               <Route path="/jobs/:id" component={JobsShow} />

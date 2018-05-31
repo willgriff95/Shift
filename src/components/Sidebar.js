@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Auth from '../lib/Auth';
 import axios from 'axios';
 
@@ -23,13 +23,12 @@ class Sidebar extends React.Component {
   }
 
   componentDidMount() {
-    const currentUserId = Auth.getPayload().sub;
+    if(!Auth.isAuthenticated()) return false;
     axios
-      .get(`/api/users/${currentUserId}`)
+      .get(`/api/users/${Auth.getPayload().sub}`)
       .then(res => this.setState({ user: res.data }));
   }
   render(){
-    // console.log(Auth.getPayload().sub);
     const { user } = this.state;
     // console.log(user.role);
 
@@ -61,7 +60,7 @@ class Sidebar extends React.Component {
                   <div className="listItem"><i className="fas fa-suitcase listIcon"></i> Jobs</div>
                 </li>
               </Link> */}
-              {Auth.getPayload().sub &&
+              {Auth.isAuthenticated() &&
                 <Link to={`/profile/${Auth.getPayload().sub}`}>
                   <li className="iconSidebar">
                     <div className="listItem"><i className="fas fa-user listIcon"></i> Account</div>
@@ -80,4 +79,4 @@ class Sidebar extends React.Component {
   }
 }
 
-export default Sidebar;
+export default withRouter(Sidebar);
