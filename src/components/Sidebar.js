@@ -16,15 +16,23 @@ class Sidebar extends React.Component {
 
   showSearchBar = () => this.setState({ searchBar: !this.state.searchBar });
 
-
-  componentDidMount() {
-    axios.get('/api/jobs')
-      .then(res => this.setState({ jobs: res.data }));
+  handleLogout = () => {
+    Auth.logout();
+    console.log(this.props);
+    this.props.history.push('/register');
   }
 
-  // console.log(Auth.getPayload().sub);
-  // console.log(state);
+  componentDidMount() {
+    const currentUserId = Auth.getPayload().sub;
+    axios
+      .get(`/api/users/${currentUserId}`)
+      .then(res => this.setState({ user: res.data }));
+  }
   render(){
+    // console.log(Auth.getPayload().sub);
+    const { user } = this.state;
+    // console.log(user.role);
+
     return(
       <div className="columns is-fullheight sideBarMain">
         <div className="column is-2 is-sidebar-menu is-hidden-mobile">
@@ -32,29 +40,37 @@ class Sidebar extends React.Component {
             <ul className=" sidebar">
               {/* <hr/> */}
               <Link to="/jobs">
-              <li onClick={this.showSearchBar} className="iconSidebar" >
-                <div className="listItem"><i className="fas fa-search listIcon"></i> Search</div>
-              </li>
+                <li onClick={this.showSearchBar} className="iconSidebar" >
+                  <div className="listItem"><i className="fas fa-search listIcon"></i> Search</div>
+                </li>
               </Link>
 
               {/* </Link> */}
               {/* <hr/> */}
-              <Link to="/jobs/new">
-                <li className="iconSidebar">
-                  <div className="listItem"><i className="fas fa-plus listIcon"></i> Add Job</div>
-                </li>
-              </Link>
+              {user && (user.role === 'manager')&&
+                <Link to="/jobs/new">
+                  {/* <p>{user.role}</p> */}
+                  <li className="iconSidebar">
+                    <div className="listItem"><i className="fas fa-plus listIcon"></i> Add Job</div>
+                  </li>
+                </Link>
+              }
               <hr/>
               {/* <Link to="/jobs/new">
                 <li className="iconSidebar">
                   <div className="listItem"><i className="fas fa-suitcase listIcon"></i> Jobs</div>
                 </li>
               </Link> */}
-              <Link to={`/users/${Auth.getPayload().sub}`}>
-                <li className="iconSidebar">
-                  <div className="listItem"><i className="fas fa-user listIcon"></i> Account</div>
-                </li>
-              </Link>
+              {Auth.getPayload().sub &&
+                <Link to={`/profile/${Auth.getPayload().sub}`}>
+                  <li className="iconSidebar">
+                    <div className="listItem"><i className="fas fa-user listIcon"></i> Account</div>
+                  </li>
+                </Link>
+              }
+              <li className="iconSidebar" onClick={this.handleLogout}>
+                <div className="listItem"><i className="fas fa-user listIcon"></i> Log Out</div>
+              </li>
 
             </ul>
           </aside>

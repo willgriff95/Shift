@@ -26,7 +26,7 @@ li:active {
 .background {
     height: 50%;
     width: 100%;
-    z-index: 0;
+    z-index: -1000;
     bottom: 0;
     position: absolute;
     background-color: #f9fafc;
@@ -263,7 +263,7 @@ img {
     border-radius: 30px;
     height: 40px;
     border: 1px solid #D3D3D3;
-    top: 20px;
+    top: 10px;
     right: 10px;
     text-align: center;
     position: absolute;
@@ -274,27 +274,27 @@ img {
 .acceptRequestbutton:hover{
 
 }
-input[type=text],input[type=password] {
-    width: 100%;
-    background-color: rgba(255,255,255,0);
-    border-radius: 0px;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    resize: none;
-    color: black;
-    outline: red;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    font-family: "Circe-light", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
-    text-decoration: none;
-    border-bottom: 1px solid #B5B5B5;
-    outline: none;
-}
+// input[type=text],input[type=password] {
+//     width: 100%;
+//     background-color: rgba(255,255,255,0);
+//     border-radius: 0px;
+//     padding: 0;
+//     border: none;
+//     box-shadow: none;
+//     resize: none;
+//     color: black;
+//     outline: red;
+//     box-sizing: border-box;
+//     margin-top: 6px;
+//     margin-bottom: 16px;
+//     font-family: "Circe-light", sans-serif;
+//     font-weight: 400;
+//     font-style: normal;
+//     font-size: 16px;
+//     text-decoration: none;
+//     border-bottom: 1px solid #B5B5B5;
+//     outline: none;
+// }
 select{
   font-family: "Circe-light", sans-serif;
 
@@ -440,24 +440,35 @@ input[type=password]:focus, textarea:focus {
 }
 .mapButton {
     text-align: center;
-    padding-top: 20px;
-    height: 60px;
-    top: 80px;
+    padding-top: 7px;
+    height: 30px;
+    top: 90px;
+    width: 90px;
+    background-color: white;
     left: 900px;
     font-size: 15px;
     position: fixed;
     z-index: 1000;
+    height: 2.25em;
+    border-radius: 5px;
+    border: 1px solid #F4F4F4;
 }
 .listButton {
   text-align: center;
-  padding-top: 20px;
-  height: 60px;
-  top: 80px;
+  padding-top: 7px;
+  height: 30px;
+  top: 90px;
+  width: 90px;
+  background-color: white;
   left: 1000px;
   font-size: 15px;
   position: fixed;
   z-index: 1000;
+  height: 2.25em;
+  border-radius: 5px;
+  border: 1px solid #F4F4F4;
 }
+
 .sidebar {
     align-items: center;
     justify-content: center;
@@ -473,7 +484,7 @@ input[type=password]:focus, textarea:focus {
     background-color: white;
     border-color: #F4F4F4;
     color: #4a4a4a;
-    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.0);
     max-width: 100%;
     width: 100%;
     font-family: "Circe";
@@ -489,8 +500,16 @@ a {
     top: 90px;
     width: 50%;
     margin: 0 auto;
-    left: 215px;
+    left: 216px;
     position: fixed;
+}
+.mainBody2 {
+    position: relative;
+    top: 100px;
+    left: 58px;
+    width: 75%;
+    z-index: 1000;
+    margin: 0 auto;
 }
 .sideBarMain{
     // -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
@@ -660,8 +679,9 @@ hr {
     color: #6BA4F5;
     text-align: left;
     font-size: 19px;
-    left: 85px;
+    left: 115px;
     width: 60%;
+    top: 20px;
     position: relative;
 }
 .deleteComment {
@@ -678,9 +698,9 @@ hr {
 .emailDetails{
   font-size: 12px;
   text-align: left;
-  left: 85px;
+  left:115px;
   width: 70%;
-  top: 0;
+  top: 20px;
   position: relative;
 }
 .managerDetails{
@@ -772,9 +792,22 @@ hr {
 }
 .userShowProfilePicture {
     height: 80px;
-    left: 20px;
+    left: 50px;
     width: 80px;
-    top: 20px;
+    top: 60px;
+    border: 1px solid #F4F4F4;
+    border-radius: 40px;
+    z-index: 1000;
+    position: absolute;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+    background-position: center;
+    background-size: cover;
+}
+.userShowRequestProfilePicture {
+    height: 80px;
+    left: 25px;
+    width: 80px;
+    /* top: 60px; */
     border: 1px solid #F4F4F4;
     border-radius: 40px;
     z-index: 1000;
@@ -787,8 +820,9 @@ hr {
     color: #D3D3D3;
     font-size: 17px;
     text-align: left;
-    left: 85px;
+    left: 115px;
     width: 70%;
+    top: 20px;
     position: relative;
 }
 .map {
@@ -853,8 +887,8 @@ hr {
 }
 .mainBody {
     position: relative;
-    top: 100px;
-    left: 70px;
+    top: 150px;
+    left: 58px;
     width: 75%;
     z-index: 1000;
     margin: 0 auto;

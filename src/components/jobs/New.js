@@ -2,6 +2,8 @@ import React from 'react';
 import JobForm from './Form';
 import axios from 'axios';
 import Auth from '../../lib/Auth';
+import Sidebar from '../Sidebar';
+import Navbar from '../Navbar';
 
 class JobsNew extends React.Component {
 
@@ -32,6 +34,8 @@ class JobsNew extends React.Component {
   render () {
     return (
       <div>
+        <Navbar />
+        <Sidebar />
         <JobForm
           job={this.state}
           handleChange={this.handleChange}

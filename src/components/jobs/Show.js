@@ -3,9 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Map from '../common/Map';
 import Auth from '../../lib/Auth';
+import CommentShow from '../comments/Show';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
-import CommentShow from '../comments/Show';
 
 class JobsShow extends React.Component {
   // In fact, `class` is not like a constructor in itself. It actually just invokes `constructor()` inside itself, and that's where the real constructing of the object occurs. There's a lot of stuff that React is doing under the hood, like attaching the methods onto the object.
@@ -78,13 +78,8 @@ class JobsShow extends React.Component {
     return (
       <div>
         <Navbar />
-        <Sidebar
-          showSearchBar={this.showSearchBar}
-          showListView={this.showListView}
-          hideListView={this.hideListView}
-          state={this.state}
-        />
-        <div className="mainBody">
+        <Sidebar />
+        <div className="mainBody2">
           <div className="tile is-ancestor">
             <div className="tile is-vertical is-3">
               <div className="tile">

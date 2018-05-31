@@ -1,16 +1,12 @@
 import React from 'react';
 import AutoComplete from '../common/AutoComplete';
-import Sidebar from '../Sidebar';
-import Navbar from '../Navbar';
 
 const JobForm = ({ handleChange, handlePlaceChange, handleSubmit, errors }) => {
   // We want to check if there's a truthy value in the value of the error itself.
   const formInvalid = Object.keys(errors).some(key => errors[key]);
   return (
     <div>
-      <Navbar />
-      <Sidebar />
-      <div className="mainBody">
+      <div className="mainBody2">
         <form onSubmit={handleSubmit}>
           <div className="field">
             {/* `htmlFor` is used for the purpose of escaping `for` (as in for loop) in JS */}

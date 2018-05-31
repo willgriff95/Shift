@@ -5,7 +5,9 @@ import Flash from '../../lib/Flash';
 import { Link } from 'react-router-dom';
 
 class AuthRegister extends React.Component {
-  state = {};
+  state = {
+    role: 'freelance'
+  };
 
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value });
@@ -28,6 +30,7 @@ class AuthRegister extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div>
         <div className="backgroundImageLoginRegister">
@@ -53,19 +56,17 @@ class AuthRegister extends React.Component {
                 </div>
                 <div className="noMarginTop field role select is-rounded ">
                   <select
-                    type="text"
                     className="input"
                     name="role"
                     placeholder="Role"
                     onChange={this.handleChange}
                   >
-                    <option>Freelancer</option>
-                    <option>Manager</option>
+                    <option value="freelance">freelance</option>
+                    <option value="manager">manager</option>
                   </select>
                 </div>
                 <div className="field firstName">
                   <input
-                    type="text"
                     className="input"
                     name="firstName"
                     placeholder="First name"
@@ -74,7 +75,6 @@ class AuthRegister extends React.Component {
                 </div>
                 <div className="field lastName">
                   <input
-                    type="text"
                     className="input"
                     name="lastName"
                     placeholder="Last Name"
@@ -83,7 +83,6 @@ class AuthRegister extends React.Component {
                 </div>
                 <div className="field">
                   <input
-                    type="text"
                     className="input"
                     name="email"
                     placeholder="Email"
@@ -112,7 +111,6 @@ class AuthRegister extends React.Component {
                   Already a member?<Link to="/login"> Sign in here</Link>
                 </div>
                 <button className="button signUp">SIGN UP</button>
-
               </form>
             </div>
           </div>

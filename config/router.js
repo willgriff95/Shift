@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const jobs = require('../controllers/jobs');
 const users = require('../controllers/users');
+const profile = require('../controllers/profile');
 const auth = require('../controllers/auth');
 const secureRoute = require('../lib/secureRoute');
 
@@ -21,6 +22,10 @@ router.route('/jobs/:id/requests/:requestId')
 
 router.route('/jobs/:id/relist')
   .put(secureRoute, jobs.relistJob);
+
+router.route('/profile/:id')
+  .get(secureRoute, profile.show)
+  .put(secureRoute, profile.update);
 
 router.route('/users')
   .get( users.index);

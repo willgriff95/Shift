@@ -4,11 +4,11 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 // import Auth from '../../lib/Auth';
+import Sidebar from '../Sidebar';
+import Navbar from '../Navbar';
 
 
 import SortFilterBar from './SortFilterBar';
-import Sidebar from '../Sidebar';
-import Navbar from '../Navbar';
 import Map from '../common/Map';
 
 class JobsIndex extends React.Component {

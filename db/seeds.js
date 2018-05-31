@@ -9,7 +9,7 @@ mongoose.connect(dbURI, (err, db) => {
 
   User.create([
     {
-      role: 'freelance',
+      role: 'manager',
       firstName: 'Elliot',
       companyPicture: 'https://cdn.worldvectorlogo.com/logos/facebook-1.svg',
       lastName: 'Yandzio',
@@ -51,7 +51,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         }, {
           title: 'Web Developer',
           location: {
@@ -61,7 +61,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         },{
           title: 'Web Developer',
           location: {
@@ -71,7 +71,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         },
         {
           title: 'Web Developer',
@@ -82,7 +82,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         }, {
           title: 'Web Developer',
           location: {
@@ -92,7 +92,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         },{
           title: 'Web Developer',
           location: {
@@ -102,7 +102,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         },
         {
           title: 'Web Developer',
@@ -113,7 +113,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         }, {
           title: 'Web Developer',
           location: {
@@ -123,7 +123,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         },{
           title: 'Web Developer',
           location: {
@@ -133,7 +133,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         },
         {
           title: 'Web Developer',
@@ -144,7 +144,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Cleaning, being my slave... blah blah blah',
-          manager: users[1]
+          manager: users[0]
         }, {
           title: 'Web Developer',
           location: {

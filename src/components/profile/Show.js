@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 
-class UsersShow extends React.Component {
+class ProfileShow extends React.Component {
   state = {
     user: {},
     errors: {}
@@ -119,4 +119,4 @@ class UsersShow extends React.Component {
 }
 
 
-export default UsersShow;
+export default ProfileShow;

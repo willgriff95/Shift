@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Auth from '../lib/Auth';
@@ -26,8 +25,9 @@ class Navbar extends React.Component {
   }
 
   handleLogout = () => {
+    console.log(this.props);
     Auth.logout();
-    this.props.history.push('/login');
+    this.props.history.push('/register');
   }
 
   render() {
@@ -59,7 +59,7 @@ class Navbar extends React.Component {
                 <i className="fas fa-user"></i>
               </span> */}
                 <button  className="logOutButton" onClick={this.handleLogout}>Log Out</button>
-                <Link to={`/users/${this.state.users._id}`} className="navbar-item" >
+                <Link to={`/profile/${this.state.users._id}`} className="navbar-item" >
                   <div className="profilePicture" style={styles} />
                 </Link>
               </div>

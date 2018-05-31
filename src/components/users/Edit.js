@@ -2,9 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Auth from '../../lib/Auth';
 // import Flash from '../../lib/Flash';
-import Sidebar from '../Sidebar';
-import Navbar from '../Navbar';
-import SortFilterBar from '../jobs/SortFilterBar';
 // import UsersForm from './Form';
 class UsersEdit extends React.Component {
   state = {
@@ -46,12 +43,6 @@ class UsersEdit extends React.Component {
     render() {
       return (
         <div>
-          <Navbar />
-          <Sidebar />
-          <SortFilterBar
-            handleChange={this.handleChange}
-            data={this.state}
-          />
           <div>
             <div className="mainBody">
               <div className="columns">
