@@ -40,14 +40,12 @@ const JobForm = ({ handleChange, handlePlaceChange, handleSubmit, job  }) => {
               <div className="tile is-child">
                 <div className="mapCard">
                   {job.location &&
-                    <div>
                       <Map
                         center={job.location}
                       />
-                    </div>
 
                   }
-                  <AutoComplete id="location" name="location" placeholder="location" className="input" handlePlaceChange={handlePlaceChange}/>
+                  {/* <AutoComplete id="location" name="location" placeholder="location" className="input" handlePlaceChange={handlePlaceChange}/> */}
                 </div>
               </div>
             </div>

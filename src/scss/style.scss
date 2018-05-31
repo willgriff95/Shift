@@ -15,15 +15,29 @@ li:active {
 }
 #rate {
     position: relative;
-    top: -65px;
+    top: -50px;
+    color: darkgrey;
+    font-size: 40px;
     text-align: center;
+    height: 1em;
+    padding-top: 9px;
+    padding-bottom: 7px;
+    padding-left: 0;
     display: block;
+    padding-right: 0;
 }
 #contract {
     text-align: center;
-    width: 20%;
+    width: 15%;
+    color: #6BA4F5;
+    padding-left: 0;
+    padding-right: 0;
     height: 1.5em;
     margin-right: 5px;
+}
+#description{
+  padding-top: 0;
+  padding-left: 0;
 }
 .backgroundImageLoginRegister {
   background-image: url('../assets/backgroundImageLoginRegister.png');
