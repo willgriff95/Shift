@@ -30,8 +30,6 @@ class Navbar extends React.Component {
     this.props.history.push('/login');
   }
 
-
-
   render() {
     // console.log(this.state.users._id);
     if(this.state.users.picture ===  undefined ){

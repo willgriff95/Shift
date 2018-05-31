@@ -85,7 +85,7 @@ class UsersShow extends React.Component {
               <div className="column is-four-fifths-desktop is-full-tablet is-mobile" key={job._id}>
                 {job.requests.map( request =>
                   <div key={request._id}>
-                    <div className="card usersShowRequests" disabled="true">
+                    <div className="card usersShowRequests">
                       <div className="card-content">
                         <div className="media">
                           <div className="media-content">
@@ -101,10 +101,10 @@ class UsersShow extends React.Component {
                                 <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-check"></i>Pending</a>
                               }
                               {(request.status === 'accepted')&&
-                                <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-check"></i>Accepted</a>
+                                <a className="acceptRequestbutton" ><i className="fas fa-check"></i>Accepted</a>
                               }
                               {(request.status === 'rejected')&&
-                                <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-times"></i>Accept</a>
+                                <a className="acceptRequestbutton" ><i className="fas fa-times"></i>Rejected</a>
                               }
                             </div>
                           </div>
