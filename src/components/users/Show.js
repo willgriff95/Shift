@@ -26,11 +26,8 @@ class UsersShow extends React.Component {
   }
 
   handleRequestAccept = (job, request) => {
-    console.log('this is the job id', job);
-    console.log('this is the request id', request);
-    console.log(this.state);
     axios
-      .put(`/jobs/${job}/requests/${request}`, {
+      .put(`/api/jobs/${job._id}/requests/${request._id}`, null, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
       })
       .then(res => this.setState({ job: res.data }));
@@ -63,7 +60,7 @@ class UsersShow extends React.Component {
                 </a>
                 }
                 {Auth.isCurrentUser(user._id)&&
-                <a className="editIconShow" onClick={this.handleDelete}>
+                <a className="editIconShow" to={`/users/${user._id}/edit`}>
                   <i className="far fa-edit"></i>
                 </a>
                 }
@@ -88,26 +85,33 @@ class UsersShow extends React.Component {
               <div className="column is-four-fifths-desktop is-full-tablet is-mobile" key={job._id}>
                 {job.requests.map( request =>
                   <div key={request._id}>
-                    <div className="card usersShowRequests">
+                    <div className="card usersShowRequests" disabled="true">
                       <div className="card-content">
                         <div className="media">
                           <div className="media-content">
                             <img className="userShowProfilePicture" src={request.user.picture} />
                             <div className="userShowRequestsProfileDetails">
                               <Link to={`/users/${request.user._id}`}>
-                                {/* {job.requests &&
-                                  // <p>{job.requests}</p>
-                                } */}
-                                {console.log()}
-                                <p>{request.user.firstName} {request.user.lastName}</p>
-                                <p>{request.status}</p>
+                                <div className="requesteeName">{request.user.firstName} {request.user.lastName}</div>
+                                <div className="requesteeRole">{request.user.role[0]}</div>
+                                <div className="requesteeEmailDetails">{request.user.email}</div>
+                                {/* <div className="requesteeStatus">{request.status}</div> */}
                               </Link>
-                              <button onClick={() => this.handleRequestAccept(job._id, request._id)}  className="acceptRequestbutton" ><i className="fas fa-check"></i></button>
+                              {(request.status === 'pending')&&
+                                <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-check"></i>Pending</a>
+                              }
+                              {(request.status === 'accepted')&&
+                                <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-check"></i>Accepted</a>
+                              }
+                              {(request.status === 'rejected')&&
+                                <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-times"></i>Accept</a>
+                              }
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div className="spacer"></div>
                   </div>
                 )}
               </div>

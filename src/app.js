@@ -32,8 +32,8 @@ class App extends React.Component {
             <FlashMessages />
             <Switch>
               {/* Decorator component => the BrowserRouter decorates the component with useful stuff like location, match, history which can be accessed with this.props inside of each component */}
-              <SecureRoute exact path="/users/:id/edit" component={UsersEdit} />
-              <SecureRoute exact path="/users/:id" component={UsersShow} />
+              <SecureRoute path="/users/:id/edit" component={UsersEdit} />
+              <SecureRoute path="/users/:id" component={UsersShow} />
               <SecureRoute path="/jobs/new" component={JobsNew} />
               <Route path="/jobs/:id" component={JobsShow} />
               <Route path="/jobs" component={JobsIndex} />
