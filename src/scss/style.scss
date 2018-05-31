@@ -13,6 +13,18 @@ li:active {
 *{
   font-family: "Circe";
 }
+#rate {
+    position: relative;
+    top: -65px;
+    text-align: center;
+    display: block;
+}
+#contract {
+    text-align: center;
+    width: 20%;
+    height: 1.5em;
+    margin-right: 5px;
+}
 .backgroundImageLoginRegister {
   background-image: url('../assets/backgroundImageLoginRegister.png');
   background-position: center;

@@ -17,6 +17,7 @@ import ProfileShow from './components/profile/Show';
 import JobsIndex from './components/jobs/Index';
 import JobsNew from './components/jobs/New';
 import JobsShow from './components/jobs/Show';
+import JobsEdit from './components/jobs/Edit';
 import AuthLogin from './components/auth/Login';
 import AuthRegister from './components/auth/Register';
 import SecureRoute from './components/common/SecureRoute';
@@ -40,6 +41,7 @@ class App extends React.Component {
               <SecureRoute path="/profile/:id" component={ProfileShow} />
               <SecureRoute path="/users/:id" component={UsersShow} />
               <SecureRoute path="/jobs/new" component={JobsNew} />
+              <Route path="/jobs/:id/edit" component={JobsEdit} />
               <Route path="/jobs/:id" component={JobsShow} />
               <Route path="/jobs" component={JobsIndex} />
               <Route path="/register" component={AuthRegister} />

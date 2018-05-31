@@ -137,7 +137,6 @@ class JobsShow extends React.Component {
           <div className="tile">
             <article className="tile is-child notification jobCommentsSection">
               <div className="content">
-
                 <CommentShow
                   handleRequestCreate={this.handleRequestCreate}
                   handleCommentDelete={this.handleCommentDelete}
