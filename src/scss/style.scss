@@ -438,6 +438,26 @@ input[type=password]:focus, textarea:focus {
     height: 60px;
     font-size: 15px;
 }
+.mapButton {
+    text-align: center;
+    padding-top: 20px;
+    height: 60px;
+    top: 80px;
+    left: 900px;
+    font-size: 15px;
+    position: fixed;
+    z-index: 1000;
+}
+.listButton {
+  text-align: center;
+  padding-top: 20px;
+  height: 60px;
+  top: 80px;
+  left: 1000px;
+  font-size: 15px;
+  position: fixed;
+  z-index: 1000;
+}
 .sidebar {
     align-items: center;
     justify-content: center;
@@ -463,10 +483,10 @@ a {
     cursor: pointer;
     text-decoration: none;
 }
-.searchBar{
-    z-index: 40;
-    height: 200px;
-    top: 7px;
+.searchBar {
+    z-index: 1000;
+    height: 30px;
+    top: 90px;
     width: 50%;
     margin: 0 auto;
     left: 215px;

@@ -15,14 +15,8 @@ class JobsIndex extends React.Component {
   state = {
     jobs: [],
     search: '',
-    sort: 'title|asc',
-    searchBar: true
+    sort: 'title|asc'
   }
-
-  showListView = () => this.setState({ listView: true });
-  hideListView = () => this.setState({ listView: false });
-  showSearchBar = () => this.setState({ searchBar: !this.state.searchBar });
-
 
   componentDidMount() {
     axios.get('/api/jobs')
@@ -42,22 +36,26 @@ class JobsIndex extends React.Component {
     return _.orderBy(filtered, field, dir);
   }
 
+  showListView = () => this.setState({ listView: true });
+  hideListView = () => this.setState({ listView: false });
+
   render() {
     console.log(this.state);
     return (
       <div>
         <Navbar />
-        <Sidebar
-          showSearchBar={this.showSearchBar}
-          showListView={this.showListView}
-          hideListView={this.hideListView}
-          state={this.state}
-        />
-        <SortFilterBar
-          handleChange={this.handleChange}
-          data={this.state}
-        />
+        <Sidebar />
         <div className="mainBody">
+          <SortFilterBar
+            handleChange={this.handleChange}
+            data={this.state}
+          />
+          <div onClick={this.showListView}  className="mapButton">
+            <i className="fas fa-map-marker-alt listIcon"></i> Map
+          </div>
+          <div onClick={this.hideListView} className="listButton">
+            <i className="fas fa-list-ul listIcon"></i> List
+          </div>
           {!this.state.listView &&
             <div className="columns is-multiline ">
               {this.sortedFilteredJobs().map(job =>
@@ -67,12 +65,6 @@ class JobsIndex extends React.Component {
                       <div className="card-content">
                         <div className="media">
                           <div className="media-content">
-                            {/* <img className="indexManagerProfilePicture" src={job.manager.picture} />
-                            <div className="indexManagerDetails">
-                              <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
-                              <div className="hiringManager">Hiring Manager</div>
-                              <div className="emailDetails">{job.manager.email}</div>
-                            </div> */}
                             <p className="indexJobTitle">{job.title}</p>
                             <p className="dayRateTextMoney">£{job.rate}</p>
                             <div className="dayRateText2">/day rate</div>
