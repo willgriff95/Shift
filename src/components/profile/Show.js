@@ -29,7 +29,10 @@ class ProfileShow extends React.Component {
       .put(`/api/jobs/${job._id}/requests/${request._id}`, null, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
       })
-      .then(res => this.setState({ job: res.data }));
+      .then(res => this.setState({ job: res.data }, () => {
+        console.log(this.state);
+      }));
+
   }
 
   render(){
