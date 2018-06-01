@@ -62,6 +62,17 @@ mongoose.connect(dbURI, (err, db) => {
       passwordConfirmation: 'a',
       picture: 'https://i.imgur.com/qhGRjXJ.jpg?3',
       bio: 'Responsible for building the function in the APAC region and focused on the growth of the business organisation and support functions in partnership with the regional executives and HR leaders to determine and drive the APAC people strategy. Leading a team of 40+ staffing professionals across India, China, South East Asia, Japan and Australia. Covering all hiring into sales, marketing, legal, public policy, corporate comms, finance, people operations and facilities.'
+    },
+    {
+      role: 'manager',
+      companyPicture: 'http://winerieparisienne.fr/wp-content/uploads/2017/07/spotify-logo-vector-download.jpg',
+      firstName: 'Bridget',
+      lastName: 'Turnbull',
+      email: 'bridg.t@spotify.co.uk',
+      password: 'a',
+      passwordConfirmation: 'a',
+      picture: 'https://i.imgur.com/6OP0J8n.jpg?2',
+      bio: 'Responsible for building the function in the APAC region and focused on the growth of the business organisation and support functions in partnership with the regional executives and HR leaders to determine and drive the APAC people strategy. Leading a team of 40+ staffing professionals across India, China, South East Asia, Japan and Australia. Covering all hiring into sales, marketing, legal, public policy, corporate comms, finance, people operations and facilities.'
     }
   ])
     .then(users => {
@@ -117,7 +128,7 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
-          manager: users[0]
+          manager: users[4]
         },{
           title: 'Web Developer',
           location: {

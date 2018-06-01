@@ -21,7 +21,7 @@ class ProfileShow extends React.Component {
     const { id } = this.props.match.params;
     axios
       .get(`/api/users/${id}`)
-      .then(res => this.setState({ user: res.data }));
+      .then(res => this.setState({ user: res.data }, () => console.log(this.state)));
   }
 
   handleRequestAccept = (job, request) => {
@@ -29,9 +29,16 @@ class ProfileShow extends React.Component {
       .put(`/api/jobs/${job._id}/requests/${request._id}`, null, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
       })
-      .then(res => this.setState({ job: res.data }, () => {
-        console.log(this.state);
-      }));
+      .then(res => {
+        const index = this.state.user.jobs.findIndex(job => job._id === res.data._id);
+        const jobs = [
+          ...this.state.user.jobs.slice(0, index),
+          res.data,
+          ...this.state.user.jobs.slice(index+1)
+        ];
+        const user = { ...this.state.user, jobs };
+        this.setState({ user });
+      });
 
   }
 
