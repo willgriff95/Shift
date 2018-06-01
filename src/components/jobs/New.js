@@ -25,11 +25,11 @@ class JobsNew extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     axios
-    .post('/api/jobs', this.state, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}`}
-    })
-    .then(() => this.props.history.push('/jobs'))
-    .catch(err => this.setState({errors: err.response.data.errors}));
+      .post('/api/jobs', this.state, {
+        headers: { Authorization: `Bearer ${Auth.getToken()}`}
+      })
+      .then(() => this.props.history.push('/jobs'))
+      .catch(err => this.setState({errors: err.response.data.errors}));
   }
 
   render () {
@@ -44,7 +44,7 @@ class JobsNew extends React.Component {
                 <div className="field">
                   {/* `htmlFor` is used for the purpose of escaping `for` (as in for loop) in JS */}
                   <label htmlFor="title">Title</label>
-                  <input id="title2" title="title" className="input" placeholder="Title of role" onChange={this.handleChange} /* value={job.title || ''} *//>
+                  <input id="title2" name="title" className="input" placeholder="Title of role" onChange={this.handleChange} /* value={job.title || ''} *//>
                 </div>
                 <div className="field">
                   <label htmlFor="location">Location</label>
