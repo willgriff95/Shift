@@ -60,7 +60,7 @@ class UsersShow extends React.Component {
                 </Link>
                 }
                 <div className="userShowProfileDetails">
-                  <div className="profilemanagerName">{user.firstName} {user.lastName}</div>
+                  <div className="profilemanagerName">{user.fullName}</div>
                   <div className="profilehiringManager">{user.role}</div>
                   <div className="profileemailDetails">{user.email}</div>
                   <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
@@ -87,7 +87,7 @@ class UsersShow extends React.Component {
                             <img className="userShowRequestProfilePicture" src={request.user.picture} />
                             <div className="userShowRequestsProfileDetails">
                               <Link to={`/users/${request.user._id}`}>
-                                <div className="requesteeName">{request.user.firstName} {request.user.lastName}</div>
+                                <div className="requesteeName">{request.user.fullName}</div>
                                 <div className="requesteeRole">{request.user.role}</div>
                                 <div className="requesteeEmailDetails">{request.user.email}</div>
                                 {/* <div className="requesteeStatus">{request.status}</div> */}

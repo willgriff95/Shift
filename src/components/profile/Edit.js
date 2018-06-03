@@ -4,6 +4,8 @@ import ProfileForm from './Form';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 import Auth from '../../lib/Auth';
+// import ReactFilestack from 'filestack-react';
+
 // import Flash from '../../lib/Flash';
 // import UsersForm from './Form';
 
@@ -11,7 +13,6 @@ class ProfileEdit extends React.Component {
   state = {
     errors: {}
   };
-
 
 
   componentDidMount() {
@@ -49,6 +50,7 @@ class ProfileEdit extends React.Component {
     return (
       <div>
         <Navbar />
+
         <Sidebar />
         <ProfileForm
           user={this.state}

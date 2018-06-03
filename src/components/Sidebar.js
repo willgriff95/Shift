@@ -49,12 +49,12 @@ class Sidebar extends React.Component {
               {user && (user.role === 'manager')&&
                 <Link to="/jobs/new">
                   {/* <p>{user.role}</p> */}
-                  <li className="iconSidebar">
+                  <li className="iconSidebarAdd">
                     <div className="listItem"><i className="fas fa-plus listIcon"></i> Add Job</div>
                   </li>
                 </Link>
               }
-              <hr/>
+              <hr className="sidebarhr"/>
               {/* <Link to="/jobs/new">
                 <li className="iconSidebar">
                   <div className="listItem"><i className="fas fa-suitcase listIcon"></i> Jobs</div>
@@ -68,7 +68,7 @@ class Sidebar extends React.Component {
                 </Link>
               }
               <li className="iconSidebar" onClick={this.handleLogout}>
-                <div className="listItem"><i className="fas fa-user listIcon"></i> Log Out</div>
+                <div className="listItem"><i className="fas fa-sign-out-alt listIcon"></i> Log Out</div>
               </li>
 
             </ul>

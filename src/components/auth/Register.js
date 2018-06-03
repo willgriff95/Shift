@@ -68,16 +68,8 @@ class AuthRegister extends React.Component {
                 <div className="field firstName">
                   <input
                     className="input"
-                    name="firstName"
-                    placeholder="First name"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="field lastName">
-                  <input
-                    className="input"
-                    name="lastName"
-                    placeholder="Last Name"
+                    name="fullName"
+                    placeholder="Full name"
                     onChange={this.handleChange}
                   />
                 </div>

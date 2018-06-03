@@ -3,8 +3,7 @@ const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
   role: { type: String,  enum: [ 'freelance', 'manager'], required: true },
-  firstName: { type: String, required: true },
-  lastName: { type: String },
+  fullName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   picture: { type: String },
@@ -41,6 +40,10 @@ userSchema
   .set(function setPasswordConfirmation(passwordConfirmation){
     this._passwordConfirmation = passwordConfirmation;
   });
+
+// userSchema.virtual('fullName').get(function () {
+//   return this.firstName + ' ' + this.lastName;
+// });
 
 // Life cycle hook - 'before you anything, validate.' The `next()` thing after `pre('validate')` is validation, and this will throw a 'does not match' error if the passwordConfirmation and the password do not match.
 userSchema.pre('validate', function checkPassword(next){

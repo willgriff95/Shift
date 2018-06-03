@@ -83,7 +83,7 @@ class AuthLogin extends React.Component {
                   </p>
                 </div>
                 <div className="register">
-                  New to foodlet? <Link to="/register" className="signUpSignInLink">Sign up now</Link>
+                  New to shift? <Link to="/register" className="signUpSignInLink">Sign up now</Link>
 
                 </div>
                 <button className="button">SIGN IN</button>

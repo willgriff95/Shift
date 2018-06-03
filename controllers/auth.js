@@ -25,7 +25,7 @@ function login(req, res, next) {
       // The jwt token consists of Header.Payload.Signature, and in Payload there is an object called { sub: '', iat: '', exp: '' }
       const token = jwt.sign({ sub: user._id }, secret, { expiresIn: '6h' });
       res.json({
-        message: `Welcome back ${user.firstName}!`,
+        message: `Welcome back ${user.fullName}!`,
         token,
         user
       });

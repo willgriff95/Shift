@@ -20,10 +20,15 @@ class FlashMessage extends React.Component {
 
   render() {
     return (
-      <div className="flashMessage">
-        {this.state.messages && Object.keys(this.state.messages).map(type =>
-          <div key={type} className={`notification is-${type}`}>{this.state.messages[type]}</div>
-        )}
+      <div className="mainBody3">
+        <div className="columns is-multiline ">
+          <div className="column is-full-desktop is-full-tablet is-mobile indexList">
+
+            {this.state.messages && Object.keys(this.state.messages).map(type =>
+              <div key={type} className={`notification is-${type}`}>{this.state.messages[type]}</div>
+            )}
+          </div>
+        </div>
       </div>
     );
   }

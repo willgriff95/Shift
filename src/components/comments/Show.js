@@ -1,5 +1,6 @@
 import React from 'react';
 import Auth from '../../lib/Auth';
+import { Link } from 'react-router-dom';
 
 const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleCommentChange, handleRequestCreate}) => {
   // console.log(job.job.requests[0].user);
@@ -13,7 +14,6 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
 
       {job.job.comments.map(comment =>
         <div key={comment._id}>
-          {/* <p className="commentsContent">{comment.createdBy.firstName} {comment.createdBy.lastName}</p> */}
           <img className="indexManagerProfilePicture" src={comment.createdBy.picture} />
           <div className="indexManagerDetails">
             {Auth.isCurrentUser(comment.createdBy.id)&&
@@ -23,10 +23,12 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
                 </a>
               </div>
             }
-            <div className="managerName">{comment.createdBy.firstName} {comment.createdBy.lastName}</div>
-            {/* <div className="hiringManager">Hiring Manager</div> */}
-            {/* <div className="emailDetails">{comment.createdBy.email}</div> */}
-            <p className="emailDetails">{comment.content}</p>
+            <Link to={`/users/${comment.createdBy.id}`}>
+              <div className="managerName">{comment.createdBy.fullName}</div>
+              {/* <div className="hiringManager">Hiring Manager</div> */}
+              {/* <div className="emailDetails">{comment.createdBy.email}</div> */}
+              <p className="emailDetails">{comment.content}</p>
+            </Link>
           </div>
           {/* <img className="commentsProfilePicture" src={comment.createdBy.picture} /> */}
           <hr />

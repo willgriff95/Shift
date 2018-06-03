@@ -125,7 +125,7 @@ class JobsShow extends React.Component {
                     </a>
                   }
                   <Link to={`/users/${job.manager._id}`}>
-                    <div className="managerName">{job.manager.firstName} {job.manager.lastName}</div>
+                    <div className="managerName">{job.manager.fullName}</div>
                     <div className="hiringManager">{job.manager.role}</div>
                     <div className="emailDetails">{job.manager.email}</div>
                     <div  /* style={styles2} */ />

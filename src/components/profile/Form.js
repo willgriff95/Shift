@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { client } from 'filestack-react';
+// const filestack = client.init('A06LnFQSXRbe2qEOmejwkz', security);
+
 
 const ProfileForm = ({ handleChange, handleSubmit, user }) => {
   // console.log(user.user);
@@ -19,9 +21,7 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
                 </button>
                 <div className="userShowProfileDetails">
                   <div className="profilemanagerName">
-                    <input type="text" className="input" name="firstName" id="firstName3" value={user.firstName} onChange={handleChange} />
-
-                    <input type="text" className="input" name="lastName" id="lastName3" value={user.lastName} onChange={handleChange} />
+                    <input type="text" className="input" name="fullName" id="lastName3" value={user.fullName} onChange={handleChange} />
                   </div>
                   <div className="profilehiringManager">{user.role}</div>
                   <div className="profileemailDetails">
@@ -30,6 +30,7 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
                   <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
                 </div>
               </div>
+
               <hr />
               <div className="userShowBio">
                 <div className="userShowBioDetails">

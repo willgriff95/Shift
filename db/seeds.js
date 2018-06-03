@@ -10,9 +10,8 @@ mongoose.connect(dbURI, (err, db) => {
   User.create([
     {
       role: 'manager',
-      firstName: 'Elliot',
+      fullName: 'Elliot Yandzio',
       companyPicture: 'https://cdn.worldvectorlogo.com/logos/facebook-1.svg',
-      lastName: 'Yandzio',
       email: 'elliot@facebook.co.uk',
       password: 'e',
       passwordConfirmation: 'e',
@@ -22,8 +21,7 @@ mongoose.connect(dbURI, (err, db) => {
     {
       role: 'freelance',
       companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
-      firstName: 'Andrew',
-      lastName: 'Xu',
+      fullName: 'Andrew Xu',
       email: 'andrew@pixelcrayons.co.uk',
       password: 'b',
       passwordConfirmation: 'b',
@@ -33,8 +31,7 @@ mongoose.connect(dbURI, (err, db) => {
     {
       role: 'manager',
       companyPicture: 'http://brandemia.org/sites/default/files/sites/default/files/logo_google-despues.jpg',
-      firstName: 'Will',
-      lastName: 'Griffiths',
+      fullName: 'Will Griffiths',
       email: 'will.griffiths@google.co.uk',
       password: 'a',
       passwordConfirmation: 'a',
@@ -44,8 +41,7 @@ mongoose.connect(dbURI, (err, db) => {
     {
       role: 'manager',
       companyPicture: 'http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png',
-      firstName: 'Alex',
-      lastName: 'Poytner',
+      fullName: 'Alex Poytner',
       email: 'alex.poytner@ga.co.uk',
       password: 'a',
       passwordConfirmation: 'a',
@@ -55,8 +51,7 @@ mongoose.connect(dbURI, (err, db) => {
     {
       role: 'manager',
       companyPicture: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Monzo_logo.svg/1200px-Monzo_logo.svg.png',
-      firstName: 'Matt',
-      lastName: 'Hunter-King',
+      fullName: 'Matt Hunter-King',
       email: 'matt.h.king@monzo.co.uk',
       password: 'a',
       passwordConfirmation: 'a',
@@ -66,8 +61,7 @@ mongoose.connect(dbURI, (err, db) => {
     {
       role: 'manager',
       companyPicture: 'http://winerieparisienne.fr/wp-content/uploads/2017/07/spotify-logo-vector-download.jpg',
-      firstName: 'Bridget',
-      lastName: 'Turnbull',
+      fullName: 'Bridget Turnbull',
       email: 'bridg.t@spotify.co.uk',
       password: 'a',
       passwordConfirmation: 'a',
@@ -293,7 +287,14 @@ mongoose.connect(dbURI, (err, db) => {
           contract: 8,
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
-          manager: users[2]
+          manager: users[2],
+          requests: [{
+            user: users[1]
+          },{
+            user: users[3]
+          },{
+            user: users[0]
+          }]
         }
       ]);
     })

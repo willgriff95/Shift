@@ -65,7 +65,7 @@ class ProfileShow extends React.Component {
                 </Link>
                 }
                 <div className="userShowProfileDetails">
-                  <div className="profilemanagerName">{user.firstName} {user.lastName}</div>
+                  <div className="profilemanagerName">{user.fullName}</div>
                   <div className="profilehiringManager">{user.role}</div>
                   <div className="profileemailDetails">{user.email}</div>
                   <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
@@ -89,22 +89,26 @@ class ProfileShow extends React.Component {
                       <div className="card-content">
                         <div className="media">
                           <div className="media-content">
-                            <img className="userShowRequestProfilePicture" src={request.user.picture} />
+                            {request.user &&
+                              <img className="userShowRequestProfilePicture" src={request.user.picture} />
+                            }
                             <div className="userShowRequestsProfileDetails">
+                              {request.user &&
                               <Link to={`/users/${request.user._id}`}>
-                                <div className="requesteeName">{request.user.firstName} {request.user.lastName}</div>
+                                <div className="requesteeName">{request.user.fullName}</div>
                                 <div className="requesteeRole">{request.user.role}</div>
                                 <div className="requesteeEmailDetails">{request.user.email}</div>
                                 {/* <div className="requesteeStatus">{request.status}</div> */}
                               </Link>
+                              }
                               {(request.status === 'pending')&&
-                                <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-check"></i>Pending</a>
+                                <a onClick={() => this.handleRequestAccept(job, request)}  className="pendingRequestbutton" ><i className="fas fa-check"></i></a>
                               }
                               {(request.status === 'accepted')&&
-                                <a className="acceptRequestbutton" ><i className="fas fa-check"></i>Accepted</a>
+                                <a className="acceptRequestbutton" ><i className="fas fa-check"></i></a>
                               }
                               {(request.status === 'rejected')&&
-                                <a className="acceptRequestbutton" ><i className="fas fa-times"></i>Rejected</a>
+                                <a className="rejectRequestbutton" ><i className="fas fa-times"></i></a>
                               }
                             </div>
                           </div>
