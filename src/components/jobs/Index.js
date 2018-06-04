@@ -85,8 +85,7 @@ class JobsIndex extends React.Component {
                             <div className="dayRateText2">/day rate</div>
                             <p className="indexContract">{job.contract} months</p>
                           </div>
-                            <div className="column is-half-desktop is-full-tablet is-mobile floatRight" key={job._id}>
-
+                          <div className="column is-half-desktop is-full-tablet is-mobile floatRight" key={job._id}>
                             <div className=" indexCompanyPicture" style={{ backgroundImage: `url(${job.manager.companyPicture})`}} />
                           </div>
                         </div>
