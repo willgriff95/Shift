@@ -81,89 +81,91 @@ class ProfileShow extends React.Component {
             </div>
           </div>
           <div className="columns is-multiline">
-            {user.jobs.map(job =>
-              <div className="column is-four-fifths-desktop is-full-tablet is-mobile" key={job._id}>
-                {job.requests.map( request =>
-                  <div key={request._id}>
-                    {(request.status === 'pending') &&
-                  <div className="card usersShowRequests">
-                    <div className="card-content">
-                      <div className="media">
-                        <div className="media-content">
-                          {request.user &&
-                            <img className="userShowRequestProfilePicture" src={request.user.picture} />
-                          }
-                          <div className="userShowRequestsProfileDetails">
-                            {request.user &&
-                              <Link to={`/users/${request.user._id}`}>
-                                <div className="requesteeName">{request.user.fullName}</div>
-                                <div className="requesteeRole">{request.user.role}</div>
-                                <div className="requesteeEmailDetails">{request.user.email}</div>
-                                {/* <div className="requesteeStatus">{request.status}</div> */}
-                              </Link>
-                            }
-                            {(request.status === 'pending')&&
-                          <a onClick={() => this.handleRequestAccept(job, request)}  className="pendingRequestbutton" ><i className="fas fa-check"></i></a>
-                            }
+            <div className="column is-four-fifths-desktop is-full-tablet is-mobile companyLogo5" >
+              {user.jobs.map(job =>
+                <div key={job._id}>
+                  {job.requests.map( request =>
+                    <div key={request._id}>
+                      {(request.status === 'pending') &&
+                      <div className="card usersShowRequests">
+                        <div className="card-content">
+                          <div className="media">
+                            <div className="media-content">
+                              {request.user &&
+                                <img className="userShowRequestProfilePicture" src={request.user.picture} />
+                              }
+                              <div className="userShowRequestsProfileDetails">
+                                {request.user &&
+                                  <Link to={`/users/${request.user._id}`}>
+                                    <div className="requesteeName">{request.user.fullName}</div>
+                                    <div className="requesteeRole">{request.user.role}</div>
+                                    <div className="requesteeEmailDetails">{request.user.email}</div>
+                                    {/* <div className="requesteeStatus">{request.status}</div> */}
+                                  </Link>
+                                }
+                                {(request.status === 'pending')&&
+                              <a onClick={() => this.handleRequestAccept(job, request)}  className="pendingRequestbutton" ><i className="fas fa-check"></i></a>
+                                }
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                    }
-                    {(request.status === 'rejected') &&
-                  <div className="card usersShowRequests">
-                    <div className="card-content">
-                      <div className="media">
-                        <div className="media-content">
-                          {request.user &&
-                            <img className="userShowRequestProfilePicture" src={request.user.picture} />
-                          }
-                          <div className="userShowRequestsProfileDetails">
-                            {request.user &&
-                              <Link to={`/users/${request.user._id}`}>
-                                <div className="requesteeName">{request.user.fullName}</div>
-                                <div className="requesteeRole">{request.user.role}</div>
-                                <div className="requesteeEmailDetails">{request.user.email}</div>
-                                {/* <div className="requesteeStatus">{request.status}</div> */}
-                              </Link>
-                            }
-                            {(request.status === 'rejected')&&
-                        <a className="rejectRequestbutton" ><i className="fas fa-times"></i></a>
-                            }
+                      }
+                      {(request.status === 'rejected') &&
+                      <div className="card usersShowRequests">
+                        <div className="card-content">
+                          <div className="media">
+                            <div className="media-content">
+                              {request.user &&
+                                <img className="userShowRequestProfilePicture" src={request.user.picture} />
+                              }
+                              <div className="userShowRequestsProfileDetails">
+                                {request.user &&
+                                  <Link to={`/users/${request.user._id}`}>
+                                    <div className="requesteeName">{request.user.fullName}</div>
+                                    <div className="requesteeRole">{request.user.role}</div>
+                                    <div className="requesteeEmailDetails">{request.user.email}</div>
+                                    {/* <div className="requesteeStatus">{request.status}</div> */}
+                                  </Link>
+                                }
+                                {(request.status === 'rejected')&&
+                            <a className="rejectRequestbutton" ><i className="fas fa-times"></i></a>
+                                }
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
+                      }
+                      {(request.status === 'accepted')&&
+                        <div className="cardAcceptedRequest usersShowRequestsAccepted">
+                          <div className="card-content">
+                            <div className="media">
+                              <div className="media-content">
+                                {request.user &&
+                                  <img className="userShowRequestProfilePicture" src={request.user.picture} />
+                                }
+                                <div className="userShowRequestsProfileDetails">
+                                  {request.user &&
+                                    <Link to={`/users/${request.user._id}`}>
+                                      <div className="requesteeName">{request.user.fullName}</div>
+                                      <div className="requesteeRole">{request.user.role}</div>
+                                      <div className="requesteeEmailDetails">{request.user.email}</div>
+                                    </Link>
+                                  }
+                                  <a className="acceptRequestbutton" ><i className="fas fa-check"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      }
                     </div>
-                  </div>
-                    }
-                    {(request.status === 'accepted')&&
-          <div className="cardAcceptedRequest usersShowRequestsAccepted">
-            <div className="card-content">
-              <div className="media">
-                <div className="media-content">
-                  {request.user &&
-                    <img className="userShowRequestProfilePicture" src={request.user.picture} />
-                  }
-                  <div className="userShowRequestsProfileDetails">
-                    {request.user &&
-                      <Link to={`/users/${request.user._id}`}>
-                        <div className="requesteeName">{request.user.fullName}</div>
-                        <div className="requesteeRole">{request.user.role}</div>
-                        <div className="requesteeEmailDetails">{request.user.email}</div>
-                      </Link>
-                    }
-                    <a className="acceptRequestbutton" ><i className="fas fa-check"></i></a>
-                  </div>
+                  )}
                 </div>
-              </div>
+              )}
             </div>
-          </div>
-                    }
-                  </div>
-                )}
-              </div>
-            )}
           </div>
         </div>
       </div>
