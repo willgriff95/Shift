@@ -53,18 +53,18 @@ class Navbar extends React.Component {
             <span></span>
           </div> */}
           </div>
-          <div id="navMenubd-example" className="navbar-menu">
-            <div className="navbar-end">
-              <div className="navbar-item userDetails">
+          <div id="navMenubd-example" >
+            {/* <div className="navbar-end"> */}
+              {/* <div className="navbar-item userDetails"> */}
                 {/* <span className="icon">
                 <i className="fas fa-user"></i>
               </span> */}
                 {/* <button  className="logOutButton" onClick={this.handleLogout}>Log Out</button> */}
-                <Link to={`/profile/${this.state.users._id}`} className="navbar-item" >
+                <Link to={`/profile/${this.state.users._id}`}  >
                   <div className="profilePicture" style={styles} />
                 </Link>
-              </div>
-            </div>
+              {/* </div> */}
+            {/* </div> */}
           </div>
         </nav>
 

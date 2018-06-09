@@ -51,19 +51,24 @@ class JobsIndex extends React.Component {
           <div className="columns is-multiline ">
             <div className="column is-full-desktop is-full-tablet is-mobile indexList">
               <div className="columns searchBar" >
-                <div className="column is-full-desktop is-half-tablet is-half-mobile">
+                <div className="column is-full-desktop is-half-tablet  is-half-mobile ">
                   <SortFilterBar
                     handleChange={this.handleChange}
                     data={this.state}
                   />
                 </div>
-                <div className="column is-full-desktop is-half-tablet is-half-mobile">
+                <div className="column is-full-desktop is-half-tablet is-half-mobile floatRight">
 
                   <div onClick={this.showListView}  className="mapButton">
-                    <i className="fas fa-map-marker-alt listIcon"></i> Map
-                  </div>
+                    <i className="fas fa-map-marker-alt listIcon"></i>
+                    <div className="displayDesktop">
+                      Map
+                    </div>                  </div>
                   <div onClick={this.hideListView} className="listButton">
-                    <i className="fas fa-list-ul listIcon"></i> List
+                    <i className="fas fa-list-ul listIcon"></i>
+                    <div className="displayDesktop">
+                      List
+                    </div>
                   </div>
                 </div>
 
@@ -73,19 +78,19 @@ class JobsIndex extends React.Component {
           {!this.state.listView &&
           <div className="columns is-multiline ">
             {this.sortedFilteredJobs().map(job =>
-              <div className="column is-one-quarter-desktop-new is-full-tablet is-mobile indexList" key={job._id}>
+              <div className="column is-one-quarter-desktop is-one-quarter-tablet is-four-fifths-mobile indexList" key={job._id}>
                 <Link to={`/jobs/${job._id}`}>
                   <div className="card indexCards">
                     <div className="card-content">
                       <div className="media">
                         <div className="media-content">
                           <p className="indexJobTitle">{job.title}</p>
-                          <div className="column is-half-desktop is-full-tablet is-mobile center" key={job._id}>
+                          <div className="column is-half-desktop is-half-tablet is-half-mobile center" key={job._id}>
                             <p className="dayRate">£{job.rate}</p>
                             <div className="dayRateText2">/day rate</div>
                             <p className="indexContract">{job.contract} months</p>
                           </div>
-                          <div className="column is-half-desktop is-full-tablet is-mobile floatRight" key={job._id}>
+                          <div className="column is-half-desktop is-half-tablet is-half-mobile floatRight" key={job._id}>
                             <div className=" indexCompanyPicture" style={{ backgroundImage: `url(${job.manager.companyPicture})`}} />
                           </div>
                         </div>

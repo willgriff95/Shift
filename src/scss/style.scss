@@ -127,12 +127,11 @@ li:active {
 
 .profilePicture {
     height: 50px;
-    right: 15px;
+    right: 20%;
     width: 50px;
     top: 10px;
     border-radius: 45px;
     z-index: 1000;
-    // border: 2px solid white;
     position: absolute;
     -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
@@ -238,23 +237,8 @@ li:active {
   text-align: center;
   height: 100vh;
 }
-.leftLoginRegisterLogo {
-    width: 20%;
-    position: relative;
-    top: 47%;
-    margin: 0 auto;
-}
-.rightRegisterContent {
-    /* margin: 60px; */
-    top: 8%;
-    width: 80%;
-    /* border-radius: 10px; */
-    padding: 40px 60px 40px 60px;
-    position: relative;
-    background-color: white;
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
-    box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
-}
+
+
 .rightLoginContent {
     /* margin: 60px; */
     top: 25%;
@@ -592,18 +576,7 @@ input[type=password]:focus, textarea:focus {
     padding-left: 5px;
     padding-right: 5px;
 }
-.listItem {
-    width: 100%;
-    display: inline;
-    text-align: left;
-    margin: 0 auto;
-    float: left;
-    position: absolute;
-    left: 40px;
-    font-size: 13px;
-    font-weight: 400;
-    color: #B5B5B5;
-}
+
 .listIcon {
     width: 50%;
     display: inline;
@@ -629,34 +602,8 @@ input[type=password]:focus, textarea:focus {
 .sidebarhr{
   width: 80%;
 }
-.mapButton {
-    text-align: center;
-    padding-top: 7px;
-    height: 30px;
-    width: 90px;
-    background-color: white;
-    right: 25%;
-    font-size: 15px;
-    position: absolute;
-    z-index: 1000;
-    height: 37px;
-    border-radius: 5px;
-    border: 1px solid #F4F4F4;
-}
-.listButton {
-    text-align: center;
-    padding-top: 7px;
-    height: 30px;
-    width: 90px;
-    background-color: white;
-    right: 15%;
-    font-size: 15px;
-    position: absolute;
-    z-index: 1000;
-    height: 37px;
-    border-radius: 5px;
-    border: 1px solid #F4F4F4;
-}
+
+
 
 .sidebar {
     align-items: center;
@@ -683,11 +630,17 @@ a {
     cursor: pointer;
     text-decoration: none;
 }
+.floatRight {
+    float: right;
+    padding: 0;
+    top: 0;
+    margin: 0;
+}
 .searchBar {
     z-index: 1000;
     height: 30px;
     top: -60px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     position: absolute;
 }
@@ -766,14 +719,7 @@ a {
     margin: 0 auto;
     position: relative;
 }
-.menu {
-    font-size: 1rem;
-    position: relative;
-    z-index: 1000;
-    top: 23px;
-    height: 100%;
-    color: #868686;
-}
+
 
 .navbar-dropdown {
     background-color: white;
@@ -1231,14 +1177,7 @@ hr {
     text-align: left;
     height: 100%;
 }
-.mainBody {
-    position: relative;
-    top: 150px;
-    left: 58px;
-    width: 75%;
-    z-index: 100;
-    margin: 0 auto;
-}
+
 .mainBody3 {
     position: relative;
     top: 150px;
@@ -1291,20 +1230,201 @@ hr {
     width: 30%;
 }
 
-.columns.is-fullheight {
-    top: 40px;
-    position: fixed;
-    max-height: calc(100vh - ( 3.25rem - .75rem ));
-    height: calc(100vh - ( 3.25rem - .75rem ));
-    z-index: 1700;
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* justify-content: stretch; */
-}
-.columns.is-fullheight .column {
+@media only screen and (max-width: 768px) {
+  .displayDesktop{
+    display: none;
+  }
+  .mapButton {
+      text-align: center;
+      padding-top: 7px;
+      height: 30px;
+      padding-left: 13px;
+      width: 40px;
+      background-color: white;
+      right: 55%;
+      font-size: 15px;
+      position: absolute;
+      z-index: 1000;
+      height: 37px;
+      border-radius: 5px;
+      border: 1px solid #F4F4F4;
+  }
+  .listItem {
+      width: 100%;
+      display: inline;
+      text-align: left;
+      margin: 0 auto;
+      float: left;
+      left: 10px;
+      text-align: center;
+      position: relative;
+      /* left: 0px; */
+      font-size: 13px;
+      font-weight: 400;
+      color: #B5B5B5;
+  }
+  .listButton {
+    text-align: center;
+    padding-top: 7px;
+    height: 30px;
+    width: 40px;
+    background-color: white;
+    right: 30%;
+    font-size: 15px;
+    padding-left: 10px;
+    position: absolute;
+    z-index: 1000;
+    height: 37px;
+    border-radius: 5px;
+    border: 1px solid #F4F4F4;
+  }
+  .menu {
+    font-size: 1rem;
+    position: relative;
+    z-index: 1000;
+    top: 53px;
+    height: 100%;
+    color: #868686;
+  }
+  .columns.is-fullheight .column {
+      position: fixed;
+      left: 0;
+      width: 0;
+      height: 100%;
+      /* overflow-y: auto; */
+  }
+  .mainBody {
+    position: relative;
+    top: 130px;
+    left: 48px;
+    width: 85%;
+    z-index: 100;
+    margin: 0 auto;
+  }
+  .leftLoginRegisterLogo {
+      width: 30%;
+      position: relative;
+      top: 8%;
+      margin: 0 auto;
+  }
+  .rightRegisterContent {
+      /* margin: 0 auto; */
+      top: 18%;
+      left: 10%;
+      width: 80%;
+      /* border-radius: 10px; */
+      padding: 40px 60px 40px 60px;
+      position: absolute;
+      background-color: white;
+      -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+      box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+  }
+  .column.is-2.is-sidebar-menu{
     position: fixed;
     left: 0;
-    width: 160px;
+    width: 60px;
     height: 100%;
     /* overflow-y: auto; */
+  }
+}
+@media only screen and (min-width: 768px) {
+  .displayDesktop{
+    display: inline;
+  }
+  .rightRegisterContent {
+      /* margin: 60px; */
+      top: 8%;
+      width: 80%;
+      /* border-radius: 10px; */
+      padding: 40px 60px 40px 60px;
+      position: relative;
+      background-color: white;
+      -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+      box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+  }
+  .leftLoginRegisterLogo {
+      width: 20%;
+      position: relative;
+      top: 47%;
+      margin: 0 auto;
+  }
+  .mapButton {
+      text-align: center;
+      padding-top: 7px;
+      height: 30px;
+      width: 90px;
+      background-color: white;
+      right: 25%;
+      font-size: 15px;
+      position: absolute;
+      z-index: 1000;
+      height: 37px;
+      border-radius: 5px;
+      border: 1px solid #F4F4F4;
+  }
+  .listButton {
+      text-align: center;
+      padding-top: 7px;
+      height: 30px;
+      width: 90px;
+      background-color: white;
+      right: 15%;
+      font-size: 15px;
+      position: absolute;
+      z-index: 1000;
+      height: 37px;
+      border-radius: 5px;
+      border: 1px solid #F4F4F4;
+  }
+  .columns.is-fullheight {
+      top: 40px;
+      position: fixed;
+      max-height: calc(100vh - ( 3.25rem - .75rem ));
+      height: calc(100vh - ( 3.25rem - .75rem ));
+      z-index: 1700;
+      /* display: flex; */
+      /* flex-direction: row; */
+      /* justify-content: stretch; */
+  }
+  .columns.is-fullheight .column {
+      position: fixed;
+      left: 0;
+      height: 100%;
+      /* overflow-y: auto; */
+  }
+  .menu {
+      font-size: 1rem;
+      position: relative;
+      z-index: 1000;
+      top: 23px;
+      height: 100%;
+      color: #868686;
+  }
+  .listItem {
+      width: 100%;
+      display: inline;
+      text-align: left;
+      margin: 0 auto;
+      float: left;
+      position: absolute;
+      left: 40px;
+      font-size: 13px;
+      font-weight: 400;
+      color: #B5B5B5;
+  }
+  .mainBody {
+      position: relative;
+      top: 150px;
+      left: 58px;
+      width: 75%;
+      z-index: 100;
+      margin: 0 auto;
+  }
+  .column.is-2.is-sidebar-menu{
+    position: fixed;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    /* overflow-y: auto; */
+  }
 }

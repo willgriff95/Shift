@@ -34,13 +34,13 @@ class Sidebar extends React.Component {
 
     return(
       <div className="columns is-fullheight sideBarMain">
-        <div className="column is-2 is-sidebar-menu is-hidden-mobile">
+        <div className="column is-2 is-sidebar-menu">
           <aside className="menu">
             <ul className=" sidebar">
               {/* <hr/> */}
               <Link to="/jobs">
                 <li onClick={this.showSearchBar} className="iconSidebar" >
-                  <div className="listItem"><i className="fas fa-search listIcon"></i> Search</div>
+                  <div className="listItem"><i className="fas fa-search listIcon"></i><div className="displayDesktop"> Search</div></div>
                 </li>
               </Link>
 
@@ -50,7 +50,7 @@ class Sidebar extends React.Component {
                 <Link to="/jobs/new">
                   {/* <p>{user.role}</p> */}
                   <li className="iconSidebarAdd">
-                    <div className="listItem"><i className="fas fa-plus listIcon"></i> Add Job</div>
+                    <div className="listItem"><i className="fas fa-plus listIcon"></i><div className="displayDesktop"> Add Job</div></div>
                   </li>
                 </Link>
               }
@@ -63,12 +63,12 @@ class Sidebar extends React.Component {
               {Auth.isAuthenticated() &&
                 <Link to={`/profile/${Auth.getPayload().sub}`}>
                   <li className="iconSidebar">
-                    <div className="listItem"><i className="fas fa-user listIcon"></i> Account</div>
+                    <div className="listItem"><i className="fas fa-user listIcon"></i><div className="displayDesktop"> Account</div></div>
                   </li>
                 </Link>
               }
               <li className="iconSidebar" onClick={this.handleLogout}>
-                <div className="listItem"><i className="fas fa-sign-out-alt listIcon"></i> Log Out</div>
+                <div className="listItem"><i className="fas fa-sign-out-alt listIcon"></i><div className="displayDesktop"> Log Out</div></div>
               </li>
 
             </ul>
