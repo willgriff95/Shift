@@ -48,8 +48,6 @@
     "chai": "^4.1.2",
     "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.16.3",
-    "filestack-js": "^1.0.1",
-    "filestack-react": "^1.3.9",
     "install": "^0.11.0",
     "jsonwebtoken": "^8.2.1",
     "lodash": "^4.17.10",
@@ -58,7 +56,6 @@
     "mongoose-unique-validator": "^2.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.3.2",
-    "react-filestack": "^0.9.7",
     "react-router-dom": "^4.2.2",
     "sinon": "^5.0.7"
   }

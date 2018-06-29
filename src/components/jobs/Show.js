@@ -84,8 +84,10 @@ class JobsShow extends React.Component {
             <div className="tile is-vertical is-3">
               <div className="tile">
                 <div className="tile is-parent is-vertical">
-                  <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
-                  </div>
+                  {job.manager.companyPicture &&
+                    <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
+                    </div>
+                  }
                   <div className="tile is-child  is-white companyLogo">
                     <div className="payDetails">
                       <div className="dayRate">£{job.rate}</div>
@@ -129,7 +131,9 @@ class JobsShow extends React.Component {
                     <div className="hiringManager">{job.manager.role}</div>
                     <div className="emailDetails">{job.manager.email}</div>
                     <div  /* style={styles2} */ />
-                    <img className="jobshowmanagerProfilePicture" src={job.manager.picture} />
+                    {job.manager.picture &&
+                      <img className="jobshowmanagerProfilePicture" src={job.manager.picture} />
+                    }
                   </Link>
                 </div>
                 <hr/>

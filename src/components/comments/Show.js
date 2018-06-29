@@ -11,7 +11,6 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
   const requestMade = request && request.status === 'pending';
   return (
     <div>
-
       {job.job.comments.map(comment =>
         <div key={comment._id}>
           <img className="indexManagerProfilePicture" src={comment.createdBy.picture} />
@@ -49,7 +48,6 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
         <button  onClick={handleRequestCreate} disabled={requestMade} className="requestPendingButton" ><i className="fas fa-check"></i> Request Pending</button>
       }
       {/* <button onClick={handleRequestCreate} className="requestbutton "><i className="fas fa-check"></i> Request Sent</button> */}
-
     </div>
   );
 };

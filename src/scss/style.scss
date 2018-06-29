@@ -373,6 +373,24 @@ img {
     width: 40px;
     border-radius: 30px;
 }
+.rejectedRequestbutton {
+    /* background-color: rgba(255, 255, 255, 0); */
+    font-family: "circe rounded";
+    color: red;
+    cursor: default;
+    font-size: 16px;
+    padding-top: 8px;
+    border-radius: 30px;
+    height: 40px;
+    border: 1px solid #D3D3D3;
+    top: 10px;
+    right: 10px;
+    padding-right: 13px;
+    text-align: right;
+    position: absolute;
+    width: 40px;
+    border-radius: 30px;
+}
 .rejectRequestbutton:hover {
     /* background-color: rgba(255, 255, 255, 0); */
     font-family: "circe rounded";
@@ -816,7 +834,7 @@ hr {
     /* margin: 0 auto; */
 }
 .mapCard{
-  height: 300px;
+  height: 100%;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
 
 }
