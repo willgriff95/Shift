@@ -667,6 +667,27 @@ a {
     z-index: 1000;
     margin: 0 auto;
 }
+
+// @media only screen
+// and (min-device-width : 375px)
+// and (max-device-width : 667px)
+// and (orientation : portrait) {
+//   .mainBody2 {
+//       position: relative;
+//       top: 72px;
+//       left: 0;
+//       width: 100%;
+//       z-index: 1000;
+//       margin: 0 auto;
+//   }
+//   .companyLogo2{
+//     padding-left: 25px;
+//     padding-top: 3px;
+//     margin: 10px;
+//     padding-bottom: 20px;
+//     padding-right: 25px;
+//   }
+// }
 .sideBarMain{
     // -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
     // box-shadow: 20px 40px 29px 50px rgba(0, 0, 0, 0.1);
@@ -970,7 +991,7 @@ hr {
     position: relative;
     top: 20px;
     margin: 1%;
-    width: 48%;
+    width: 100%;
 }
 .usersShowRequestsAccepted {
     background-color: white;
@@ -986,7 +1007,7 @@ hr {
     position: relative;
     top: 20px;
     margin: 1%;
-    width: 48%;
+    width: 100%;
 }
 
 .companyLogo5 {
@@ -998,7 +1019,7 @@ hr {
 
 .userShowRequestsProfileDetails {
     /* height: 100px; */
-    width: 72%;
+    width: 80%;
     left: 100px;
     /* top: 40px; */
     position: relative;
