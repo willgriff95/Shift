@@ -216,6 +216,37 @@ li:active {
 .signUp{
   float: right;
 }
+.rating {
+    float:left;
+    width:300px;
+}
+.rating span { float:right; position:relative; }
+.rating span input {
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
+}
+.rating span label {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    text-align:center;
+    color:#FFF;
+    background:#ccc;
+    font-size:30px;
+    margin-right:2px;
+    line-height:30px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.rating span:hover ~ span label,
+.rating span:hover label,
+.rating span.checked label,
+.rating span.checked ~ span label {
+    background:#F90;
+    color:#FFF;
+}
 
 .roleSelect {
     float: left;
@@ -250,6 +281,144 @@ li:active {
     -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
     box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
 }
+
+.rating {
+  text-align: center;
+  margin-top: 120px;
+  position: relative;
+  width: 50%;
+  float: left;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.star {
+  display: inline-block;
+  margin: 5px;
+  font-size: 30px;
+  color: whitesmoke;
+  position: relative;
+
+
+  &.animate {
+     -webkit-animation: stretch-bounce .5s ease-in-out;
+  }
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+
+.full {
+  &:before {
+    font-family: fontAwesome;
+    display: inline-block;
+    content: "\f005";
+    position: relative;
+    float: right;
+    z-index: 2;
+  }
+}
+
+.half {
+  &:before {
+     font-family: fontAwesome;
+     content: "\f089";
+     position: absolute;
+     float: left;
+    z-index: 3;
+  }
+}
+
+.star-colour {
+  color: #ffd700;
+}
+
+
+
+@-webkit-keyframes stretch-bounce {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  25% {
+    -webkit-transform: scale(1.5);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+  }
+  75% {
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+.selected {
+  &:before {
+    font-family: "Font Awesome 5 Pro" !important;
+    display: inline-block;
+    content: "\f005";
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &.pulse {
+    &:before {
+      -webkit-transform: scale(3);
+      opacity: 0;
+    }
+  }
+
+  &.is-animated {
+    &:before {
+       transition: 1s ease-out;
+    }
+  }
+}
+
+.score {
+  font-family: arial;
+  font-size: 20px;
+  color: green;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.score-rating {
+  vertical-align: sup;
+  top: -5px;
+  position: relative;
+  font-size: 150%;
+}
+
+.total {
+  vertical-align: sub;
+  top: 0px;
+  position: relative;
+  font-size: 100%;
+}
+
+.average {
+  font-family: arial;
+  font-size: 20px;
+  color: indianred;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+
+  .score-average {
+    padding-top: 30px;
+  }
+}
 img {
     position: relative;
     /* height: 100%; */
@@ -265,6 +434,18 @@ img {
     padding-left: 1em;
     padding-bottom: 0.50em;
 }
+
+.select select {
+    background-color: white;
+    border-color: #dbdbdb;
+    color: cornflowerblue;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    max-width: 100%;
+    outline: none;
+}
+
 .column {
     display: block;
     flex-basis: 0;
@@ -454,6 +635,8 @@ select{
   font-family: "Circe-light", sans-serif;
 
 }
+
+
 .card-image {
   background-position: center;
   background-size: cover;

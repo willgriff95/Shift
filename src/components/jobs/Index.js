@@ -85,7 +85,7 @@ class JobsIndex extends React.Component {
                       <div className="media">
                         <div className="media-content">
                           <p className="indexJobTitle">{job.title}</p>
-                          <div className="column is-half-desktop is-half-tablet is-half-mobile center" key={job._id}>
+                          <div className="column is-half-desktop is-half-tablet is-half-mobile center">
                             <p className="dayRate">£{job.rate}</p>
                             <div className="dayRateText2">/day rate</div>
                             <p className="indexContract">{job.contract} months</p>

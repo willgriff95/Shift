@@ -72,7 +72,12 @@ class UsersShow extends React.Component {
                   Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk
                 </div>
               </div>
-              <img className="userShowProfilePicture" src={user.picture} />
+              {!user.picture &&
+                <img className="userShowProfilePicture" src="https://i.imgur.com/pxca5Js.jpg" />
+              }
+              {user.picture &&
+                <img className="userShowProfilePicture" src={user.picture} />
+              }
             </div>
           </div>
           <div className="columns is-multiline">

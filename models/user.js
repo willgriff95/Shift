@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   picture: { type: String },
   companyPicture: { type: String},
-  bio: { type: String}
+  bio: { type: String},
+  rating: { type: Number }
 });
 
 // Makes uniqueness into a ValidationError for the purposes of convenience.

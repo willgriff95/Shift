@@ -96,13 +96,14 @@ function jobsRelist(req, res, next){
 }
 
 function commentCreateRoute(req, res, next) {
-  console.log('comment');
+  // console.log('comment');
   req.body.createdBy = req.currentUser;
   Job
     .findById(req.params.id)
     .populate('comments.createdBy')
     .then(job => {
       job.comments.push(req.body);
+      // job.manager.rating.push(req.body);
       return job.save();
     })
     .then(job => res.json(job))

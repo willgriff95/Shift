@@ -10,6 +10,7 @@ mongoose.connect(dbURI, (err, db) => {
   User.create([
     {
       role: 'manager',
+      rating: 5,
       fullName: 'Elliot Yandzio',
       companyPicture: 'https://cdn.worldvectorlogo.com/logos/facebook-1.svg',
       email: 'elliot@facebook.co.uk',
@@ -20,6 +21,7 @@ mongoose.connect(dbURI, (err, db) => {
     },
     {
       role: 'freelance',
+      rating: 5,
       companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
       fullName: 'Andrew Xu',
       email: 'andrew@pixelcrayons.co.uk',
@@ -30,6 +32,7 @@ mongoose.connect(dbURI, (err, db) => {
     },
     {
       role: 'manager',
+      rating: 5,
       companyPicture: 'http://brandemia.org/sites/default/files/sites/default/files/logo_google-despues.jpg',
       fullName: 'Will Griffiths',
       email: 'will.griffiths@google.co.uk',
@@ -40,6 +43,7 @@ mongoose.connect(dbURI, (err, db) => {
     },
     {
       role: 'manager',
+      rating: 5,
       companyPicture: 'http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png',
       fullName: 'Alex Poytner',
       email: 'alex.poytner@ga.co.uk',
@@ -50,6 +54,7 @@ mongoose.connect(dbURI, (err, db) => {
     },
     {
       role: 'manager',
+      rating: 5,
       companyPicture: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Monzo_logo.svg/1200px-Monzo_logo.svg.png',
       fullName: 'Matt Hunter-King',
       email: 'matt.h.king@monzo.co.uk',
@@ -60,6 +65,7 @@ mongoose.connect(dbURI, (err, db) => {
     },
     {
       role: 'manager',
+      rating: 5,
       companyPicture: 'http://winerieparisienne.fr/wp-content/uploads/2017/07/spotify-logo-vector-download.jpg',
       fullName: 'Bridget Turnbull',
       email: 'bridg.t@spotify.co.uk',

@@ -76,10 +76,10 @@ class ProfileShow extends React.Component {
                 {user.bio}
               </div>
             </div>
-            {(this.state.user.picture === 'undefined')&&
+            {!user.picture &&
               <img className="userShowProfilePicture" src="https://i.imgur.com/pxca5Js.jpg" />
             }
-            {(this.state.user.picture !== 'undefined')&& user.picture &&
+            {user.picture &&
               <img className="userShowProfilePicture" src={user.picture} />
             }
 

@@ -11,6 +11,7 @@ const requestSchema = new mongoose.Schema({
 
 const commentSchema = new mongoose.Schema({
   content: { type: String, required: true },
+  rating: { type: Number, required: true, min: 0, max: 5 },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User' }
 }, {
   timestamps: true

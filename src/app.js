@@ -9,6 +9,7 @@ import {
 
 import 'bulma';
 import './scss/style.scss';
+import '../node_modules/react-star-rating/dist/css/react-star-rating.min.css';
 
 import Home from './components/Home';
 import ProfileEdit from './components/profile/Edit';
@@ -26,6 +27,7 @@ import NotFound from './components/common/NotFound';
 // import Sidebar from './components/Sidebar';
 // import Navbar from './components/Navbar';
 // import Auth from './lib/Auth';
+
 
 class App extends React.Component {
   render() {
