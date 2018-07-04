@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 import ProfileForm from './Form';
-import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 import Auth from '../../lib/Auth';
 // import ReactFilestack from 'filestack-react';
@@ -50,8 +49,6 @@ class ProfileEdit extends React.Component {
     return (
       <div>
         <Navbar />
-
-        <Sidebar />
         <ProfileForm
           user={this.state}
           handleChange={this.handleChange}

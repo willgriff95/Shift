@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Auth from '../../lib/Auth';
 import { Link } from 'react-router-dom';
-import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 
 class UsersShow extends React.Component {
@@ -39,7 +38,6 @@ class UsersShow extends React.Component {
     return (
       <div>
         <Navbar />
-        <Sidebar />
         <div className="mainBody2">
           <div className="columns is-multiline">
             <div className="column is-four-fifths-desktop is-full-mobile is-two-third-tablet companyLogo">

@@ -25,8 +25,10 @@ import SecureRoute from './components/common/SecureRoute';
 import FlashMessages from './components/common/FlashMessages';
 import NotFound from './components/common/NotFound';
 // import Sidebar from './components/Sidebar';
-// import Navbar from './components/Navbar';
+import Navbar from './components/Navbar';
 // import Auth from './lib/Auth';
+
+
 
 
 class App extends React.Component {
@@ -34,8 +36,8 @@ class App extends React.Component {
     return (
       <Router>
         <main>
-
           <section>
+            <Navbar />
             <FlashMessages />
             <Switch>
               {/* Decorator component => the BrowserRouter decorates the component with useful stuff like location, match, history which can be accessed with this.props inside of each component */}

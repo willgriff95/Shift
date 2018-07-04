@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import AutoComplete from '../common/AutoComplete';
 import Auth from '../../lib/Auth';
-import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 
 class JobsNew extends React.Component {
@@ -35,8 +34,6 @@ class JobsNew extends React.Component {
   render () {
     return (
       <div>
-        <Navbar />
-        <Sidebar />
         <div className="mainBody2">
           <div className="columns is-multiline">
             <div className="column is-four-fifths-desktop is-full-mobile is-two-third-tablet companyLogo2">

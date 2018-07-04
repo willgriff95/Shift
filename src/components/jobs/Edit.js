@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 // import JobsForm from './Form';
-import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 import Auth from '../../lib/Auth';
 // import ReactFilestack from 'filestack-react';
@@ -66,7 +65,6 @@ class JobsEdit extends React.Component {
     return (
       <div>
         <Navbar />
-        <Sidebar />
         <div className="mainBody2">
           <form onSubmit={this.handleSubmit}>
             <div className="tile is-ancestor">

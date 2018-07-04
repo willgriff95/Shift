@@ -9,7 +9,7 @@ mongoose.connect(dbURI, (err, db) => {
 
   User.create([
     {
-      role: 'manager',
+      role: 'Employer',
       rating: 5,
       fullName: 'Elliot Yandzio',
       companyPicture: 'https://cdn.worldvectorlogo.com/logos/facebook-1.svg',
@@ -20,7 +20,7 @@ mongoose.connect(dbURI, (err, db) => {
       bio: 'Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk'
     },
     {
-      role: 'freelance',
+      role: 'Freelancer',
       rating: 5,
       companyPicture: 'http://thietkemythuat.com/thu-vien-logo/wp-content/uploads/2014/11/pixel_logo.jpg',
       fullName: 'Andrew Xu',
@@ -31,7 +31,7 @@ mongoose.connect(dbURI, (err, db) => {
       bio: 'Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk'
     },
     {
-      role: 'manager',
+      role: 'Employer',
       rating: 5,
       companyPicture: 'http://brandemia.org/sites/default/files/sites/default/files/logo_google-despues.jpg',
       fullName: 'Will Griffiths',
@@ -42,7 +42,7 @@ mongoose.connect(dbURI, (err, db) => {
       bio: 'Responsible for building the function in the APAC region and focused on the growth of the business organisation and support functions in partnership with the regional executives and HR leaders to determine and drive the APAC people strategy. Leading a team of 40+ staffing professionals across India, China, South East Asia, Japan and Australia. Covering all hiring into sales, marketing, legal, public policy, corporate comms, finance, people operations and facilities.'
     },
     {
-      role: 'manager',
+      role: 'Employer',
       rating: 5,
       companyPicture: 'http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png',
       fullName: 'Alex Poytner',
@@ -53,7 +53,7 @@ mongoose.connect(dbURI, (err, db) => {
       bio: 'Responsible for building the function in the APAC region and focused on the growth of the business organisation and support functions in partnership with the regional executives and HR leaders to determine and drive the APAC people strategy. Leading a team of 40+ staffing professionals across India, China, South East Asia, Japan and Australia. Covering all hiring into sales, marketing, legal, public policy, corporate comms, finance, people operations and facilities.'
     },
     {
-      role: 'manager',
+      role: 'Employer',
       rating: 5,
       companyPicture: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Monzo_logo.svg/1200px-Monzo_logo.svg.png',
       fullName: 'Matt Hunter-King',
@@ -64,7 +64,7 @@ mongoose.connect(dbURI, (err, db) => {
       bio: 'Responsible for building the function in the APAC region and focused on the growth of the business organisation and support functions in partnership with the regional executives and HR leaders to determine and drive the APAC people strategy. Leading a team of 40+ staffing professionals across India, China, South East Asia, Japan and Australia. Covering all hiring into sales, marketing, legal, public policy, corporate comms, finance, people operations and facilities.'
     },
     {
-      role: 'manager',
+      role: 'Employer',
       rating: 5,
       companyPicture: 'http://winerieparisienne.fr/wp-content/uploads/2017/07/spotify-logo-vector-download.jpg',
       fullName: 'Bridget Turnbull',

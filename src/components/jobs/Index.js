@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 // import Auth from '../../lib/Auth';
-import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 
 
@@ -40,16 +39,15 @@ class JobsIndex extends React.Component {
   hideListView = () => this.setState({ listView: false });
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div>
-        <Navbar />
-        <Sidebar />
+        {/* <Navbar /> */}
         <div className="mainBody">
           {/* <div className="searchBarBackground">
         </div> */}
           <div className="columns is-multiline ">
-            <div className="column is-full-desktop is-full-tablet is-mobile indexList">
+            <div className="column is-four-fifths-desktop is-full-tablet is-mobile indexList">
               <div className="columns searchBar" >
                 <div className="column is-full-desktop is-half-tablet  is-half-mobile ">
                   <SortFilterBar

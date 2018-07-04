@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Auth from '../../lib/Auth';
 import { Link } from 'react-router-dom';
-import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
 
 class ProfileShow extends React.Component {
@@ -49,7 +48,6 @@ class ProfileShow extends React.Component {
     return (
       <div>
         <Navbar />
-        <Sidebar />
         <div className="mainBody2 columns is-multiline">
           <div className="column is-full-desktop is-full-mobile is-full-tablet companyLogo">
             <div>
