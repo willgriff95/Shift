@@ -120,7 +120,14 @@ class Map extends React.Component {
     this.marker = new google.maps.Marker({
       position: this.map.getCenter(),
       map: this.map,
-      icon: 'https://i.imgur.com/6OGWoXQ.png'
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: '#3399FF',
+        fillOpacity: 1,
+        scale: 7,
+        strokeColor: 'white',
+        strokeWeight: 3
+      }
     });
     this.generateMarkers();
 
@@ -139,7 +146,14 @@ class Map extends React.Component {
       return new google.maps.Marker({
         position: marker.location,
         map: this.map,
-        icon: 'https://i.imgur.com/6OGWoXQ.png'
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: '#3399FF',
+          fillOpacity: 1,
+          scale: 7,
+          strokeColor: 'white',
+          strokeWeight: 3
+        }
       });
     });
   }

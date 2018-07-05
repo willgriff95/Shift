@@ -1,6 +1,7 @@
 import React from 'react';
 // import { client } from 'filestack-react';
 // const filestack = client.init('A06LnFQSXRbe2qEOmejwkz', security);
+// import Autocomplete from 'react-autocomplete-tags';
 
 
 const ProfileForm = ({ handleChange, handleSubmit, user }) => {
@@ -30,7 +31,10 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
                   <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
                 </div>
               </div>
-
+              <Autocomplete
+                suggestions={this.state.suggestions}
+                onChange={this.handleChange}
+              />
               <hr />
               <div className="userShowBio">
                 <div className="userShowBioDetails">

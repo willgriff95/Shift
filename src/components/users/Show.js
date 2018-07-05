@@ -37,83 +37,89 @@ class UsersShow extends React.Component {
     if(Object.keys(user).length === 0) return null;
     return (
       <div>
-        <Navbar />
-        <div className="mainBody2">
-          <div className="columns is-multiline">
-            <div className="column is-four-fifths-desktop is-full-mobile is-two-third-tablet companyLogo">
-              <div>
-                {Auth.isCurrentUser(!user._id)&&
-                <a className="emailIconShow" href={'mailto:' + `${user.email}`}>
-                  <i className="far fa-envelope"></i>
-                </a>
-                }
-                {Auth.isCurrentUser(user._id)&&
-                <a className="deleteIconShow" onClick={this.handleDelete}>
-                  <i  className="far fa-trash-alt"></i>
-                </a>
-                }
-                {Auth.isCurrentUser(user._id)&&
-                <Link className="editIconShow" to={`/profile/${user._id}/edit`}>
-                  <i className="far fa-edit"></i>
-                </Link>
-                }
-                <div className="userShowProfileDetails">
-                  <div className="profilemanagerName">{user.fullName}</div>
-                  <div className="profilehiringManager">{user.role}</div>
-                  <div className="profileemailDetails">{user.email}</div>
-                  <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
+        <div className="columns is-multiline ">
+          <div className="column is-2"></div>
+          <div className="mainBody2">
+            <div className="columns is-multiline">
+              <div className="column is-four-fifths-desktop is-full-mobile is-two-third-tablet companyLogo">
+                <div>
+                  {Auth.isCurrentUser(!user._id)&&
+                  <a className="emailIconShow" href={'mailto:' + `${user.email}`}>
+                    <i className="far fa-envelope"></i>
+                  </a>
+                  }
+                  {Auth.isCurrentUser(user._id)&&
+                  <a className="deleteIconShow" onClick={this.handleDelete}>
+                    <i  className="far fa-trash-alt"></i>
+                  </a>
+                  }
+                  {Auth.isCurrentUser(user._id)&&
+                  <Link className="editIconShow" to={`/profile/${user._id}/edit`}>
+                    <i className="far fa-edit"></i>
+                  </Link>
+                  }
+                  <div className="userShowProfileDetails">
+                    <div className="profilemanagerName">{user.fullName}</div>
+                    <div className="profilehiringManager">{user.role}</div>
+                    <div className="profileemailDetails">{user.email}</div>
+                    {user.role !== 'manager' &&
+                    <div className="userShowCompanyPicture is-vertical-center">
+                      <i className="far fa-file"></i>
+                    </div>
+                    }
+                  </div>
                 </div>
-              </div>
-              <hr />
-              <div className="userShowBio">
-                <div className="userShowBioDetails">
-                  Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk
+                <hr />
+                <div className="userShowBio">
+                  <div className="userShowBioDetails">
+                    Senior Full Stack Developer currently seeking opportunities I’m always looking for exciting work; from freelance opportunities to working for innovative companies so feel free to get in touch even just to say Hi! hello@willgriff.co.uk
+                  </div>
                 </div>
+                {!user.picture &&
+                  <img className="userShowProfilePicture" src="https://i.imgur.com/pxca5Js.jpg" />
+                }
+                {user.picture &&
+                  <img className="userShowProfilePicture" src={user.picture} />
+                }
               </div>
-              {!user.picture &&
-                <img className="userShowProfilePicture" src="https://i.imgur.com/pxca5Js.jpg" />
-              }
-              {user.picture &&
-                <img className="userShowProfilePicture" src={user.picture} />
-              }
             </div>
-          </div>
-          <div className="columns is-multiline">
-            {user.jobs.map(job =>
-              <div className="column is-four-fifths-desktop is-full-tablet is-mobile" key={job._id}>
-                {job.requests.map( request =>
-                  <div key={request._id}>
-                    <div className="card usersShowRequests">
-                      <div className="card-content">
-                        <div className="media">
-                          <div className="media-content">
-                            <img className="userShowRequestProfilePicture" src={request.user.picture} />
-                            <div className="userShowRequestsProfileDetails">
-                              <Link to={`/users/${request.user._id}`}>
-                                <div className="requesteeName">{request.user.fullName}</div>
-                                <div className="requesteeRole">{request.user.role}</div>
-                                <div className="requesteeEmailDetails">{request.user.email}</div>
-                                {/* <div className="requesteeStatus">{request.status}</div> */}
-                              </Link>
-                              {(request.status === 'pending')&&
-                                <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-check"></i>Pending</a>
-                              }
-                              {(request.status === 'accepted')&&
-                                <a className="acceptRequestbutton" ><i className="fas fa-check"></i>Accepted</a>
-                              }
-                              {(request.status === 'rejected')&&
-                                <a className="acceptRequestbutton" ><i className="fas fa-times"></i>Rejected</a>
-                              }
+            <div className="columns is-multiline">
+              {user.jobs.map(job =>
+                <div className="column is-four-fifths-desktop is-full-tablet is-mobile" key={job._id}>
+                  {job.requests.map( request =>
+                    <div key={request._id}>
+                      <div className="card usersShowRequests">
+                        <div className="card-content">
+                          <div className="media">
+                            <div className="media-content">
+                              <img className="userShowRequestProfilePicture" src={request.user.picture} />
+                              <div className="userShowRequestsProfileDetails">
+                                <Link to={`/users/${request.user._id}`}>
+                                  <div className="requesteeName">{request.user.fullName}</div>
+                                  <div className="requesteeRole">{request.user.role}</div>
+                                  <div className="requesteeEmailDetails">{request.user.email}</div>
+                                  {/* <div className="requesteeStatus">{request.status}</div> */}
+                                </Link>
+                                {(request.status === 'pending')&&
+                                  <a onClick={() => this.handleRequestAccept(job, request)}  className="acceptRequestbutton" ><i className="fas fa-check"></i>Pending</a>
+                                }
+                                {(request.status === 'accepted')&&
+                                  <a className="acceptRequestbutton" ><i className="fas fa-check"></i>Accepted</a>
+                                }
+                                {(request.status === 'rejected')&&
+                                  <a className="acceptRequestbutton" ><i className="fas fa-times"></i>Rejected</a>
+                                }
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <div className="spacer"></div>
                     </div>
-                    <div className="spacer"></div>
-                  </div>
-                )}
-              </div>
-            )}
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import Auth from '../../lib/Auth';
 import CommentShow from '../comments/Show';
 // import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
-import Rating from '../rating/Rating';
+// import Rating from '../rating/Rating';
 
 
 
@@ -15,7 +15,9 @@ class JobsShow extends React.Component {
   // In fact, `class` is not like a constructor in itself. It actually just invokes `constructor()` inside itself, and that's where the real constructing of the object occurs. There's a lot of stuff that React is doing under the hood, like attaching the methods onto the object.
 
   state = {
-    requestButtonClicked: false
+    requestButtonClicked: false,
+    averageRating: {},
+    averageRatingArray: []
   }
 
   componentDidMount() {
@@ -51,7 +53,22 @@ class JobsShow extends React.Component {
       .then(res => {
         const job = res.data;
         this.setState({ job, comment: {} });
-      });
+      }, this.averageRatingCalculator());
+  }
+
+  averageRatingCalculator(){
+    this.state.job.comments.map(comment =>
+      this.state.averageRatingArray.push(comment.rating)
+    );
+    var sum = 0;
+    for( var i = 0; i < this.state.averageRatingArray.length; i++ ){
+      sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
+    }
+    var avg = sum/this.state.averageRatingArray.length;
+    console.log(avg);
+    this.setState({ averageRating: {avg} });
+    console.log(this.state.averageRatingArray);
+    console.log(this.state.averageRating);
   }
 
   handleCommentDelete = (commentId) => {
@@ -75,7 +92,6 @@ class JobsShow extends React.Component {
       });
   }
 
-
   render() {
     const { job } = this.state;
     // console.log(job);
@@ -85,9 +101,9 @@ class JobsShow extends React.Component {
       <div>
         <Navbar />
         {/* <Sidebar /> */}
-        <Rating
+        {/* <Rating
           job={this.state}
-        />
+        /> */}
         {job.manager &&
           <div className="">
             <div className="columns is-multiline ">
@@ -97,7 +113,7 @@ class JobsShow extends React.Component {
                 <div className="tile is-ancestor">
                   <div className="tile is-vertical is-3">
                     <div className="tile">
-                      <div className="tile is-parent is-vertical">
+                      <div className="tile is-parent is-vertical jobDetails">
                         {job.manager.companyPicture &&
                           <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
                           </div>

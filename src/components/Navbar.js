@@ -36,7 +36,6 @@ class Navbar extends React.Component {
   }
 
   render() {
-    console.log('this is user data', this.state);
     if(this.state.user.picture ===  undefined ){
       var styles = {
         backgroundImage: 'url(https://i.imgur.com/pxca5Js.jpg)'
@@ -48,11 +47,14 @@ class Navbar extends React.Component {
     }
     return (
       <div className="columns is-fullheight sideBarMain">
+        {Auth.isAuthenticated() &&
         <div className="column is-2 is-sidebar-menu">
           <aside className="menu">
+            {Auth.isAuthenticated() &&
             <Link to={`/profile/${this.state.user._id}`}  >
               <div className="profilePicture" style={styles} />
             </Link>
+            }
             <div className="userNameNavbar">{this.state.user.fullName}</div>
             <div className="userRoleNavbar">{this.state.user.role}</div>
             {/* <div className="userEmailNavbar">{this.state.user.email}</div> */}
@@ -61,7 +63,7 @@ class Navbar extends React.Component {
                 <li onClick={this.showSearchBar} className="iconSidebar" >
                   <i className="fas fa-users listIcon"></i>
                   <br/>
-                  <div className="listItem">Find freelancer</div>
+                  <div className="listItem">Find<br/>Freelancer</div>
                 </li>
               </Link>
               {this.state.user && (this.state.user.role === 'manager')&&
@@ -78,7 +80,7 @@ class Navbar extends React.Component {
                 <li className="iconSidebar">
                   <i className="fas fa-suitcase listIcon"></i>
                   <br/>
-                  <div className="listItem"> Browse Contracts</div>
+                  <div className="listItem"> Browse<br/>Contracts</div>
                 </li>
               </Link>
               {Auth.isAuthenticated() &&
@@ -104,6 +106,7 @@ class Navbar extends React.Component {
             </ul>
           </aside>
         </div>
+        }
       </div>
     );
   }

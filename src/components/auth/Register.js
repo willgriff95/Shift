@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 class AuthRegister extends React.Component {
   state = {
-    role: 'freelance'
+    role: 'Employer',
+    tabOpen: true
   };
 
   handleChange = ({ target: { name, value } }) => {
@@ -29,78 +30,111 @@ class AuthRegister extends React.Component {
       });
   }
 
+  employerTab = (e) => {
+    console.log(e.target.classList.value);
+    if(this.state.tabOpen === true){
+      e.target.classList.add('is-active');
+    } else if(this.state.tabOpen === false) {
+      this.setState({tabOpen: true});
+      this.setState({role: 'Employer'});
+      // .remove('is-active');
+    }
+
+  }
+  talentTab = (e) => {
+    console.log(e.target.classList.value);
+    if(this.state.tabOpen === false){
+      e.target.classList.add('is-active');
+    } else if(this.state.tabOpen === true) {
+      this.setState({tabOpen: false});
+      this.setState({role: 'Freelancer'});
+      e.target.classList.remove('is-active');
+    }
+  }
+
   render() {
     console.log(this.state);
     return (
       <div>
         <div className="backgroundImageLoginRegister">
         </div>
-        <div className="columns">
-          <div className="column is-half-desktop">
-            <div className="leftLoginRegisterContent">
-              <div className="leftLoginRegisterLogo">
-                <img src="https://i.imgur.com/kaiUv3m.png" height="200px"/>
+        <div className="mainBody">
+          <div className="columns is-multiline ">
+            <div className="column is-three-fifths-desktop ">
+              <div className="">
+                <div className="tabs is-boxed">
+                  <ul>
+                    <li >
+                      {this.state.tabOpen &&
+                      <a onClick={this.talentTab} id="talent" className="talent">
+                        Talent
+                      </a>
+                      }
+                      {!this.state.tabOpen &&
+                      <a onClick={this.talentTab} id="talent" className="talent is-active">
+                        Talent
+                      </a>
+                      }
+                    </li>
+                    <li >
+                      {this.state.tabOpen &&
+                        <a onClick={this.employerTab} id="employer" className="employer is-active">
+                          Employer
+                        </a>
+                      }
+                      {!this.state.tabOpen &&
+                        <a onClick={this.employerTab} id="employer" className="employer">
+                          Employer
+                        </a>
+                      }
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="copyrightText">
-                Designed & Developed by <a href="https://www.linkedin.com/in/willgriff/">Will Griffiths</a>
-              </div>
-            </div>
-          </div>
-          <div className="column is-half-desktop is-full-mobile is-two-third-tablet ">
-            <div className="rightRegisterContent companyLogo3">
-              <div className="title1">SIGN UP</div>
-
-              <form onSubmit={this.handleSubmit}>
-                <div className="roleSelect">
-                  Which are you?
-                </div>
-                <div className="noMarginTop field role select is-rounded ">
-                  <select
-                    className="input"
-                    name="role"
-                    placeholder="Role"
-                    onChange={this.handleChange}
-                  >
-                    <option value="freelance">freelance</option>
-                    <option value="manager">manager</option>
-                  </select>
-                </div>
-                <div className="field firstName">
-                  <input
-                    className="input"
-                    name="fullName"
-                    placeholder="Full name"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="field">
-                  <input
-                    className="input"
-                    name="email"
-                    placeholder="Email"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="field">
-                  <input
-                    type="password"
-                    className="input"
-                    name="password"
-                    placeholder="Password"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                <div className="field">
-                  <input
-                    type="password"
-                    className="input"
-                    name="passwordConfirmation"
-                    placeholder="Password Confirmation"
-                    onChange={this.handleChange}
-                  />
-                </div>
-                {/* <p>{this.state}</p> */}
-                {(this.state.role === 'manager')&&
+              {!this.state.tabOpen &&
+              <div className="companyLogo3">
+                <div className="title1">Sign Up for Talent</div>
+                <form onSubmit={this.handleSubmit}>
+                  <div className="field">
+                    <label className="label">Full Name</label>
+                    <input
+                      className="input"
+                      name="fullName"
+                      placeholder="e.g. John Doe"
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Email</label>
+                    <input
+                      className="input"
+                      name="email"
+                      placeholder="e.g. john@example.com"
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Password</label>
+                    <input
+                      type="password"
+                      className="input"
+                      name="password"
+                      placeholder="Password"
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  <div className="field">
+                    <label className="label">Password Confirmation</label>
+                    <input
+                      type="password"
+                      className="input"
+                      name="passwordConfirmation"
+                      placeholder="Password Confirmation"
+                      onChange={this.handleChange}
+                    />
+                  </div>
+                  {/* <p>{this.state}</p> */}
+                  {(this.state.role === 'manager')&&
                 <div className="field">
                   <input
                     type="input"
@@ -110,12 +144,76 @@ class AuthRegister extends React.Component {
                     onChange={this.handleChange}
                   />
                 </div>
-                }
-                <div className="register ">
-                  Already a member?<Link to="/login" className="signUpSignInLink"> Sign in here</Link>
+                  }
+                  <div className="register ">
+                    Already a member?<Link to="/login" className="signUpSignInLink"> Sign in here</Link>
+                  </div>
+                  <button className="button signUp">SIGN UP</button>
+                </form>
+              </div>
+              }
+              {this.state.tabOpen &&
+                <div className="companyLogo3">
+                  <div className="title1">Sign Up for Employers</div>
+                  <form onSubmit={this.handleSubmit}>
+                    <div className="field">
+                      <label className="label">Full Name</label>
+                      <input
+                        className="input"
+                        name="fullName"
+                        placeholder="e.g. John Doe"
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                    <div className="field">
+                      <label className="label">Email</label>
+                      <input
+                        className="input"
+                        name="email"
+                        placeholder="e.g. john@example.com"
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                    <div className="field">
+                      <label className="label">Password</label>
+                      <input
+                        type="password"
+                        className="input"
+                        name="password"
+                        placeholder="Password"
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                    <div className="field">
+                      <label className="label">Password Confirmation</label>
+                      <input
+                        type="password"
+                        className="input"
+                        name="passwordConfirmation"
+                        placeholder="Password Confirmation"
+                        onChange={this.handleChange}
+                      />
+                    </div>
+                    {/* <p>{this.state}</p> */}
+                    {(this.state.role === 'Employer')&&
+                      <div className="field">
+                        <label className="label">Company Picture URL</label>
+                        <input
+                          type="input"
+                          className="input"
+                          name="companyPicture"
+                          placeholder="Add your company picture URL here"
+                          onChange={this.handleChange}
+                        />
+                      </div>
+                    }
+                    <div className="register ">
+                      Already a member?<Link to="/login" className="signUpSignInLink"> Sign in here</Link>
+                    </div>
+                    <button className="button signUp">SIGN UP</button>
+                  </form>
                 </div>
-                <button className="button signUp">SIGN UP</button>
-              </form>
+              }
             </div>
           </div>
         </div>

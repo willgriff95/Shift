@@ -4,7 +4,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import _ from 'lodash';
 // import Auth from '../../lib/Auth';
-import Navbar from '../Navbar';
 
 
 import SortFilterBar from './SortFilterBar';
@@ -42,21 +41,20 @@ class JobsIndex extends React.Component {
     // console.log(this.state);
     return (
       <div>
-        {/* <Navbar /> */}
-        <div className="mainBody">
-          {/* <div className="searchBarBackground">
+        <div className="columns is-multiline ">
+          <div className="column is-2"></div>
+          <div className="mainBody2">
+            {/* <div className="searchBarBackground">
         </div> */}
-          <div className="columns is-multiline ">
-            <div className="column is-four-fifths-desktop is-full-tablet is-mobile indexList">
-              <div className="columns searchBar" >
-                <div className="column is-full-desktop is-half-tablet  is-half-mobile ">
-                  <SortFilterBar
-                    handleChange={this.handleChange}
-                    data={this.state}
-                  />
-                </div>
-                <div className="column is-full-desktop is-half-tablet is-half-mobile floatRight">
-
+            <div className="columns is-multiline ">
+              <div className="column is-four-fifths-desktop is-four-fifths-tablet is-mobile indexList">
+                <div className="columns searchBar" >
+                  <div className="column is-four-fifths-desktop is-four-fifths-tablet is-half-mobile">
+                    <SortFilterBar
+                      handleChange={this.handleChange}
+                      data={this.state}
+                    />
+                  </div>
                   <div onClick={this.showListView}  className="mapButton">
                     <i className="fas fa-map-marker-alt listIcon"></i>
                     <div className="displayDesktop">
@@ -69,11 +67,9 @@ class JobsIndex extends React.Component {
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
-          </div>
-          {!this.state.listView &&
+            {!this.state.listView &&
           <div className="columns is-multiline ">
             {this.sortedFilteredJobs().map(job =>
               <div className="column is-one-quarter-desktop is-one-quarter-tablet is-four-fifths-mobile indexList" key={job._id}>
@@ -99,9 +95,9 @@ class JobsIndex extends React.Component {
               </div>
             )}
           </div>
-          }
-        </div>
-        {this.state.listView &&
+            }
+          </div>
+          {this.state.listView &&
       <div>
         <Map
           className="job-index"
@@ -109,7 +105,8 @@ class JobsIndex extends React.Component {
           markers={this.sortedFilteredJobs()}
         />
       </div>
-        }
+          }
+        </div>
       </div>
     );
   }

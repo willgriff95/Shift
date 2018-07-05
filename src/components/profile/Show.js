@@ -47,9 +47,10 @@ class ProfileShow extends React.Component {
     if(Object.keys(user).length === 0) return null;
     return (
       <div>
-        <Navbar />
+        <div className="columns is-multiline ">
+        <div className="column is-2"></div>
         <div className="mainBody2 columns is-multiline">
-          <div className="column is-full-desktop is-full-mobile is-full-tablet companyLogo">
+          <div className="column is-four-fifths-desktop is-full-mobile is-full-tablet companyLogo">
             <div>
               {Auth.isCurrentUser(!user._id)&&
                 <a className="emailIconShow" href={'mailto:' + `${user.email}`}>
@@ -84,7 +85,7 @@ class ProfileShow extends React.Component {
           </div>
           {/* <div className="columns is-multiline"> */}
             {user.jobs.map(job =>
-              <div className="column is-full-desktop is-full-tablet is-mobile" key={job._id}>
+              <div className="column is-four-fifths-desktop is-full-mobile is-full-tablet " key={job._id}>
                 {job.requests.map(request =>
                   <div key={request._id}>
                     {(request.status === 'pending') &&
@@ -168,6 +169,7 @@ class ProfileShow extends React.Component {
               )}
           {/* </div> */}
       </div>
+    </div>
     </div>
     );
   }

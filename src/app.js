@@ -35,27 +35,25 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <main>
-          <section>
-            <Navbar />
-            <FlashMessages />
-            <Switch>
-              {/* Decorator component => the BrowserRouter decorates the component with useful stuff like location, match, history which can be accessed with this.props inside of each component */}
-              <SecureRoute path="/profile/:id/edit" component={ProfileEdit} />
-              <SecureRoute path="/profile/:id" component={ProfileShow} />
-              <SecureRoute path="/users/:id" component={UsersShow} />
-              <SecureRoute path="/jobs/new" component={JobsNew} />
-              <Route path="/jobs/:id/edit" component={JobsEdit} />
-              <Route path="/jobs/:id" component={JobsShow} />
-              <Route path="/jobs" component={JobsIndex} />
-              <Route path="/register" component={AuthRegister} />
-              <Route path="/login" component={AuthLogin} />
-              <Route exact path="/" component={Home} />
-              <Route component={NotFound} />
-            </Switch>
-          </section>
+        <div className="appJsBody">
+          <Navbar />
+          <FlashMessages />
+          <Switch>
+            {/* Decorator component => the BrowserRouter decorates the component with useful stuff like location, match, history which can be accessed with this.props inside of each component */}
+            <SecureRoute path="/profile/:id/edit" component={ProfileEdit} />
+            <SecureRoute path="/profile/:id" component={ProfileShow} />
+            <SecureRoute path="/users/:id" component={UsersShow} />
+            <SecureRoute path="/jobs/new" component={JobsNew} />
+            <Route path="/jobs/:id/edit" component={JobsEdit} />
+            <Route path="/jobs/:id" component={JobsShow} />
+            <Route path="/jobs" component={JobsIndex} />
+            <Route path="/register" component={AuthRegister} />
+            <Route path="/login" component={AuthLogin} />
+            <Route exact path="/" component={Home} />
+            <Route component={NotFound} />
+          </Switch>
           <div className="background"></div>
-        </main>
+        </div>
       </Router>
     );
   }

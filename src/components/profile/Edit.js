@@ -1,8 +1,9 @@
 import React from 'react';
+// import React, { Component } from 'react'
 import axios from 'axios';
 import ProfileForm from './Form';
-import Navbar from '../Navbar';
 import Auth from '../../lib/Auth';
+
 // import ReactFilestack from 'filestack-react';
 
 // import Flash from '../../lib/Flash';
@@ -10,18 +11,32 @@ import Auth from '../../lib/Auth';
 
 class ProfileEdit extends React.Component {
   state = {
-    errors: {}
+    errors: {},
+    suggestions: [
+      {
+        label: 'Suggestions 1',
+        value: '1'
+      },
+      {
+        label: 'Suggestions 2',
+        value: '2'
+      },
+      {
+        label: 'Another suggestions',
+        value: 'X'
+      }
+    ]
   };
 
 
-  componentDidMount() {
-    const { id } = this.props.match.params;
-    axios
-      .get(`/api/profile/${id}`, {
-        headers: { Authorization: `Bearer ${Auth.getToken()}`}
-      })
-      .then(res => this.setState( res.data ));
-  }
+    componentDidMount() {
+      const { id } = this.props.match.params;
+      axios
+        .get(`/api/profile/${id}`, {
+          headers: { Authorization: `Bearer ${Auth.getToken()}`}
+        })
+        .then(res => this.setState( res.data ));
+    }
 
   // handleChange = ({ target: { name, value }}) => {
   //   this.setState({ user: {[name]: value} }, () => console.log(this.state));
@@ -48,13 +63,14 @@ class ProfileEdit extends React.Component {
     // if(Object.keys(this.state).length === 0) return null;
     return (
       <div>
-        <Navbar />
         <ProfileForm
           user={this.state}
           handleChange={this.handleChange}
           handleSubmit={this.handleSubmit}
+          onChange={this.onChange}
           // errors={this.state.errors}
         />
+
       </div>
     );
   }
