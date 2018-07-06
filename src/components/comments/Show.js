@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleCommentChange, handleRequestCreate}) => {
-  // console.log(job.job.requests[0].user);
-  // console.log(Auth.getPayload().sub);
-  console.log(job);
-  console.log(job.requestButtonClicked);
   const request = job.job.requests.find(request => request.user === Auth.getPayload().sub);
   const requestMade = request && request.status === 'pending';
   return (
@@ -24,7 +20,7 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
             {Auth.isCurrentUser(comment.createdBy.id)&&
               <div className="deleteComment">
                 <a onClick={() => handleCommentDelete(comment._id)}>
-                  <i className="fas fa-times" onClick={() => handleCommentDelete(comment._id)}></i>
+                  <i className="fas fa-times"></i>
                 </a>
               </div>
             }
