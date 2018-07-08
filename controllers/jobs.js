@@ -113,6 +113,8 @@ function commentCreateRoute(req, res, next) {
 function commentDeleteRoute(req, res, next) {
   Job
     .findById(req.params.id)
+    .populate('manager')
+    .populate('comments.createdBy')
     .then(job => {
       const comment = job.comments.id(req.params.commentId);
       // The throw new Error() takes you into the next catch block.

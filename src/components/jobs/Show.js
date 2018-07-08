@@ -12,18 +12,30 @@ class JobsShow extends React.Component {
 
   state = {
     requestButtonClicked: false,
-    averageRating: {},
+    averageRating: null,
     averageRatingArray: [],
     job: {}
   }
 
   componentDidMount() {
+    const averageRatingArray = [];
     // console.log(this.props.match.params.id);
     axios
       .get(`/api/jobs/${this.props.match.params.id}`)
-      .then(res => this.setState({ job: res.data }));
-    // console.log(Auth.isCurrentUser('5b0d26bd8f8708a4dec8f707'));
-    // console.log(Auth.isCurrentUser(Auth.getPayload().sub));
+      .then(res => this.setState({ job: res.data }, () => {
+        this.state.job.comments.map(comment =>
+          averageRatingArray.push(comment.rating)
+        );
+        this.setState({averageRatingArray: this.state.averageRatingArray.concat([averageRatingArray])}, () => {
+          var sum = 0;
+          for( var i = 0; i < this.state.averageRatingArray.length; i++ ){
+            sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
+          }
+          var avg = sum/this.state.averageRatingArray.length;
+          this.setState({ averageRating: avg});
+          console.log(this.state);
+        });
+      }));
   }
 
   handleDelete = () => {
@@ -40,32 +52,34 @@ class JobsShow extends React.Component {
   }
 
   handleCommentSubmit = e => {
+    const averageRatingArray = [];
     e.preventDefault();
-    // console.log(e);
     const { id } = this.props.match.params;
     axios
       .post(`/api/jobs/${id}/comments`, this.state.comment, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
       })
       .then(res => {
-        const job = res.data;
-        this.setState({ job, comment: {} });
-      }, this.averageRatingCalculator());
-  }
+        const newState = Object.assign({}, this.state);
+        newState.job.comments = res.data.comments;
+        this.setState(newState);
+        newState.job.comments.map(comment =>
+          averageRatingArray.push(comment.rating),
+        );
+        this.setState({ averageRatingArray: averageRatingArray });
+        var sum = 0;
+        for( var i = 0; i < this.state.averageRatingArray.length; i++ ){
+          sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
+        }
+        var avg = sum/this.state.averageRatingArray.length;
+        this.setState({ averageRating: avg });
+      }, () => {
+        console.log(this.state);
 
-  averageRatingCalculator(){
-    this.state.job.comments.map(comment =>
-      this.state.averageRatingArray.push(comment.rating)
-    );
-    var sum = 0;
-    for( var i = 0; i < this.state.averageRatingArray.length; i++ ){
-      sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
-    }
-    var avg = sum/this.state.averageRatingArray.length;
-    console.log(avg);
-    this.setState({ averageRating: {avg} });
-    console.log(this.state.averageRatingArray);
-    console.log(this.state.averageRating);
+
+
+      }
+      );
   }
 
   handleCommentDelete = (commentId) => {
@@ -73,7 +87,9 @@ class JobsShow extends React.Component {
       .delete(`/api/jobs/${this.props.match.params.id}/comments/${commentId}`, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
       })
-      .then(res => this.setState({ job: res.data }));
+      .then(res => this.setState({ job: res.data }, () => {
+        console.log(res.data);
+      }));
   }
 
   handleRequestCreate = () => {
@@ -91,7 +107,7 @@ class JobsShow extends React.Component {
 
   render() {
     const { job } = this.state;
-    console.log(job);
+    // console.log(this.state);
     if(!job) return null;
     return (
       <div>
@@ -114,7 +130,7 @@ class JobsShow extends React.Component {
                         }
                         {job.manager.companyPicture &&
                           <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
-                            {this.state.averageRating[0] &&
+                            {this.state.averageRating &&
                               <div className="averageRating">{this.state.averageRating}</div>
                             }
                           </div>
@@ -197,73 +213,3 @@ class JobsShow extends React.Component {
 }
 
 export default JobsShow;
-
-//   componentDidMount() {
-//     // console.log(this.props.match.params.id);
-//     axios
-//       .get(`/api/jobs/${this.props.match.params.id}`)
-//       .then(res => this.setState({ job: res.data }));
-//     // console.log(Auth.isCurrentUser('5b0d26bd8f8708a4dec8f707'));
-//     // console.log(Auth.isCurrentUser(Auth.getPayload().sub));
-//   }
-//   handleDelete = () => {
-//     axios
-//       .delete(`/api/jobs/${this.props.match.params.id}`, {
-//         headers: { Authorization: `Bearer ${Auth.getToken()}`}
-//       })
-//       .then(() => this.props.history.push('/jobs'));
-//   }
-//
-//   handleCommentChange = ({ target: { name, value }}) => {
-//     const comments = { ...this.state.job.comments, [name]: value };
-//     this.setState({  comments });
-//   }
-//
-//   handleCommentSubmit = e => {
-//     e.preventDefault();
-//     const { id } = this.props.match.params;
-//     axios
-//       .post(`/api/jobs/${id}/comments`, this.state.job.comments, {
-//         headers: { Authorization: `Bearer ${Auth.getToken()}`}
-//       })
-//       .then(res => {
-//         const job = res.data;
-//         this.setState({ job, comments: [] });
-//       });
-//   }
-//
-//   averageRatingCalculator = () => {
-//     const averageRatingArray =[];
-//     this.state.job.comments.map(comment =>
-//       averageRatingArray.concat(comment.rating)
-//     );
-//     var sum = 0;
-//     for( var i = 0; i < averageRatingArray.length; i++ ){
-//       sum += parseInt( averageRatingArray[i], 10 ); //don't forget to add the base
-//     }
-//     var avg = sum/this.state.averageRatingArray.length;
-//     this.setState({ averageRating: {avg} });
-//     // console.log(this.state.averageRatingArray);
-//   }
-//
-//   handleCommentDelete = (commentId) => {
-//     axios
-//       .delete(`/api/jobs/${this.props.match.params.id}/comments/${commentId}`, {
-//         headers: { Authorization: `Bearer ${Auth.getToken()}`}
-//       })
-//       .then(res => this.setState({ job: res.data }));
-//   }
-//
-//   handleRequestCreate = () => {
-//     console.log('request created');
-//     const { id } = this.props.match.params;
-//     axios
-//       .post(`/api/jobs/${id}/requests`, this.state.comment, {
-//         headers: { Authorization: `Bearer ${Auth.getToken()}`}
-//       })
-//       .then(() => this.setState({ requestButtonClicked: true }))
-//       .catch(e => {
-//         console.log(e);
-//       });
-//   }
-//
