@@ -28,11 +28,12 @@ class JobsShow extends React.Component {
         );
         this.setState({averageRatingArray: this.state.averageRatingArray.concat([averageRatingArray])}, () => {
           var sum = 0;
-          for( var i = 0; i < this.state.averageRatingArray.length; i++ ){
-            sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
+          for( var i = 0; i < this.state.averageRatingArray[0].length; i++ ){
+            sum += parseInt( this.state.averageRatingArray[0][i], 10 ); //don't forget to add the base
           }
-          var avg = sum/this.state.averageRatingArray.length;
+          var avg = sum/this.state.averageRatingArray[0].length;
           this.setState({ averageRating: avg});
+          console.log(`${avg}=${sum}/${this.state.averageRatingArray[0].length}`);
           console.log(this.state);
         });
       }));
@@ -75,22 +76,36 @@ class JobsShow extends React.Component {
         this.setState({ averageRating: avg });
       }, () => {
         console.log(this.state);
-
-
-
       }
       );
   }
 
   handleCommentDelete = (commentId) => {
+    const averageRatingArray = [];
     axios
       .delete(`/api/jobs/${this.props.match.params.id}/comments/${commentId}`, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
       })
-      .then(res => this.setState({ job: res.data }, () => {
-        console.log(res.data);
-      }));
+      .then(res => {
+        const newState = Object.assign({}, this.state);
+        newState.job.comments = res.data.comments;
+        this.setState(newState);
+        newState.job.comments.map(comment =>
+          averageRatingArray.push(comment.rating),
+        );
+        this.setState({ averageRatingArray: averageRatingArray });
+        var sum = 0;
+        for( var i = 0; i < this.state.averageRatingArray.length; i++ ){
+          sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
+        }
+        var avg = sum/this.state.averageRatingArray.length;
+        this.setState({ averageRating: avg });
+      }, () => {
+        console.log(this.state);
+      }
+      );
   }
+
 
   handleRequestCreate = () => {
     console.log('request created');
@@ -121,17 +136,13 @@ class JobsShow extends React.Component {
                   <div className="tile is-vertical is-3">
                     <div className="tile">
                       <div className="tile is-parent is-vertical jobDetails">
-                        {!job.manager.companyPicture &&
-                          <div className="tile is-child notification companyLogo">
-                            {this.state.averageRating[0] &&
-                              <div className="averageRating">{this.state.averageRating}</div>
-                            }
-                          </div>
-                        }
                         {job.manager.companyPicture &&
                           <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
-                            {this.state.averageRating &&
+                            {(this.state.averageRating !== null)&&
                               <div className="averageRating">{this.state.averageRating}</div>
+                            }
+                            {(this.state.averageRating === null) &&
+                              <div className="averageRating">0</div>
                             }
                           </div>
                         }
