@@ -12,7 +12,7 @@ class JobsShow extends React.Component {
 
   state = {
     requestButtonClicked: false,
-    averageRating: null,
+    averageRating: 0,
     averageRatingArray: [],
     job: {}
   }
@@ -32,7 +32,7 @@ class JobsShow extends React.Component {
             sum += parseInt( this.state.averageRatingArray[0][i], 10 ); //don't forget to add the base
           }
           var avg = sum/this.state.averageRatingArray[0].length;
-          this.setState({ averageRating: avg});
+          this.setState({ averageRating: avg.toFixed(1)});
           console.log(`${avg}=${sum}/${this.state.averageRatingArray[0].length}`);
           console.log(this.state);
         });
@@ -73,7 +73,7 @@ class JobsShow extends React.Component {
           sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
         }
         var avg = sum/this.state.averageRatingArray.length;
-        this.setState({ averageRating: avg });
+        this.setState({ averageRating: avg.toFixed(1) });
       }, () => {
         console.log(this.state);
       }
@@ -94,12 +94,14 @@ class JobsShow extends React.Component {
           averageRatingArray.push(comment.rating),
         );
         this.setState({ averageRatingArray: averageRatingArray });
+        console.log(this.state.averageRatingArray[0]);
+        console.log(this.state.averageRatingArray.length);
         var sum = 0;
         for( var i = 0; i < this.state.averageRatingArray.length; i++ ){
           sum += parseInt( this.state.averageRatingArray[i], 10 ); //don't forget to add the base
         }
         var avg = sum/this.state.averageRatingArray.length;
-        this.setState({ averageRating: avg });
+        this.setState({ averageRating: avg.toFixed(1) });
       }, () => {
         console.log(this.state);
       }
@@ -122,7 +124,8 @@ class JobsShow extends React.Component {
 
   render() {
     const { job } = this.state;
-    // console.log(this.state);
+    const styleNew = {width: `calc(100*${this.state.averageRating*2/10}px)`};
+    console.log(this.state);
     if(!job) return null;
     return (
       <div>
@@ -133,17 +136,32 @@ class JobsShow extends React.Component {
               </div>
               <div className="column is-three-fifths-desktop is-four-fifths-tablet is-four-fifths-mobile jobShowContent">
                 <div className="tile is-ancestor">
-                  <div className="tile is-vertical is-3">
+                  <div className="tile is-vertical">
                     <div className="tile">
                       <div className="tile is-parent is-vertical jobDetails">
                         {job.manager.companyPicture &&
                           <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
-                            {(this.state.averageRating !== null)&&
-                              <div className="averageRating">{this.state.averageRating}</div>
-                            }
-                            {(this.state.averageRating === null) &&
-                              <div className="averageRating">0</div>
-                            }
+                            <div className="starRatingHeight">
+                              {(isNaN(this.state.averageRating) === false ) &&
+                                <div>
+                                  <div className="averageRating2">{this.state.averageRating}</div>
+                                  <div className="averageRating">
+                                    <i className="fas fa-user"></i> {this.state.averageRatingArray.length} reviews
+                                  </div>
+                                </div>
+                              }
+                              {(isNaN(this.state.averageRating) === true || (this.state.averageRating === 0) ) &&
+                                <div>
+                                  <div className="averageRating2">0</div>
+                                  <div className="averageRating">
+                                    <i className="fas fa-user"></i> 0 reviews
+                                  </div>
+                                </div>
+                              }
+                              <div className="averageRatingBarBackgroundColor"></div>
+                              <div className="averageRatingBar" style={styleNew}></div>
+                              <div className="averageRatingBackground"></div>
+                            </div>
                           </div>
                         }
                         <div className="tile is-child  is-white companyLogo">
