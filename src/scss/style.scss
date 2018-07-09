@@ -184,57 +184,76 @@ li:active {
     background-size: cover;
 }
 .averageRatingBackground {
-    background-image: url('../assets/starRating-01.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 110px;
-    position: absolute;
-    height: 18px;
-    bottom: 15px;
-    left: 32%;
-    /* margin: 0 auto; */
-    z-index: 100;
-    right: 0;
-}
-.averageRatingBar {
-    background-color: cornflowerblue;
-    width: calc(100*1px);
-    position: absolute;
-    height: 18px;
-    bottom: 15px;
-    left: 35%;
-    /* margin: 0 auto; */
-    z-index: 1;
-    right: 0;
-}
+  background-image: url('../assets/starRating-01.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 68%;
+      position: absolute;
+      height: 100%;
+      bottom: 3px;
+      left: 25%;
+      /* right: 0; */
+      /* margin: 0 auto; */
+      justify-content: center;
+      z-index: 100;
+  }
+  .averageRatingBar {
+      background-color: cornflowerblue;
+      width: 0;
+      position: absolute;
+      height: 72.5%;
+      bottom: 30%;
+      left: 28%;
+      /* right: 0; */
+      /* margin: 0 auto; */
+      justify-content: center;
+      z-index: 1;
+  }
 
 .averageRating {
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0px;
-    margin: 0 auto;
+    position: relative;
+    /* right: 0; */
+    /* left: 0; */
+    bottom: 4px;
+    /* margin: 0 auto; */
     font-size: 9px;
 }
-.averageRating2 {
-    position: absolute;
-    left: 25%;
-    bottom: 12px;
-    z-index: 1000;
-    font-size: 14px;
-}
-.averageRatingBarBackgroundColor {
-    background-color: lightGray;
-    width: 98px;
-    position: absolute;
-    height: 18px;
-    bottom: 15px;
-    left: 35%;
-    /* margin: 0 auto; */
-    z-index: 1;
-    right: 0;
-}
+.ratingSystem{
+      position: absolute;
+      width: 100%;
+      height: 20%;
+      bottom: 0;
+      left: 0;
+  }
+  .averageRating2 {
+      position: relative;
+      /* left: 6%; */
+      /* bottom: 12px; */
+      text-align: left;
+      z-index: 0;
+      font-size: 14px;
+  }
+  .averageRatingNumber {
+      width: 25px;
+      left: 14%;
+      /* right: 0; */
+      z-index: 10000;
+      bottom: 0;
+      position: relative;
+  }
+  .averageRatingBarBackgroundColor {
+      background-color: lightGray;
+      width: 62.5%;
+      position: absolute;
+      height: 72.5%;
+      bottom: 5px;
+      left: 28%;
+      /* right: 0; */
+      /* margin: 0 auto; */
+      justify-content: center;
+      z-index: 1;
+  }
 .starRatingHeight{
   height: 100%;
 }
@@ -1260,6 +1279,16 @@ hr {
     height: 100px;
     padding: 1em;
     background-color: #f9fafc;
+}
+.companyRating {
+    position: absolute;
+    left: 0;
+    height: 29%;
+    z-index: -1;
+    bottom: 0;
+    width: 100%;
+    padding: 1em;
+    background-color: white;
 }
 
 .managerDetails{

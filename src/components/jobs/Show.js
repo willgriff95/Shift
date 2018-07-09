@@ -124,7 +124,7 @@ class JobsShow extends React.Component {
 
   render() {
     const { job } = this.state;
-    const styleNew = {width: `calc(100*${this.state.averageRating*2/10}px)`};
+    const styleNew = {width: `calc(62.5*${this.state.averageRating*2/10}%)`};
     console.log(this.state);
     if(!job) return null;
     return (
@@ -136,7 +136,7 @@ class JobsShow extends React.Component {
               </div>
               <div className="column is-three-fifths-desktop is-four-fifths-tablet is-four-fifths-mobile jobShowContent">
                 <div className="tile is-ancestor">
-                  <div className="tile is-vertical">
+                  <div className="tile is-vertical is-3">
                     <div className="tile">
                       <div className="tile is-parent is-vertical jobDetails">
                         {job.manager.companyPicture &&
@@ -144,23 +144,42 @@ class JobsShow extends React.Component {
                             <div className="starRatingHeight">
                               {(isNaN(this.state.averageRating) === false ) &&
                                 <div>
-                                  <div className="averageRating2">{this.state.averageRating}</div>
-                                  <div className="averageRating">
-                                    <i className="fas fa-user"></i> {this.state.averageRatingArray.length} reviews
+                                  <div className="ratingSystem">
+                                    <div className="averageRating2">
+                                      {/* <hr/> */}
+                                      <div className="averageRatingNumber">{this.state.averageRating}</div>
+                                      <div className="averageRatingBarBackgroundColor"></div>
+                                      <div className="averageRatingBar" style={styleNew}></div>
+                                      <div className="averageRatingBackground"></div>
+                                      <div className="companyRating">
+                                      </div>
+                                    </div>
+                                    <div className="averageRating">
+                                      <i className="fas fa-user"></i> {this.state.averageRatingArray.length} reviews
+                                    </div>
                                   </div>
                                 </div>
                               }
                               {(isNaN(this.state.averageRating) === true || (this.state.averageRating === 0) ) &&
                                 <div>
-                                  <div className="averageRating2">0</div>
-                                  <div className="averageRating">
-                                    <i className="fas fa-user"></i> 0 reviews
+                                  <div className="ratingSystem">
+                                    <div className="averageRating2">
+                                      {/* <hr/> */}
+                                      <div className="averageRatingNumber">0</div>
+                                      <div className="averageRatingBarBackgroundColor"></div>
+                                      <div className="averageRatingBar" ></div>
+                                      <div className="averageRatingBackground"></div>
+                                      <div className="companyRating">
+                                      </div>
+                                    </div>
+                                    <div className="averageRating">
+                                      <i className="fas fa-user"></i> 0 reviews
+                                    </div>
                                   </div>
                                 </div>
                               }
-                              <div className="averageRatingBarBackgroundColor"></div>
-                              <div className="averageRatingBar" style={styleNew}></div>
-                              <div className="averageRatingBackground"></div>
+
+
                             </div>
                           </div>
                         }
@@ -175,7 +194,7 @@ class JobsShow extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="tile is-parent">
+                  <div className="tile is-parent is-5">
                     <div className="tile is-child">
                       <div className="mapCard">
                         <Map
@@ -184,7 +203,7 @@ class JobsShow extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="tile is-parent">
+                  <div className="tile is-parent is-4">
                     <div className="tile is-child notification companyLogo">
                       <div className="managerDetails">
                         {!Auth.isCurrentUser(job.manager._id)&&
