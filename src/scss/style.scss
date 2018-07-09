@@ -8,24 +8,24 @@ body{
   background-color: #F9FAFC;
 }
 li:active {
-    background-color: #F9FAFC;
+  background-color: #F9FAFC;
 }
 *{
-  font-family: "Circe";
+  font-family: "circe rounded";
 }
 
 #firstName3 {
-    color: #3399FF;
-    text-align: left;
-    font-size: 19px;
-    width: 10%;
-    position: relative;
-    padding:  0;
-    height: 30px;
+  color: #3399FF;
+  text-align: left;
+  font-size: 19px;
+  width: 10%;
+  position: relative;
+  padding:  0;
+  height: 30px;
 }
 .tabs li {
-    display: block;
-    width: 50%;
+  display: block;
+  width: 50%;
 }
 #lastName3{
   color: #3399FF;
@@ -39,64 +39,72 @@ li:active {
   position: relative;
 }
 #email3{
-      font-size: 12px;
-      text-align: left;
-      // left: 115px;
-      width: 70%;
-      // top: 30px;
-      padding: 0;
-      height: 20px;
-      position: relative;
-  }
+  font-size: 12px;
+  text-align: left;
+  // left: 115px;
+  width: 70%;
+  // top: 30px;
+  padding: 0;
+  height: 20px;
+  position: relative;
+}
 #rate {
-    position: relative;
-    top: -50px;
-    color: darkgrey;
-    font-size: 40px;
-    text-align: center;
-    height: 1em;
-    padding-top: 9px;
-    padding-bottom: 7px;
-    padding-left: 0;
-    display: block;
-    padding-right: 0;
+  position: relative;
+  top: -50px;
+  color: darkgrey;
+  font-size: 40px;
+  text-align: center;
+  height: 1em;
+  padding-top: 9px;
+  padding-bottom: 7px;
+  padding-left: 0;
+  display: block;
+  padding-right: 0;
 }
 #contract {
-    text-align: center;
-    width: 15%;
-    color: #3399FF;
-    padding-left: 0;
-    padding-right: 0;
-    height: 1.5em;
-    margin-right: 5px;
+  text-align: center;
+  width: 15%;
+  color: #3399FF;
+  padding-left: 0;
+  padding-right: 0;
+  height: 1.5em;
+  margin-right: 5px;
 }
 #editCompletedButton {
-    position: absolute;
-    top: 0;
-    border: none;
-    outline: none;
-    right: 0;
+  position: absolute;
+  top: 0;
+  border: none;
+  outline: none;
+  right: 0;
 }
 #profileeditCompletedButton {
-    position: absolute;
-    top: 0;
-    border: none;
-    outline: none;
-    right: 0;
+  position: absolute;
+  top: 0;
+  border: none;
+  outline: none;
+  right: 0;
 }
 #bio {
   padding: 0;
 }
 .deleteIcon2 {
-    width: 20px;
-    position: absolute;
-    float: right;
-    left: -200px;
-    top: 10px;
+  width: 20px;
+  position: absolute;
+  float: right;
+  left: -200px;
+  top: 10px;
 }
 #description{
   padding-top: 0;
   padding-left: 0;
+}
+
+.employeeBackground{
+  height: 100vh;
+  background-image: url('../assets/backgroundImageLoginRegister2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .backgroundImageLoginRegister {
   // background-image: url('../assets/backgroundImageLoginRegister2.png');
@@ -109,62 +117,68 @@ li:active {
   width: 100vw;
 }
 .background {
-    height: 50%;
-    width: 100%;
-    z-index: -1000;
-    bottom: 0;
-    position: absolute;
-    background-color: #f9fafc;
+  height: 50%;
+  width: 100%;
+  z-index: -1000;
+  bottom: 0;
+  position: absolute;
+  background-color: #f9fafc;
 }
 .logo {
-    position: relative;
+    position: absolute;
     height: 30px;
     top: 11px;
     /* max-width: 100%; */
     left: 50px;
 }
+
+img.shiftLogo {
+    position: relative;
+    height: 42px;
+    /* max-width: 100%; */
+}
 .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: white;
-    color: white;
+  background-color: white;
+  color: white;
 }
 
 .profilePicture {
-    height: 90px;
-    /* right: 27%; */
-    width: 90px;
-    top: 61px;
-    border-radius: 45px;
-    z-index: 1000;
-    margin: 0 auto;
-    position: relative;
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 90px;
+  /* right: 27%; */
+  width: 90px;
+  top: 61px;
+  border-radius: 45px;
+  z-index: 1000;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 .managerProfilePicture {
-    height: 100px;
-    left: 15px;
-    width: 100px;
-    top: 10px;
-    border-radius: 50px;
-    z-index: 1000;
-    position: absolute;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 100px;
+  left: 15px;
+  width: 100px;
+  top: 10px;
+  border-radius: 50px;
+  z-index: 1000;
+  position: absolute;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 .commentsProfilePicture {
-    height: 100px;
-    left: 15px;
-    width: 100px;
-    top: 10px;
-    border-radius: 50px;
-    z-index: 1000;
-    position: relative;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 100px;
+  left: 15px;
+  width: 100px;
+  top: 10px;
+  border-radius: 50px;
+  z-index: 1000;
+  position: relative;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 
 .indexJobTitle{
@@ -172,98 +186,149 @@ li:active {
   color: #868686;
 }
 .indexManagerProfilePicture {
-    height: 100px;
-    left: 10px;
-    width: 100px;
-    top: 50px;
-    border-radius: 50px;
-    z-index: 1000;
-    position: relative;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 100px;
+  left: 10px;
+  width: 100px;
+  top: 50px;
+  border-radius: 50px;
+  z-index: 1000;
+  position: relative;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 .averageRatingBackground {
   background-image: url('../assets/starRating-01.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      width: 68%;
-      position: absolute;
-      height: 100%;
-      bottom: 3px;
-      left: 25%;
-      /* right: 0; */
-      /* margin: 0 auto; */
-      justify-content: center;
-      z-index: 100;
-  }
-  .averageRatingBar {
-      background-color: cornflowerblue;
-      width: 0;
-      position: absolute;
-      height: 72.5%;
-      bottom: 30%;
-      left: 28%;
-      /* right: 0; */
-      /* margin: 0 auto; */
-      justify-content: center;
-      z-index: 1;
-  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 68%;
+  position: absolute;
+  height: 100%;
+  bottom: 2px;
+  left: 25%;
+  /* right: 0; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  z-index: 100;
+}
+
+.averageRatingBackground2 {
+  background-image: url('../assets/starRating-01.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  position: absolute;
+  height: 100%;
+  bottom: 2px;
+  left: 73px;
+  /* right: 0; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  z-index: 100;
+}
+.averageRatingBar {
+  background-color: #3399FF;
+  width: 0;
+  position: absolute;
+  height: 73.5%;
+  bottom: 4.5px;
+  left: 28%;
+  /* right: 0; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  z-index: 1;
+}
+.averageRatingBar2 {
+  background-color: #3399FF;
+  width: 0;
+  position: absolute;
+  height: 73.5%;
+  bottom: 4.5px;
+  left: 94px;
+  /* right: 0; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  z-index: 1;
+}
 
 .averageRating {
-    position: relative;
-    /* right: 0; */
-    /* left: 0; */
-    bottom: 4px;
-    /* margin: 0 auto; */
-    font-size: 9px;
+  position: relative;
+  /* right: 0; */
+  /* left: 0; */
+  bottom: -5px;
+  /* margin: 0 auto; */
+  font-size: 9px;
 }
-.ratingSystem{
-      position: absolute;
-      width: 100%;
-      height: 20%;
-      bottom: 0;
-      left: 0;
-  }
-  .averageRating2 {
-      position: relative;
-      /* left: 6%; */
-      /* bottom: 12px; */
-      text-align: left;
-      z-index: 0;
-      font-size: 14px;
-  }
-  .averageRatingNumber {
-      width: 25px;
-      left: 14%;
-      /* right: 0; */
-      z-index: 10000;
-      bottom: 0;
-      position: relative;
-  }
-  .averageRatingBarBackgroundColor {
-      background-color: lightGray;
-      width: 62.5%;
-      position: absolute;
-      height: 72.5%;
-      bottom: 5px;
-      left: 28%;
-      /* right: 0; */
-      /* margin: 0 auto; */
-      justify-content: center;
-      z-index: 1;
-  }
+.ratingSystem {
+  position: absolute;
+  width: 100%;
+  border-top: #F4F4F4 solid 1px;
+  height: 22%;
+  bottom: 0;
+  border-radius: 5px;
+  background-color: white;
+  left: 0;
+}
+.averageRating2 {
+    position: relative;
+    left: 2.7%;
+    bottom: -20px;
+    text-align: left;
+    z-index: 0;
+    font-size: 14px;
+}
+.averageRatingNumber {
+  width: 25px;
+  left: 14%;
+  /* right: 0; */
+  z-index: 10000;
+  bottom: 0;
+  position: relative;
+}
+.averageRatingNumber2 {
+    width: 25px;
+    left: 82px;
+    /* right: 0; */
+    z-index: 10000;
+    bottom: -1px;
+    position: relative;
+}
+.averageRatingBarBackgroundColor {
+  background-color: lightGray;
+  width: 62.5%;
+  position: absolute;
+  height: 73.5%;
+  bottom: 4.5px;
+  left: 28%;
+  /* right: 0; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  z-index: 1;
+}
+.averageRatingBarBackgroundColor2 {
+  background-color: lightGray;
+  width: 105px;
+  position: absolute;
+  height: 73.5%;
+  bottom: 4.5px;
+  left: 94px;
+  /* right: 0; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  z-index: 1;
+}
 .starRatingHeight{
   height: 100%;
 }
 
 .navbar-item, .navbar-link {
-    align-items: center;
-    display: flex;
-    // right: 150px;
-    height: 100%;
-    color: white;
+  align-items: center;
+  display: flex;
+  // right: 150px;
+  height: 100%;
+  color: white;
 
 }
 .userDetails{
@@ -274,8 +339,8 @@ li:active {
 }
 
 .field:not(:last-child) {
-    margin-top: 0em;
-    margin-bottom: 0.75rem;
+  margin-top: 0em;
+  margin-bottom: 0.75rem;
 }
 
 .role{
@@ -292,52 +357,52 @@ li:active {
   float: right;
 }
 .rating {
-    float:left;
-    width:300px;
+  float:left;
+  width:300px;
 }
 .rating span { float:right; position:relative; }
 .rating span input {
-    position:absolute;
-    top:0px;
-    left:0px;
-    opacity:0;
+  position:absolute;
+  top:0px;
+  left:0px;
+  opacity:0;
 }
 .rating span label {
-    display:inline-block;
-    width:30px;
-    height:30px;
-    text-align:center;
-    color:#FFF;
-    background:#ccc;
-    font-size:30px;
-    margin-right:2px;
-    line-height:30px;
-    border-radius:50%;
-    -webkit-border-radius:50%;
+  display:inline-block;
+  width:30px;
+  height:30px;
+  text-align:center;
+  color:#FFF;
+  background:#ccc;
+  font-size:30px;
+  margin-right:2px;
+  line-height:30px;
+  border-radius:50%;
+  -webkit-border-radius:50%;
 }
 .rating span:hover ~ span label,
 .rating span:hover label,
 .rating span.checked label,
 .rating span.checked ~ span label {
-    background:#F90;
-    color:#FFF;
+  background:#F90;
+  color:#FFF;
 }
 .jobShowContent {
-    position: relative;
-    top: 40px;
-    margin-bottom: 100px;
+  position: relative;
+  top: 40px;
+  margin-bottom: 100px;
 }
 .roleSelect {
-    float: left;
-    height: 2.25em;
-    margin-top: 1.2em;
-    font-size: 14px;
-    margin-bottom: 15px;
+  float: left;
+  height: 2.25em;
+  margin-top: 1.2em;
+  font-size: 14px;
+  margin-bottom: 15px;
 }
 .lastName {
-    width: 50%;
-    padding-left: 10px;
-    float: left;
+  width: 50%;
+  padding-left: 10px;
+  float: left;
 }
 .title1{
   font-size: 20px;
@@ -350,15 +415,15 @@ li:active {
 
 
 .rightLoginContent {
-    /* margin: 60px; */
-    top: 25%;
-    width: 80%;
-    /* border-radius: 10px; */
-    padding: 60px;
-    position: relative;
-    background-color: rgba(255, 255, 255, 1);
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
-    box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+  /* margin: 60px; */
+  top: 25%;
+  width: 80%;
+  /* border-radius: 10px; */
+  padding: 60px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+  box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
 }
 
 .rating {
@@ -382,7 +447,7 @@ li:active {
 
 
   &.animate {
-     -webkit-animation: stretch-bounce .5s ease-in-out;
+    -webkit-animation: stretch-bounce .5s ease-in-out;
   }
 
   &.hidden {
@@ -403,10 +468,10 @@ li:active {
 
 .half {
   &:before {
-     font-family: fontAwesome;
-     content: "\f089";
-     position: absolute;
-     float: left;
+    font-family: fontAwesome;
+    content: "\f089";
+    position: absolute;
+    float: left;
     z-index: 3;
   }
 }
@@ -457,7 +522,7 @@ li:active {
 
   &.is-animated {
     &:before {
-       transition: 1s ease-out;
+      transition: 1s ease-out;
     }
   }
 }
@@ -499,38 +564,38 @@ li:active {
   }
 }
 img {
-    position: relative;
-    /* height: 100%; */
-    /* max-width: 100%; */
+  position: relative;
+  /* height: 100%; */
+  /* max-width: 100%; */
 }
 
 .field:not(:last-child) {
-    margin-top: 1em;
-    margin-bottom: 0.75rem;
+  margin-top: 1em;
+  margin-bottom: 0.75rem;
 }
 
 .control.has-icons-left .input, .control.has-icons-left .select select {
-    padding-left: 1em;
-    padding-bottom: 0.50em;
+  padding-left: 1em;
+  padding-bottom: 0.50em;
 }
 
 .select select {
-    background-color: white;
-    border-color: #dbdbdb;
-    color: cornflowerblue;
-    cursor: pointer;
-    display: block;
-    font-size: 1em;
-    max-width: 100%;
-    outline: none;
+  background-color: white;
+  border-color: #dbdbdb;
+  color: #3399FF;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  max-width: 100%;
+  outline: none;
 }
 
 .column {
-    display: block;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding: 0rem;
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0rem;
 }
 
 .submitbutton{
@@ -562,7 +627,7 @@ img {
     border-color: #3399FF;
     font-size: 14px;
     height: 40px;
-    bottom: 20px;
+    bottom: 28px;
     left: 150px;
     position: absolute;
     width: 150px;
@@ -580,138 +645,188 @@ img {
   border-radius: 5px;
 }
 .acceptRequestbutton {
-    /* background-color: rgba(255, 255, 255, 0); */
-    font-family: "circe rounded";
-    color: limegreen;
-    /* border-color: #3399FF; */
-    font-size: 16px;
-    padding-top: 8px;
-    border-radius: 30px;
-    height: 40px;
-    border: 1px solid #D3D3D3;
-    top: 10px;
-    right: 10px;
-    padding-right: 11px;
-    text-align: right;
-    position: absolute;
-    width: 40px;
-    border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  font-family: "circe rounded";
+  color: limegreen;
+  /* border-color: #3399FF; */
+  font-size: 16px;
+  padding-top: 8px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #D3D3D3;
+  top: 10px;
+  right: 10px;
+  padding-right: 11px;
+  text-align: right;
+  position: absolute;
+  width: 40px;
+  border-radius: 30px;
 }
 .acceptRequestbutton:hover {
-    /* background-color: rgba(255, 255, 255, 0); */
-    font-family: "circe rounded";
-    color: limegreen;
-    /* border-color: #3399FF; */
-    font-size: 16px;
-    padding-top: 8px;
-    border-radius: 30px;
-    height: 40px;
-    border: 1px solid #D3D3D3;
-    top: 10px;
-    right: 10px;
-    padding-right: 11px;
-    text-align: right;
-    position: absolute;
-    width: 40px;
-    border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  font-family: "circe rounded";
+  color: limegreen;
+  /* border-color: #3399FF; */
+  font-size: 16px;
+  padding-top: 8px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #D3D3D3;
+  top: 10px;
+  right: 10px;
+  padding-right: 11px;
+  text-align: right;
+  position: absolute;
+  width: 40px;
+  border-radius: 30px;
 }
 .rejectRequestbutton {
-    /* background-color: rgba(255, 255, 255, 0); */
-    font-family: "circe rounded";
-    color: #D3D3D3;
-    cursor: default;
-    font-size: 16px;
-    padding-top: 8px;
-    border-radius: 30px;
-    height: 40px;
-    border: 1px solid #D3D3D3;
-    top: 10px;
-    right: 10px;
-    padding-right: 13px;
-    text-align: right;
-    position: absolute;
-    width: 40px;
-    border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  font-family: "circe rounded";
+  color: #D3D3D3;
+  cursor: default;
+  font-size: 16px;
+  padding-top: 8px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #D3D3D3;
+  top: 10px;
+  right: 10px;
+  padding-right: 13px;
+  text-align: right;
+  position: absolute;
+  width: 40px;
+  border-radius: 30px;
 }
 .rejectedRequestbutton {
-    /* background-color: rgba(255, 255, 255, 0); */
-    font-family: "circe rounded";
-    color: red;
-    cursor: default;
-    font-size: 16px;
-    padding-top: 8px;
-    border-radius: 30px;
-    height: 40px;
-    border: 1px solid #D3D3D3;
-    top: 10px;
-    right: 10px;
-    padding-right: 13px;
-    text-align: right;
-    position: absolute;
-    width: 40px;
-    border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  font-family: "circe rounded";
+  color: red;
+  cursor: default;
+  font-size: 16px;
+  padding-top: 8px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #D3D3D3;
+  top: 10px;
+  right: 10px;
+  padding-right: 13px;
+  text-align: right;
+  position: absolute;
+  width: 40px;
+  border-radius: 30px;
 }
 .rejectRequestbutton:hover {
-    /* background-color: rgba(255, 255, 255, 0); */
-    font-family: "circe rounded";
-    color: #D3D3D3;
-    cursor: default;
-    font-size: 16px;
-    padding-top: 8px;
-    border-radius: 30px;
-    height: 40px;
-    border: 1px solid #D3D3D3;
-    top: 10px;
-    right: 10px;
-    padding-right: 13px;
-    text-align: right;
-    position: absolute;
-    width: 40px;
-    border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  font-family: "circe rounded";
+  color: #D3D3D3;
+  cursor: default;
+  font-size: 16px;
+  padding-top: 8px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #D3D3D3;
+  top: 10px;
+  right: 10px;
+  padding-right: 13px;
+  text-align: right;
+  position: absolute;
+  width: 40px;
+  border-radius: 30px;
 }
 .pendingRequestbutton {
-    /* background-color: rgba(255, 255, 255, 0); */
-    font-family: "circe rounded";
-    color: #D3D3D3;
-    font-size: 16px;
-    padding-top: 8px;
-    border-radius: 30px;
-    height: 40px;
-    border: 1px solid #D3D3D3;
-    top: 10px;
-    right: 10px;
-    padding-right: 11px;
-    text-align: right;
-    position: absolute;
-    width: 40px;
-    border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  font-family: "circe rounded";
+  color: #D3D3D3;
+  font-size: 16px;
+  padding-top: 8px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #D3D3D3;
+  top: 10px;
+  right: 10px;
+  padding-right: 11px;
+  text-align: right;
+  position: absolute;
+  width: 40px;
+  border-radius: 30px;
 }
 .pendingRequestbutton:hover {
-    /* background-color: rgba(255, 255, 255, 0); */
-    font-family: "circe rounded";
-    color: limegreen;
-    font-size: 16px;
-    padding-top: 8px;
-    border-radius: 30px;
-    height: 40px;
-    border: 1px solid #D3D3D3;
-    top: 10px;
-    right: 10px;
-    padding-right: 11px;
-    text-align: right;
-    position: absolute;
-    width: 40px;
-    border-radius: 30px;
+  /* background-color: rgba(255, 255, 255, 0); */
+  font-family: "circe rounded";
+  color: limegreen;
+  font-size: 16px;
+  padding-top: 8px;
+  border-radius: 30px;
+  height: 40px;
+  border: 1px solid #D3D3D3;
+  top: 10px;
+  right: 10px;
+  padding-right: 11px;
+  text-align: right;
+  position: absolute;
+  width: 40px;
+  border-radius: 30px;
+}
+.applyForJobs {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 0px  rgba(255, 255, 255, 0);
+    margin: 30px;
+    border-width: 1px;
+    color: white;
+    text-decoration: underline;
+}
+.applyForJobs:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 0px  rgba(255, 255, 255, 0);
+    margin: 30px;
+    border-width: 1px;
+    color: white;
+    text-decoration: underline;
+}
+.button.is-primary {
+    /* background-color: #00d1b2; */
+    border-color: transparent;
+    color: #fff;
+}
+
+.amEmployer {
+    background-color:  rgba(0, 0, 0, 0);
+    border-color: white;
+    margin-left: 0 !important;
+    border-radius: 50px;
+    padding: 21px;
+    margin: 30px;
+    border-width: 1px;
+    color: white;
+    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.2);
+}
+
+#talent{
+  outline: none;
+}
+#employer{
+  outline: none;
+}
+.amEmployer:hover {
+    background-color: #3399FF;
+    border-color: #3399FF;
+    margin-left: 0 !important;
+    border-radius: 50px;
+    padding: 21px;
+    margin: 30px;
+    border-width: 1px;
+    color: white;
+    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.2);
 }
 .signUpSignInLink{
   color: #3399FF;
 }
-.acceptRequestbutton:hover{
-
-}
 
 select{
-  font-family: "Circe-light", sans-serif;
+  font-family: "circe rounded", sans-serif;
 
 }
 
@@ -723,38 +838,38 @@ select{
   height: 300px;
 }
 .card {
-    background-color: white;
-    box-shadow: none;
-    color: #4a4a4a;
-    max-width: 100%;
-    background-color: white;
-    color: #4a4a4a;
-    max-width: 100%;
-    border-radius: 5px;
-    position: relative;
-    border: 1px solid #F4F4F4;
+  background-color: white;
+  box-shadow: none;
+  color: #4a4a4a;
+  max-width: 100%;
+  background-color: white;
+  color: #4a4a4a;
+  max-width: 100%;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #F4F4F4;
 }
 .cardAcceptedRequest {
-    background-color: white;
-    // box-shadow: 0px 0px 10px limegreen;
-    color: #4a4a4a;
-    max-width: 100%;
-    background-color: white;
-    color: #4a4a4a;
-    max-width: 100%;
-    border-radius: 5px;
-    position: relative;
-    border: 1px solid #F4F4F4;
+  background-color: white;
+  // box-shadow: 0px 0px 10px limegreen;
+  color: #4a4a4a;
+  max-width: 100%;
+  background-color: white;
+  color: #4a4a4a;
+  max-width: 100%;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #F4F4F4;
 }
 a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-    background-color: white;
-    color: #3273dc;
+  background-color: white;
+  color: #3273dc;
 }
 
 .register {
-    float: left;
-    font-size: 14px;
-    margin-top: 15px;
+  float: left;
+  font-size: 14px;
+  margin-top: 15px;
 }
 input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 0);
@@ -767,118 +882,118 @@ input[type=password]:focus, textarea:focus {
 
 }
 .icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    position: relative;
-    top: 13px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  height: 1.5rem;
+  position: relative;
+  top: 13px;
 }
 .center{
   text-align: center;
 };
 
 .dayRate {
-    font-size: 40px;
-    font-weight: 600;
-    color: darkgrey;
-    height: 50px;
-    text-align: center;
-    width: 100%;
+  font-size: 40px;
+  font-weight: 600;
+  color: darkgrey;
+  height: 50px;
+  text-align: center;
+  width: 100%;
 }
 .dayRateTextMoney {
-    margin-bottom: 0;
-    font-size: 30px;
-    text-align: center;
-    width: 70px;
-    color: darkslategrey;
+  margin-bottom: 0;
+  font-size: 30px;
+  text-align: center;
+  width: 70px;
+  color: darkslategrey;
 }
 .dayRateText {
-    margin-bottom: 10px;
-    font-size: 10px;
-    color: darkslategrey;
+  margin-bottom: 10px;
+  font-size: 10px;
+  color: darkslategrey;
 }
 
 .dayRateText2 {
-    /* margin-bottom: 10px; */
-    font-size: 15px;
-    color: darkslategrey;
-    position: relative;
-    top: -3px;
-    text-align: center;
-    width: 100%;
+  /* margin-bottom: 10px; */
+  font-size: 15px;
+  color: darkslategrey;
+  position: relative;
+  top: -3px;
+  text-align: center;
+  width: 100%;
 }
 .indexContract {
-    color: #3399FF;
-    /* padding: 10px 10px 10px 4px; */
-    /* float: right; */
-    position: relative;
-    width: 100%;
-    text-align: center;
-    /* bottom: -20px; */
-    /* right: 110px; */
+  color: #3399FF;
+  /* padding: 10px 10px 10px 4px; */
+  /* float: right; */
+  position: relative;
+  width: 100%;
+  text-align: center;
+  /* bottom: -20px; */
+  /* right: 110px; */
 }
 .floatRight {
-    position: absolute;
-    bottom: 10px;
-    right: 5px;
-    padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  padding: 10px;
 }
 .indexCompanyPicture {
-    width: 70%;
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
-    height: 80px;
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    text-align: center;
+  width: 70%;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  height: 80px;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  text-align: center;
 }
 .contract {
-    color: #3399FF;
-    padding: 10px;
+  color: #3399FF;
+  padding: 10px;
 }
 .jobDescription {
-    font-size: 12px;
-    text-align: left;
-    padding-top: 23px;
-    padding-left: 5px;
-    padding-right: 5px;
+  font-size: 12px;
+  text-align: left;
+  padding-top: 23px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .commentsContent {
-    font-size: 12px;
-    text-align: left;
-    padding-top: 23px;
-    padding-left: 5px;
-    padding-right: 5px;
+  font-size: 12px;
+  text-align: left;
+  padding-top: 23px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .listIcon {
-    width: 50%;
-    display: inline;
-    color: #868686;
-    top: 20%;
-    position: relative;
-    font-weight: 600;
+  width: 50%;
+  display: inline;
+  color: #868686;
+  top: 20%;
+  position: relative;
+  font-weight: 600;
 }
 
 .iconSidebar {
-    text-align: center;
-    height: 85px;
-    font-size: 20px;
-    cursor: pointer;
+  text-align: center;
+  height: 85px;
+  font-size: 20px;
+  cursor: pointer;
 }
 .iconSidebarAdd {
-      text-align: center;
-      padding-top: 20px;
-      height: 60px;
-      font-size: 15px;
-      cursor: copy;
-  }
+  text-align: center;
+  // padding-top: 20px;
+  height: 85px;
+  font-size: 20 px;
+  cursor: copy;
+}
 .sidebarhr{
   width: 80%;
 }
@@ -886,67 +1001,67 @@ input[type=password]:focus, textarea:focus {
 
 
 .sidebar {
-    align-items: center;
-    justify-content: center;
-    /* height: 3em; */
-    top: 146px;
-    width: 100%;
-    position: relative;
+  align-items: center;
+  justify-content: center;
+  /* height: 3em; */
+  top: 146px;
+  width: 100%;
+  position: relative;
 }
 .is-sidebar-menu {
-    background: white;
-    border-right: 1px solid #F4F4F4;
+  background: white;
+  border-right: 1px solid #F4F4F4;
 }
 
 .input, .textarea {
-    background-color: white;
-    border-color: #F4F4F4;
-    color: #4a4a4a;
-    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.0);
-    max-width: 100%;
-    width: 100%;
-    font-family: "Circe";
+  background-color: white;
+  border-color: #F4F4F4;
+  color: #4a4a4a;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.0);
+  max-width: 100%;
+  width: 100%;
+  font-family: "circe rounded";
 }
 a {
-    color: #4a4a4a;
-    cursor: pointer;
-    text-decoration: none;
+  color: #4a4a4a;
+  cursor: pointer;
+  text-decoration: none;
 }
 .floatRight {
-    float: right;
-    padding: 0;
-    top: 0;
-    margin: 0;
+  float: right;
+  padding: 0;
+  top: 0;
+  margin: 0;
 }
 .searchBar {
-    z-index: 1000;
-    height: 30px;
-    top: -60px;
-    width: 100%;
-    margin: 0 auto;
-    position: absolute;
+  z-index: 1000;
+  height: 30px;
+  top: -60px;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
 }
 .columns:not(:last-child) {
-    margin-bottom: 0rem;
+  margin-bottom: 0rem;
 }
 .input2 {
-    background-color: white;
-    border-color: #F4F4F4;
-    color: #4a4a4a;
-    height: 37px;
-    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0);
-    max-width: 100%;
-    width: 400px;
-    font-family: "Circe";
+  background-color: white;
+  border-color: #F4F4F4;
+  color: #4a4a4a;
+  height: 37px;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0);
+  max-width: 100%;
+  width: 400px;
+  font-family: "circe rounded";
 }
 
 
 .mainBody2 {
-    position: relative;
-    top: 85px;
-    // left: 15%;
-    width: 83.33333%;
-    z-index: 1000;
+  position: relative;
+  top: 85px;
+  // left: 15%;
+  width: 83.33333%;
+  z-index: 1000;
 }
 
 // @media only screen
@@ -970,114 +1085,143 @@ a {
 //   }
 // }
 .sideBarMain{
-    // -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
-    // box-shadow: 20px 40px 29px 50px rgba(0, 0, 0, 0.1);
+  // -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+  // box-shadow: 20px 40px 29px 50px rgba(0, 0, 0, 0.1);
 
 }
 
 .requesteeRole{
-    color: #D3D3D3;
-    font-size: 17px;
-    text-align: left;
-    left: 30px;
-    width: 70%;
-    position: relative;
+  color: #D3D3D3;
+  font-size: 17px;
+  text-align: left;
+  left: 30px;
+  width: 70%;
+  position: relative;
 }
 
-.requesteeName{
-    color: #3399FF;
-    text-align: left;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-    left: 30px;
-    width: 60%;
-    position: relative;
+.requesteeName {
+  color: #3399FF;
+  text-align: left;
+  font-size: 16px;
+  /* text-transform: uppercase; */
+  font-weight: normal;
+  left: 30px;
+  width: 60%;
+  position: relative;
 }
 
 
 .requesteeEmailDetails{
-    font-size: 12px;
-    text-align: left;
-    // left: 85px;
-    width: 70%;
-    top: 0;
-    left: 30px;
-    position: relative;
+  font-size: 12px;
+  text-align: left;
+  // left: 85px;
+  width: 70%;
+  top: 0;
+  left: 30px;
+  position: relative;
 }
 .notification.is-info {
-    background-color: #209cee;
-    color: #fff;
-    position: absolute;
-    width: 94%;
-    /* opacity: 0.6; */
-    top: -50px;
-    /* left: 50px; */
-    margin: 0 auto;
-    z-index: 100000000;
-    border: none;
+  background-color: #209cee;
+  color: #fff;
+  position: absolute;
+  width: 68%;
+  /* opacity: 0.6; */
+  top: 78px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 100000000;
+  border: none;
 }
 .notification {
-    background-color: whitesmoke;
-    border-radius: 4px;
-    padding: 1.25rem;
-    position: relative;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 1.75rem;
+  position: relative;
 }
 
 .notification a:not(.button) {
-    color: currentColor;
-    text-decoration: none;
+  color: currentColor;
+  text-decoration: none;
 }
 .flashMessage {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
 }
 
 
 .navbar-dropdown {
-    background-color: white;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-top: 2px solid white;
-    border-bottom: 1px solid #F4F4F4;
-    border-left: 1px solid #F4F4F4;
-    border-right: 1px solid #F4F4F4;
-    box-shadow: none;
-    display: none;
-    font-size: 0.875rem;
-    right: 0;
-    min-width: 100%;
-    position: absolute;
-    top: 100%;
-    z-index: 20;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top: 2px solid white;
+  border-bottom: 1px solid #F4F4F4;
+  border-left: 1px solid #F4F4F4;
+  border-right: 1px solid #F4F4F4;
+  box-shadow: none;
+  display: none;
+  font-size: 0.875rem;
+  right: 0;
+  min-width: 100%;
+  position: absolute;
+  top: 100%;
+  z-index: 20;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
 
+}
+
+.signUpButton {
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px rgba(255,255,255,0);
+    color: white;
+}
+.signUpButton:hover{
+  background-color: rgba(255,255,255, 0);
+  border: solid 1px white;
+  color: white;
+}
+
+.aboutPageContent {
+    width: 70%;
+    top: 27%;
+    z-index: 1000000;
+    margin: 0 auto;
+    height: 50%;
+    // background-color: red;
+    position: relative;
+    color: white;
+}
+
+.headerRegisterPage {
+    font-size: 41px;
+    font-weight: 300;
+    color: white;
 }
 
 .navbar {
-    background-color: white;
-    min-height: 3.25rem;
-    position: fixed;
-    border-bottom: 1px solid #F4F4F4;
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.02);
-    width: 100%;
-    z-index: 10000;
-    top: 0;
+  background-color: rgba(255,255, 255, 0);
+  min-height: 3.25rem;
+  position: fixed;
+  // border-bottom: 1px solid #F4F4F4;
+  -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  z-index: 10000;
+  top: 0;
 }
 .logOutButton {
-    background-color: rgba(255, 255, 255, 0);
-    font-family: "circe rounded";
-    color: #3399FF;
-    border-color: #3399FF;
-    font-size: 14px;
-    height: 40px;
-    // bottom: 20px;
-    left: 30px;
-    position: absolute;
-    width: 150px;
-    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "circe rounded";
+  color: #3399FF;
+  border-color: #3399FF;
+  font-size: 14px;
+  height: 40px;
+  // bottom: 20px;
+  left: 30px;
+  position: absolute;
+  width: 150px;
+  border-radius: 5px;
 }
 .logOutButton:hover{
   // border-radius: 20px;
@@ -1091,22 +1235,22 @@ a {
   border-radius: 5px;
 }
 hr {
-    background-color: #F4F4F4;
-    border: none;
-    display: block;
-    height: 1px;
-    width: 90%;
-    margin: 0 auto;
+  background-color: #F4F4F4;
+  border: none;
+  display: block;
+  height: 1px;
+  width: 90%;
+  margin: 0 auto;
 }
 .indexhr {
-    background-color: #F4F4F4;
-    border: none;
-    display: block;
-    height: 1px;
-    width: 100%;
-    top: 50px;
-    position: absolute;
-    /* margin: 0 auto; */
+  background-color: #F4F4F4;
+  border: none;
+  display: block;
+  height: 1px;
+  width: 100%;
+  top: 50px;
+  position: absolute;
+  /* margin: 0 auto; */
 }
 .mapCard{
   height: 100%;
@@ -1114,67 +1258,85 @@ hr {
 
 }
 .emailIcon {
-    width: 20px;
-    position: absolute;
-    float: right;
-    right: 20px;
-    top: 10px;
+  width: 20px;
+  position: absolute;
+  float: right;
+  right: 20px;
+  top: 10px;
 }
 .deleteIcon {
-    width: 20px;
-    position: absolute;
-    float: right;
-    right: 20px;
-    top: 10px;
+  width: 20px;
+  position: absolute;
+  float: right;
+  right: 20px;
+  top: 10px;
 }
 .emailIconShow {
-    width: 20px;
-    position: relative;
-    float: right;
-    right: 20px;
-    top: 10px;
+  width: 20px;
+  position: relative;
+  float: right;
+  right: 20px;
+  top: 10px;
 }
 .deleteIconShow {
-    width: 20px;
-    position: relative;
-    float: right;
-    right: 20px;
-    top: 10px;
+  width: 20px;
+  position: relative;
+  float: right;
+  right: 20px;
+  top: 10px;
 }
 .editIconShow {
-    width: 20px;
-    position: relative;
-    float: right;
-    right: 30px;
-    top: 10px;
+  width: 20px;
+  position: relative;
+  float: right;
+  right: 30px;
+  top: 10px;
 }
 .profileeditIconShow {
-    width: 20px;
-    position: relative;
-    float: right;
-    right: 10px;
-    top: 10px;
+  width: 20px;
+  position: relative;
+  float: right;
+  right: 10px;
+  top: 10px;
 }
 .managerName {
-    color: #3399FF;
-    text-align: left;
-    font-size: 14px;
-    left: 105px;
-    top: 20px;
-    text-transform: uppercase;
-    width: 60%;
-    position: relative;
-    font-weight: bold;
+  color: #3399FF;
+  text-align: left;
+  font-size: 14px;
+  left: 105px;
+  z-index: 1000;
+  top: 20px;
+  /* text-transform: uppercase; */
+  width: 60%;
+  position: relative;
+  font-weight: normal;
 }
-.hiringManager {
-    color: #D3D3D3;
-    font-size: 17px;
+
+.emailDetailsComments {
+    font-size: 12px;
     text-align: left;
     left: 105px;
     width: 70%;
-    top: 20px;
-    // top: 20px;
+    top: 26px;
     position: relative;
+}
+.averageRating3 {
+    position: relative;
+    /* left: 2.7%; */
+    bottom: -3px;
+    text-align: left;
+    z-index: 0;
+    font-size: 14px;
+}
+.hiringManager {
+  color: #D3D3D3;
+  font-size: 17px;
+  text-align: left;
+  left: 105px;
+  width: 70%;
+  top: 20px;
+  // top: 20px;
+  position: relative;
 }
 .emailDetails{
   font-size: 12px;
@@ -1186,30 +1348,30 @@ hr {
   position: relative;
 }
 .userNameNavbar {
-    color: #3399FF;
-    text-align: left;
-    font-size: 14px;
-    left: 0;
-    width: 100%;
-    text-transform: uppercase;
-    top: 70px;
-    text-align: center;
-    font-weight: bold;
-    position: relative;
+  color: #3399FF;
+  text-align: left;
+  font-size: 17px;
+  left: 0;
+  width: 100%;
+  /* text-transform: uppercase; */
+  top: 70px;
+  text-align: center;
+  font-weight: normal;
+  position: relative;
 }
 .is-vertical-center {
   display: flex;
   align-items: center;
 }
 .userRoleNavbar {
-    color: #D3D3D3;
-    font-size: 17px;
-    text-align: left;
-    left: 0;
-    top: 70px;
-    width: 100%;
-    text-align: center;
-    position: relative;
+  color: #D3D3D3;
+  font-size: 17px;
+  text-align: left;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  text-align: center;
+  position: relative;
 }
 .userEmailNavbar{
   font-size: 10px;
@@ -1221,25 +1383,25 @@ hr {
   position: relative;
 }
 .profilemanagerName {
-    color: #3399FF;
-    text-align: left;
-    font-size: 16px;
-    left: 115px;
-    width: 60%;
-    top: 30px;
-    text-transform: uppercase;
-    position: relative;
-    font-weight: bold;
+  color: #3399FF;
+  text-align: left;
+  font-size: 17px;
+  left: 115px;
+  width: 60%;
+  top: 30px;
+  /* text-transform: uppercase; */
+  position: relative;
+  font-weight: normal;
 }
 
 .profilehiringManager {
-    color: #D3D3D3;
-    font-size: 17px;
-    text-align: left;
-    left: 115px;
-    width: 70%;
-    top: 30px;
-    position: relative;
+  color: #D3D3D3;
+  font-size: 17px;
+  text-align: left;
+  left: 115px;
+  width: 70%;
+  top: 30px;
+  position: relative;
 }
 .profileemailDetails{
   font-size: 12px;
@@ -1250,45 +1412,45 @@ hr {
   position: relative;
 }
 .jobshowmanagerProfilePicture {
-    height: 100px;
-    left: 19px;
-    width: 100px;
-    top: 9px;
-    border-radius: 50px;
-    z-index: 1000;
-    position: absolute;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 100px;
+  left: 19px;
+  width: 100px;
+  top: 9px;
+  border-radius: 50px;
+  z-index: 1000;
+  position: absolute;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 .jobseditIconShow {
-    width: 20px;
-    position: absolute;
-    float: right;
-    right: 50px;
-    top: 10px;
-    z-index: 1000;
+  width: 20px;
+  position: absolute;
+  float: right;
+  right: 50px;
+  top: 10px;
+  z-index: 1000;
 }
 .deleteComment {
-    width: 10px;
-    position: absolute;
-    right: 40px;
-    /* top: 20px; */
+  width: 10px;
+  position: absolute;
+  right: 40px;
+  /* top: 20px; */
 }
 .payDetails {
-    height: 100px;
-    padding: 1em;
-    background-color: #f9fafc;
+  height: 100px;
+  padding: 1em;
+  background-color: #f9fafc;
 }
 .companyRating {
-    position: absolute;
-    left: 0;
-    height: 29%;
-    z-index: -1;
-    bottom: 0;
-    width: 100%;
-    padding: 1em;
-    background-color: white;
+  position: absolute;
+  left: 0;
+  height: 29%;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  background-color: white;
 }
 
 .managerDetails{
@@ -1302,76 +1464,76 @@ hr {
   position: relative;
 }
 .userShowProfileDetails {
-    height: 100px;
-    width: 92%;
-    left: 50px;
-    top: 40px;
-    position: relative;
+  height: 100px;
+  width: 92%;
+  left: 50px;
+  top: 40px;
+  position: relative;
 }
 .userShowCompanyPicture {
-    width: 120px;
-    height: 120px;
-    font-size: 56px;
-    right: 70px;
-    border-radius: 5px;
-    float: right;
-    bottom: 70px;
-    justify-content: center;
-    background-repeat: no-repeat;
-    position: relative;
-    background-position: center;
-    background-size: contain;
-    border: 1px solid #F4F4F4;
+  width: 120px;
+  height: 120px;
+  font-size: 56px;
+  right: 70px;
+  border-radius: 5px;
+  float: right;
+  bottom: 70px;
+  justify-content: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid #F4F4F4;
 }
 .usersShowRequests {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
-    text-align: center;
-    z-index: 1000;
-    float: left;
-    position: relative;
-    top: 20px;
-    margin: 1%;
-    width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  z-index: 1000;
+  float: left;
+  position: relative;
+  top: 20px;
+  margin: 1%;
+  width: 100%;
 }
 .usersShowRequestsAccepted {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    box-shadow: 0px 0px 10px rgba(50, 205, 50, 0.6);
-    text-align: center;
-    z-index: 1000;
-    float: left;
-    position: relative;
-    top: 20px;
-    margin: 1%;
-    width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0px 0px 10px rgba(50, 205, 50, 0.6);
+  text-align: center;
+  z-index: 1000;
+  float: left;
+  position: relative;
+  top: 20px;
+  margin: 1%;
+  width: 100%;
 }
 
 .companyLogo5 {
-    text-align: center;
-    height: 100%;
-    margin: 10px;
-    z-index: 1000;
+  text-align: center;
+  height: 100%;
+  margin: 10px;
+  z-index: 1000;
 }
 
 .userShowRequestsProfileDetails {
-    height: 100%;
-    width: 80%;
-    left: 5%;
-    display: inline;
-    top: 14px;
-    /* top: 40px; */
-    float: left;
-    position: relative;
+  height: 100%;
+  width: 80%;
+  left: 5%;
+  display: inline;
+  top: 14px;
+  /* top: 40px; */
+  float: left;
+  position: relative;
 }
 .requestPendingButton{
   background-color: rgba(255, 255, 255, 0);
@@ -1388,178 +1550,178 @@ hr {
 }
 
 .userShowBio {
-    height: 100%;
-    top: 0;
-    position: relative;
+  height: 100%;
+  top: 0;
+  position: relative;
 }
 .userShowBioDetails {
-    font-size: 12px;
-    text-align: left;
-    width: 80%;
-    height: 100%;
-    padding: 30px;
-    margin: 0 auto;
-    top: 0;
-    position: relative;
+  font-size: 12px;
+  text-align: left;
+  width: 80%;
+  height: 100%;
+  padding: 30px;
+  margin: 0 auto;
+  top: 0;
+  position: relative;
 }
 .userShowProfilePicture {
-    height: 100px;
-    left: 50px;
-    width: 100px;
-    top: 65px;
-    // border: 1px solid #F4F4F4;
-    border-radius: 50px;
-    z-index: 1000;
-    position: absolute;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 100px;
+  left: 50px;
+  width: 100px;
+  top: 65px;
+  // border: 1px solid #F4F4F4;
+  border-radius: 50px;
+  z-index: 1000;
+  position: absolute;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 .searchBarBackground {
-    background: linear-gradient(white, rgba(255, 255, 255, 0.4));
-    height: 125px;
-    width: 100%;
-    position: fixed;
-    top: 50px;
-    left: 0px;
-    z-index: 14;
+  background: linear-gradient(white, rgba(255, 255, 255, 0.4));
+  height: 125px;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  z-index: 14;
 }
 .userShowRequestProfilePicture {
-    height: 100px;
-    left: 25px;
-    float: left;
-    width: 100px;
-    /* top: 60px; */
-    border-radius: 50px;
-    z-index: 1000;
-    position: relative;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 100px;
+  left: 25px;
+  float: left;
+  width: 100px;
+  /* top: 60px; */
+  border-radius: 50px;
+  z-index: 1000;
+  position: relative;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 
 .map {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-    border-radius: 10px;
-    border: 1px solid #F4F4F4;
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.02);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  border-radius: 10px;
+  border: 1px solid #F4F4F4;
+  -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.02);
   &.job-index {
-      height: 100vh;
-      position: absolute;
-      z-index: 1;
-      left: 0;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    left: 0;
   }
 }
 
 
 .tile.is-3 {
-    flex: none;
-    width: 19%;
+  flex: none;
+  width: 19%;
 }
 
 .companyLogo {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
-    text-align: center;
-    // height: 100%;
-    margin: 10px;
-    z-index: 1000;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  // height: 100%;
+  margin: 10px;
+  z-index: 1000;
 }
 .column.is-one-quarter-desktop-new {
-    flex: none;
-    width: 25.4%;
+  flex: none;
+  width: 25.4%;
 }
 
 .companyLogo2 {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
-    text-align: left;
-    height: 100%;
-    z-index: 1000;
-    padding-left: 40px;
-    padding-top: 20px;
-    margin: 10px;
-    padding-bottom: 20px;
-    padding-right: 40px;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  height: 100%;
+  z-index: 1000;
+  padding-left: 40px;
+  padding-top: 20px;
+  margin: 10px;
+  padding-bottom: 20px;
+  padding-right: 40px;
 }
 .companyLogo3 {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    height: 100%;
-    padding: 6%;
-    top: 100px;
-    border-top: none;
-    z-index: 1000;
-    border: 1px solid #F4F4F4;
-    border-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 100%;
+  padding: 6%;
+  top: 100px;
+  border-top: none;
+  z-index: 1000;
+  border: 1px solid #F4F4F4;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .companyLogo4 {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    padding: 6%;
-    // box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
-    text-align: center;
-    height: 300px;
-    z-index: 1000;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  padding: 6%;
+  // box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  height: 300px;
+  z-index: 1000;
 }
 .indexCards {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
-    text-align: center;
-    // height: 100%;
-    z-index: 1000;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  // height: 100%;
+  z-index: 1000;
 }
 
 .jobCommentsSection {
-    background-color: white;
-    border-radius: 5px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border: 1px solid #F4F4F4;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
-    text-align: left;
-    height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #F4F4F4;
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.07);
+  text-align: left;
+  height: 100%;
 }
 
 .mainBody3 {
-    position: absolute;
-    top: 150px;
-    left: 0;
-    width: 75%;
-    z-index: 1000;
-    margin: 0 auto;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  width: 75%;
+  z-index: 1000;
+  margin: 0 auto;
 }
 .job-index2{
   opacity: 0.5;
@@ -1579,65 +1741,65 @@ hr {
     font-family: "circe rounded";
     text-decoration: none;
   }
-    position: absolute;
-    text-align: center;
-    bottom: 10px;
-    width: 50%;
-    height: 20px;
-    /* margin: 0 auto; */
-    color: white;
-    font-size: 13px;
-    font-family: "circe rounded";
+  position: absolute;
+  text-align: center;
+  bottom: 10px;
+  width: 50%;
+  height: 20px;
+  /* margin: 0 auto; */
+  color: white;
+  font-size: 13px;
+  font-family: "circe rounded";
 }
 .indexList {
-    position: relative;
-    z-index: 10;
-    margin: 10px;
-    // height: 250px;
+  position: relative;
+  z-index: 10;
+  margin: 10px;
+  // height: 250px;
 }
 .indexManagerDetails {
-    position: relative;
-    top: -60px;
-    left: 40px;
+  position: relative;
+  top: -60px;
+  left: 40px;
 }
 .column.is-one-third-desktop {
-    flex: none;
-    width: 30%;
+  flex: none;
+  width: 30%;
 }
 
 @media only screen and (max-width: 768px) {
   .displayDesktop {
-      top: 20%;
-      padding-left: 15px;
-      position: relative;
-      display: inline;
+    top: 20%;
+    padding-left: 15px;
+    position: relative;
+    display: inline;
   }
   .mapButton {
-      text-align: center;
-      height: 30px;
-      padding-left: 13px;
-      width: 40px;
-      background-color: white;
-      right: 55%;
-      font-size: 15px;
-      position: absolute;
-      z-index: 1000;
-      height: 37px;
-      border-radius: 5px;
-      border: 1px solid #F4F4F4;
+    text-align: center;
+    height: 30px;
+    padding-left: 13px;
+    width: 40px;
+    background-color: white;
+    right: 55%;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1000;
+    height: 37px;
+    border-radius: 5px;
+    border: 1px solid #F4F4F4;
   }
   .listItem {
-      width: 100%;
-      display: inline;
-      text-align: center;
-      margin: 0 auto;
-      float: left;
-      position: relative;
-      left: 0;
-      top: 20%;
-      font-size: 13px;
-      font-weight: 400;
-      color: #868686;
+    width: 100%;
+    display: inline;
+    text-align: center;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+    left: 0;
+    top: 20%;
+    font-size: 13px;
+    font-weight: 400;
+    color: #868686;
   }
   .listButton {
     text-align: center;
@@ -1662,11 +1824,11 @@ hr {
     color: #868686;
   }
   .columns.is-fullheight .column {
-      position: fixed;
-      left: 0;
-      width: 0;
-      height: 100%;
-      /* overflow-y: auto; */
+    position: fixed;
+    left: 0;
+    width: 0;
+    height: 100%;
+    /* overflow-y: auto; */
   }
   .mainBody {
     position: relative;
@@ -1677,22 +1839,22 @@ hr {
     margin: 0 auto;
   }
   .leftLoginRegisterLogo {
-      width: 30%;
-      position: relative;
-      top: 8%;
-      margin: 0 auto;
+    width: 30%;
+    position: relative;
+    top: 8%;
+    margin: 0 auto;
   }
   .rightRegisterContent {
-      /* margin: 0 auto; */
-      top: 18%;
-      left: 10%;
-      width: 80%;
-      /* border-radius: 10px; */
-      padding: 40px 60px 40px 60px;
-      position: absolute;
-      background-color: white;
-      -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
-      box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+    /* margin: 0 auto; */
+    top: 18%;
+    left: 10%;
+    width: 80%;
+    /* border-radius: 10px; */
+    padding: 40px 60px 40px 60px;
+    position: absolute;
+    background-color: white;
+    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
   }
   .column.is-2.is-sidebar-menu {
     position: fixed;
@@ -1700,102 +1862,102 @@ hr {
     width: 10%;
     height: 100%;
     /* overflow-y: auto; */
-}
+  }
 }
 @media only screen and (min-width: 768px) {
   .displayDesktop {
-      top: 20%;
-      padding-left: 15px;
-      position: relative;
-      display: inline;
+    top: 20%;
+    padding-left: 15px;
+    position: relative;
+    display: inline;
   }
   .rightRegisterContent {
-      /* margin: 60px; */
-      top: 8%;
-      width: 80%;
-      /* border-radius: 10px; */
-      padding: 40px 60px 40px 60px;
-      position: relative;
-      background-color: white;
-      -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
-      box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+    /* margin: 60px; */
+    top: 8%;
+    width: 80%;
+    /* border-radius: 10px; */
+    padding: 40px 60px 40px 60px;
+    position: relative;
+    background-color: white;
+    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.19);
   }
   .leftLoginRegisterLogo {
-      width: 20%;
-      position: relative;
-      top: 47%;
-      margin: 0 auto;
+    width: 20%;
+    position: relative;
+    top: 47%;
+    margin: 0 auto;
   }
   .mapButton {
-      text-align: center;
-      height: 30px;
-      width: 90px;
-      background-color: white;
-      right: 0;
-      font-size: 15px;
-      position: absolute;
-      z-index: 1000;
-      height: 37px;
-      border-radius: 5px;
-      border: 1px solid #F4F4F4;
+    text-align: center;
+    height: 30px;
+    width: 90px;
+    background-color: white;
+    right: 0;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1000;
+    height: 37px;
+    border-radius: 5px;
+    border: 1px solid #F4F4F4;
   }
   .listButton {
-      text-align: center;
-      height: 30px;
-      width: 90px;
-      background-color: white;
-      right: 15%;
-      font-size: 15px;
-      position: absolute;
-      z-index: 1000;
-      height: 37px;
-      border-radius: 5px;
-      border: 1px solid #F4F4F4;
+    text-align: center;
+    height: 30px;
+    width: 90px;
+    background-color: white;
+    right: 15%;
+    font-size: 15px;
+    position: absolute;
+    z-index: 1000;
+    height: 37px;
+    border-radius: 5px;
+    border: 1px solid #F4F4F4;
   }
   .columns.is-fullheight {
-      top: 0;
-      position: fixed;
-      max-height: calc(100vh - ( 3.25rem - .75rem ));
-      height: calc(100vh - ( 3.25rem - .75rem ));
-      z-index: 1700;
-      /* display: flex; */
-      /* flex-direction: row; */
-      /* justify-content: stretch; */
+    top: 0;
+    position: fixed;
+    max-height: calc(100vh - ( 3.25rem - .75rem ));
+    height: calc(100vh - ( 3.25rem - .75rem ));
+    z-index: 1700;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: stretch; */
   }
   .columns.is-fullheight .column {
-      position: fixed;
-      left: 0;
-      height: 100%;
-      /* overflow-y: auto; */
+    position: fixed;
+    left: 0;
+    height: 100%;
+    /* overflow-y: auto; */
   }
   .menu {
-      font-size: 1rem;
-      position: relative;
-      z-index: 1000;
-      top: 0;
-      height: 100%;
-      color: #868686;
+    font-size: 1rem;
+    position: relative;
+    z-index: 1000;
+    top: 0;
+    height: 100%;
+    color: #868686;
   }
   .listItem {
-      width: 100%;
-      display: inline;
-      text-align: center;
-      margin: 0 auto;
-      float: left;
-      position: relative;
-      left: 0;
-      top: 20%;
-      font-size: 13px;
-      font-weight: 400;
-      color: #868686;
+    width: 100%;
+    display: inline;
+    text-align: center;
+    margin: 0 auto;
+    float: left;
+    position: relative;
+    left: 0;
+    top: 20%;
+    font-size: 13px;
+    font-weight: 400;
+    color: #868686;
   }
   .mainBody {
-      position: relative;
-      top: 80px;
-      left: 15%;
-      width: 85%;
-      z-index: 100;
-      margin: 0 auto;
+    position: relative;
+    top: 80px;
+    left: 15%;
+    width: 85%;
+    z-index: 100;
+    margin: 0 auto;
   }
   .column.is-2.is-sidebar-menu {
     position: fixed;
@@ -1803,40 +1965,39 @@ hr {
     width: 10%;
     height: 100%;
     /* overflow-y: auto; */
-}
+  }
 }
 .tabs.is-boxed li.is-active a {
-    background-color: white;
-    border-color: none !important;
-    border-bottom-color: none !important;
-    border: 1px solid #F4F4F4;
+  background-color: white;
+  border-color: none !important;
+  border-bottom-color: none !important;
+  border: 1px solid #F4F4F4;
 
 }
 .label {
-    color: #363636;
-    display: block;
-    font-size: 1rem;
-    text-align: left;
-    font-weight: normal;
+  color: #363636;
+  display: block;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: normal;
 }
 .is-active {
-    background-color: white;
-    border-color: none !important;
-    border-bottom-color: white !important;
-    border: 1px solid #F4F4F4;
+  background-color: white;
+  border-color: none !important;
+  border-bottom-color: white !important;
+  border: 1px solid #F4F4F4;
 }
 .tabs.is-boxed a {
-    border: 1px solid #F4F4F4;
-    border-radius: 4px 4px 0 0;
+  border: 1px solid #F4F4F4;
+  border-radius: 4px 4px 0 0;
 }
 .tabs.is-boxed a:hover {
     background-color: whitesmoke;
-    border-bottom: none  !important;
-
+    border-bottom: rgba(255,255,255, 0) solid 1px !important;
 }
 .is-active:hover {
-    background-color: white !important;
-    border-bottom: 1px solid white  !important;
+  background-color: white !important;
+  border-bottom: 1px solid white  !important;
 
 }
 

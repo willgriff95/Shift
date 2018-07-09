@@ -141,11 +141,10 @@ class JobsShow extends React.Component {
                       <div className="tile is-parent is-vertical jobDetails">
                         {job.manager.companyPicture &&
                           <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
-                            <div className="starRatingHeight">
-                              {(isNaN(this.state.averageRating) === false ) &&
+                            {(isNaN(this.state.averageRating) === false ) &&
                                 <div>
                                   <div className="ratingSystem">
-                                    <div className="averageRating2">
+                                    <div className="averageRating3">
                                       {/* <hr/> */}
                                       <div className="averageRatingNumber">{this.state.averageRating}</div>
                                       <div className="averageRatingBarBackgroundColor"></div>
@@ -159,11 +158,11 @@ class JobsShow extends React.Component {
                                     </div>
                                   </div>
                                 </div>
-                              }
-                              {(isNaN(this.state.averageRating) === true || (this.state.averageRating === 0) ) &&
+                            }
+                            {(isNaN(this.state.averageRating) === true || (this.state.averageRating === 0) ) &&
                                 <div>
                                   <div className="ratingSystem">
-                                    <div className="averageRating2">
+                                    <div className="averageRating3">
                                       {/* <hr/> */}
                                       <div className="averageRatingNumber">0</div>
                                       <div className="averageRatingBarBackgroundColor"></div>
@@ -177,10 +176,7 @@ class JobsShow extends React.Component {
                                     </div>
                                   </div>
                                 </div>
-                              }
-
-
-                            </div>
+                            }
                           </div>
                         }
                         <div className="tile is-child  is-white companyLogo">

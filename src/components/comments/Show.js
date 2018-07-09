@@ -25,11 +25,23 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
               </div>
             }
             <Link to={`/users/${comment.createdBy.id}`}>
+              {comment.createdBy.fullName &&
               <div className="managerName">{comment.createdBy.fullName}</div>
+              }
               {/* <div className="hiringManager">Hiring Manager</div> */}
               {/* <div className="emailDetails">{comment.createdBy.email}</div> */}
-              <p className="emailDetails">{comment.rating}</p>
-              <p className="emailDetails">{comment.content}</p>
+              {comment.rating &&
+                  <div>
+                    <div className="averageRating2">
+                      {/* <hr/> */}
+                      <div className="averageRatingNumber2">{comment.rating}</div>
+                      <div className="averageRatingBarBackgroundColor2"></div>
+                      <div className="averageRatingBar2" style={{width: `calc(105*${comment.rating*2/10}px)`}}></div>
+                      <div className="averageRatingBackground2"></div>
+                    </div>
+                  </div>
+              }
+              <p className="emailDetailsComments">{comment.content}</p>
             </Link>
           </div>
           {/* <img className="commentsProfilePicture" src={comment.createdBy.picture} /> */}

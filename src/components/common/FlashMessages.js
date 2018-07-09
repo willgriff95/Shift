@@ -20,10 +20,9 @@ class FlashMessage extends React.Component {
 
   render() {
     return (
-      <div className="mainBody3">
+      <div >
         <div className="columns is-multiline ">
-          <div className="column is-full-desktop is-full-tablet is-mobile indexList">
-
+          <div className="column is-full-desktop is-full-tablet is-mobile indexList" style={{zIndex: 10000}}>
             {this.state.messages && Object.keys(this.state.messages).map(type =>
               <div key={type} className={`notification is-${type}`}>{this.state.messages[type]}</div>
             )}

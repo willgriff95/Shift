@@ -14,6 +14,17 @@ class AuthRegister extends React.Component {
     this.setState({ [name]: value });
   }
 
+  componentDidMount() {
+    console.log('hello');
+    console.log(this.props.location.hash);
+    if(this.props.location.hash === '#talent'){
+      this.setState({tabOpen: false});
+    } else {
+      this.setState({tabOpen: true});
+    }
+  }
+
+
   handleSubmit = e => {
     e.preventDefault();
     axios
@@ -66,24 +77,24 @@ class AuthRegister extends React.Component {
                   <ul>
                     <li >
                       {this.state.tabOpen &&
-                      <a onClick={this.talentTab} id="talent" className="talent">
+                      <a onClick={this.talentTab} id="talent" href="#talent" className="talent">
                         Talent
                       </a>
                       }
                       {!this.state.tabOpen &&
-                      <a onClick={this.talentTab} id="talent" className="talent is-active">
+                      <a onClick={this.talentTab} id="talent" href="#talent" className="talent is-active">
                         Talent
                       </a>
                       }
                     </li>
                     <li >
                       {this.state.tabOpen &&
-                        <a onClick={this.employerTab} id="employer" className="employer is-active">
+                        <a onClick={this.employerTab} id="employer" href="#employer" className="employer is-active">
                           Employer
                         </a>
                       }
                       {!this.state.tabOpen &&
-                        <a onClick={this.employerTab} id="employer" className="employer">
+                        <a onClick={this.employerTab} id="employer" href="#employer" className="employer">
                           Employer
                         </a>
                       }

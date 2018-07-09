@@ -59,14 +59,14 @@ class Navbar extends React.Component {
             <div className="userRoleNavbar">{this.state.user.role}</div>
             {/* <div className="userEmailNavbar">{this.state.user.email}</div> */}
             <ul className=" sidebar">
-              <Link to="/jobs">
+              {/* <Link to="/jobs">
                 <li onClick={this.showSearchBar} className="iconSidebar" >
                   <i className="fas fa-users listIcon"></i>
                   <br/>
                   <div className="listItem">Find<br/>Freelancer</div>
                 </li>
-              </Link>
-              {this.state.user && (this.state.user.role === 'manager')&&
+              </Link> */}
+              {this.state.user && (this.state.user.role === 'Employer')&&
                 <Link to="/jobs/new">
                   {/* <p>{user.role}</p> */}
                   <li className="iconSidebarAdd">
@@ -76,7 +76,7 @@ class Navbar extends React.Component {
                   </li>
                 </Link>
               }
-              <Link to="/jobs/new">
+              <Link to="/jobs">
                 <li className="iconSidebar">
                   <i className="fas fa-suitcase listIcon"></i>
                   <br/>
