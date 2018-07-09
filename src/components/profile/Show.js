@@ -47,42 +47,42 @@ class ProfileShow extends React.Component {
     return (
       <div>
         <div className="columns is-multiline ">
-        <div className="column is-2"></div>
-        <div className="mainBody2 columns is-multiline">
-          <div className="column is-four-fifths-desktop is-full-mobile is-full-tablet companyLogo">
-            <div>
-              {Auth.isCurrentUser(!user._id)&&
+          <div className="column is-2"></div>
+          <div className="mainBody2 columns is-multiline">
+            <div className="column is-four-fifths-desktop is-full-mobile is-full-tablet companyLogo">
+              <div>
+                {Auth.isCurrentUser(!user._id)&&
                 <a className="emailIconShow" href={'mailto:' + `${user.email}`}>
                   <i className="far fa-envelope"></i>
                 </a>
-              }
-              {Auth.isCurrentUser(user._id)&&
+                }
+                {Auth.isCurrentUser(user._id)&&
                 <Link className="profileeditIconShow" to={`/profile/${user._id}/edit`}>
                   <i className="far fa-edit"></i>
                 </Link>
+                }
+                <div className="userShowProfileDetails">
+                  <div className="profilemanagerName">{user.fullName}</div>
+                  <div className="profilehiringManager">{user.role}</div>
+                  <div className="profileemailDetails">{user.email}</div>
+                  <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
+                </div>
+              </div>
+              <hr />
+              <div className="userShowBio">
+                <div className="userShowBioDetails">
+                  {user.bio}
+                </div>
+              </div>
+              {!user.picture &&
+                <img className="userShowProfilePicture" src="https://i.imgur.com/pxca5Js.jpg" />
               }
-              <div className="userShowProfileDetails">
-                <div className="profilemanagerName">{user.fullName}</div>
-                <div className="profilehiringManager">{user.role}</div>
-                <div className="profileemailDetails">{user.email}</div>
-                <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
-              </div>
-            </div>
-            <hr />
-            <div className="userShowBio">
-              <div className="userShowBioDetails">
-                {user.bio}
-              </div>
-            </div>
-            {!user.picture &&
-              <img className="userShowProfilePicture" src="https://i.imgur.com/pxca5Js.jpg" />
-            }
-            {user.picture &&
-              <img className="userShowProfilePicture" src={user.picture} />
-            }
+              {user.picture &&
+                <img className="userShowProfilePicture" src={user.picture} />
+              }
 
-          </div>
-          {/* <div className="columns is-multiline"> */}
+            </div>
+            {/* <div className="columns is-multiline"> */}
             {user.jobs.map(job =>
               <div className="column is-four-fifths-desktop is-full-mobile is-full-tablet " key={job._id}>
                 {job.requests.map(request =>
@@ -165,11 +165,11 @@ class ProfileShow extends React.Component {
                   </div>
                 )}
               </div>
-              )}
-          {/* </div> */}
+            )}
+            {/* </div> */}
+          </div>
+        </div>
       </div>
-    </div>
-    </div>
     );
   }
 }
