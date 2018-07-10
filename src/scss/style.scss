@@ -294,14 +294,14 @@ img.shiftLogo {
   font-size: 9px;
 }
 .ratingSystem {
-    position: relative;
-    width: 100%;
-    border-top: #F4F4F4 solid 1px;
-    height: 45px;
-    bottom: -4px;
-    border-radius: 5px;
-    background-color: white;
-    left: 0;
+  position: relative;
+  width: 100%;
+  border-top: #F4F4F4 solid 1px;
+  height: 45px;
+  bottom: -4px;
+  border-radius: 5px;
+  background-color: white;
+  left: 0;
 }
 
 
@@ -314,12 +314,12 @@ img.shiftLogo {
   font-size: 14px;
 }
 .averageRatingNumber {
-    width: 25px;
-    left: 23%;
-    /* right: 0; */
-    z-index: 10000;
-    bottom: -1px;
-    position: relative;
+  width: 25px;
+  left: 23%;
+  /* right: 0; */
+  z-index: 10000;
+  bottom: -1px;
+  position: relative;
 }
 .averageRatingNumber2 {
   width: 25px;
@@ -665,7 +665,32 @@ img {
   width: 100px;
   border-radius: 5px;
 }
+  .noneResponsive{
+    display: none;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+  }
+  .underConstruction {
+      position: absolute;
+      top: 49%;
+      width: 70%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+  }
 
+@media only screen and (max-width: 1200px) {
+  .noneResponsive{
+    display: block;
+  }
+}
 .requestbutton {
   background-color: rgba(255, 255, 255, 0);
   font-family: "circe rounded";
@@ -1662,30 +1687,30 @@ hr {
   position: relative;
 }
 .requestPendingButton {
-    background-color: rgba(255, 255, 255, 0);
-    font-family: "circe rounded";
-    color: #FCC254;
-    border-color: #FCC254;
-    font-size: 14px;
-    height: 40px;
-    bottom: 29px;
-    left: 150px;
-    position: absolute;
-    width: 150px;
-    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "circe rounded";
+  color: #FCC254;
+  border-color: #FCC254;
+  font-size: 14px;
+  height: 40px;
+  bottom: 29px;
+  left: 150px;
+  position: absolute;
+  width: 150px;
+  border-radius: 5px;
 }
 .requestAcceptedButton {
-    background-color: rgba(255, 255, 255, 0);
-    font-family: "circe rounded";
-    color: rgba(50, 205, 50, 0.6);
-    border-color: rgba(50, 205, 50, 0.6);
-    font-size: 14px;
-    height: 40px;
-    bottom: 29px;
-    left: 150px;
-    position: absolute;
-    width: 150px;
-    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "circe rounded";
+  color: rgba(50, 205, 50, 0.6);
+  border-color: rgba(50, 205, 50, 0.6);
+  font-size: 14px;
+  height: 40px;
+  bottom: 29px;
+  left: 150px;
+  position: absolute;
+  width: 150px;
+  border-radius: 5px;
 }
 
 .userShowBio {
