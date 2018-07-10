@@ -85,6 +85,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
+          comments: [],
           rate: 350,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
@@ -95,6 +96,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[1]
@@ -105,6 +107,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[2]
@@ -116,6 +119,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[3]
@@ -126,6 +130,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[4]
@@ -136,6 +141,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
@@ -147,6 +153,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
+          comments: [],
           rate: 675,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
@@ -157,6 +164,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
+          comments: [],
           rate: 250,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[3]
@@ -167,6 +175,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[4]
@@ -178,6 +187,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Facebook\'s mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we\'re building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together.',
           manager: users[0]
@@ -188,6 +198,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -198,6 +209,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -209,6 +221,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -219,6 +232,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -229,6 +243,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -240,6 +255,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -250,6 +266,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -260,6 +277,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -271,6 +289,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.078075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -281,6 +300,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.138075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2]
@@ -291,6 +311,7 @@ mongoose.connect(dbURI, (err, db) => {
             lng: -0.178075
           },
           contract: 8,
+          comments: [],
           rate: 200,
           description: 'Google\'s software engineers develop the next-generation technologies that change how billions of users connect, explore, and interact with information and one another. Our products need to handle information at massive scale, and extend well beyond web search. We\'re looking for engineers who bring fresh ideas from all areas, including information retrieval, distributed computing, large-scale system design.',
           manager: users[2],
@@ -308,3 +329,8 @@ mongoose.connect(dbURI, (err, db) => {
     .catch(err => console.log(err))
     .finally(() => mongoose.connection.close());
 });
+
+// content: "This was one of the best freelancing gigs I have had, the manager was really professional and all the staff were really friendly",
+// createdAt: "2018-07-10T21:48:10.879Z",
+// createdBy: users[2],
+// updatedAt:"2018-07-10T21:48:10.879Z"

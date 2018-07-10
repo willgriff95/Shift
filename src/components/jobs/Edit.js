@@ -68,7 +68,6 @@ class JobsEdit extends React.Component {
                   <div className="tile is-vertical is-3">
                     <div className="tile">
                       <div className="tile is-parent is-vertical jobDetails">
-
                         {this.state.manager &&
                           <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${this.state.manager.companyPicture})`}}>
                           </div>
