@@ -9,16 +9,16 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
   // We want to check if there's a truthy value in the value of the error itself.
   // const formInvalid = Object.keys(errors).some(key => errors[key]);
   return (
-    <div className="mainBody2">
-      <div className="columns is-multiline">
-        <div className="column is-four-fifths-desktop is-full-mobile is-two-third-tablet companyLogo">
-          {user &&
+    <div>
+      <div className="columns is-multiline ">
+        <div className="column is-2"></div>
+        <div className="mainBody2 columns is-multiline">
+          <div className="column is-four-fifths-desktop is-full-mobile is-two-third-tablet companyLogo">
+            {user &&
             <form onSubmit={handleSubmit}>
               <div>
-                <button id="profileeditCompletedButton">
-                  <a className="deleteIcon2">
-                    <i className="fas fa-check"></i>
-                  </a>
+                <button className="deleteIcon2">
+                  <i className="fas fa-check"></i>
                 </button>
                 <div className="userShowProfileDetails">
                   <div className="profilemanagerName">
@@ -31,10 +31,6 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
                   <div className="userShowCompanyPicture" style={{ backgroundImage: `url(${user.companyPicture})`}} />
                 </div>
               </div>
-              <Autocomplete
-                suggestions={this.state.suggestions}
-                onChange={this.handleChange}
-              />
               <hr />
               <div className="userShowBio">
                 <div className="userShowBioDetails">
@@ -43,7 +39,8 @@ const ProfileForm = ({ handleChange, handleSubmit, user }) => {
               </div>
               <img className="userShowProfilePicture" src={user.picture} />
             </form>
-          }
+            }
+          </div>
         </div>
       </div>
     </div>

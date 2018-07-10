@@ -26,7 +26,7 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
             }
             <Link to={`/users/${comment.createdBy.id}`}>
               {comment.createdBy.fullName &&
-              <div className="managerName">{comment.createdBy.fullName}</div>
+              <div className="managerName2">{comment.createdBy.fullName}</div>
               }
               {/* <div className="hiringManager">Hiring Manager</div> */}
               {/* <div className="emailDetails">{comment.createdBy.email}</div> */}
@@ -88,6 +88,9 @@ const commentsShow = ({  job , handleCommentDelete, handleCommentSubmit, handleC
       {(job.requestButtonClicked === true) &&
         <button  onClick={handleRequestCreate} disabled={requestMade} className="requestPendingButton" ><i className="fas fa-check"></i> Request Pending</button>
       }
+      {/* {(job.requests === true) &&
+        <button  onClick={handleRequestCreate} disabled={requestMade} className="requestPendingButton" ><i className="fas fa-check"></i> Request Pending</button>
+      } */}
       {/* <button onClick={handleRequestCreate} className="requestbutton "><i className="fas fa-check"></i> Request Sent</button> */}
     </div>
   );

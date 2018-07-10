@@ -30,7 +30,7 @@ class Navbar extends React.Component {
   }
 
   handleLogout = () => {
-    console.log(this.props);
+    // console.log(this.props);
     Auth.logout();
     this.props.history.push('/register');
   }
@@ -50,7 +50,7 @@ class Navbar extends React.Component {
         {Auth.isAuthenticated() &&
         <div className="column is-2 is-sidebar-menu">
           <aside className="menu">
-            {Auth.isAuthenticated() &&
+            {this.state.user.picture &&
             <Link to={`/profile/${this.state.user._id}`}  >
               <div className="profilePicture" style={styles} />
             </Link>

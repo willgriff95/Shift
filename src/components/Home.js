@@ -138,11 +138,11 @@ class Home extends React.Component {
                 </div>
               </nav>
               <div className="aboutPageContent">
-                <h1 className="headerRegisterPage">You deserve a better job</h1>
-                <h2>Find your next contract in the tech industry</h2>
-                <a className="button amEmployer" href="/register#talent">
+                <h1 className="headerRegisterPage">Join Europe's fastest growing recruitment platform</h1>
+                <h2>Meet 200+ new qualified developers every two weeks from across the UK, France and Germany</h2>
+                <a className="button hireForJobs" href="/register#employer">
                   <span>
-                    APPLY FOR JOBS
+                    START HIRING
                   </span>
                 </a>
                 <a onClick={this.employerHomePage} id="talent" className="button applyForJobs">
@@ -154,34 +154,32 @@ class Home extends React.Component {
             </div>
             <div className="howItWorks">
               <div className="aboutHomePageContent">
-                <h1 className="headerHomePage">It's simple and it works</h1>
+                <h1 className="headerHomePage2">Meet top developers</h1>
                 <div className="columns is-mobile  is-multiline">
-                  <div className="column is-one-third-desktop spacingAbout">
-                    <div className="iconProcess">
+                  <div className="column is-one-third-desktop spacingAbout2">
+                    <div className="iconProcess2">
                       <img src="./assets/s-09.svg"/>
                     </div>
                     <div>
                       <h3 className="aboutheader">All functions</h3>
                         We place developers across all positions and functions. From full stack developers, to more specialised positions such as tech leads, product managers, and CTOs.                  </div>
-                    <div className="column is-one-third-desktop spacingAbout">
-                      <div className="iconProcess">
-                        <img src="./assets/s-10.svg"/>
-                      </div>
-                      <div>
-                        <h3 className="aboutheader">All tech stacks</h3>
-                        No. On talent.io, companies reach out directly to you. You're in complete control. Our team of Talent Advocates is always available to help and advise, though.
-                      </div>
+                  </div>
+                  <div className="column is-one-third-desktop spacingAbout2">
+                    <div className="iconProcess2">
+                      <img src="./assets/s-10.svg"/>
+                    </div>
+                    <div>
+                      <h3 className="aboutheader">All tech stacks</h3>
+                      No. On talent.io, companies reach out directly to you. You're in complete control. Our team of Talent Advocates is always available to help and advise, though.
                     </div>
                   </div>
-                  <div className="columns is-mobile  is-multiline">
-                    <div className="column is-one-third-desktop spacingAbout">
-                      <div className="iconProcess">
-                        <img src="./assets/s-11.svg"/>
-                      </div>
-                      <div>
-                        <h3 className="aboutheader">All seniority levels</h3>
-                          Our platform features developers with varying levels of seniority. From juniors right after school, to seniors with 5+ years of experience.                    </div>
+                  <div className="column is-one-third-desktop spacingAbout2">
+                    <div className="iconProcess2">
+                      <img src="./assets/s-11.svg"/>
                     </div>
+                    <div>
+                      <h3 className="aboutheader">All seniority levels</h3>
+                        Our platform features developers with varying levels of seniority. From juniors right after school, to seniors with 5+ years of experience.                    </div>
                   </div>
                 </div>
               </div>

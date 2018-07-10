@@ -26,6 +26,16 @@ class JobsShow extends React.Component {
         this.state.job.comments.map(comment =>
           averageRatingArray.push(comment.rating)
         );
+        this.state.job.requests.map(request => {
+          if(request.user === Auth.getPayload().sub){
+            // console.log('its true bitch', request);
+            this.setState({ requestButtonClicked: true });
+          }
+        }
+        );
+        // if (Auth.isCurrentUser(request.user)){
+        // }
+
         this.setState({averageRatingArray: this.state.averageRatingArray.concat([averageRatingArray])}, () => {
           var sum = 0;
           for( var i = 0; i < this.state.averageRatingArray[0].length; i++ ){
@@ -116,7 +126,13 @@ class JobsShow extends React.Component {
       .post(`/api/jobs/${id}/requests`, this.state.comment, {
         headers: { Authorization: `Bearer ${Auth.getToken()}`}
       })
-      .then(() => this.setState({ requestButtonClicked: true }))
+      .then(() => {
+        this.setState({ requestButtonClicked: true });
+        {this.state.job.requests.map(request =>
+          console.log('heyooo',request, Auth.isCurrentUser(request.user))
+        );
+        }
+      })
       .catch(e => {
         console.log(e);
       });
@@ -136,7 +152,7 @@ class JobsShow extends React.Component {
               </div>
               <div className="column is-three-fifths-desktop is-four-fifths-tablet is-four-fifths-mobile jobShowContent">
                 <div className="tile is-ancestor">
-                  <div className="tile is-vertical is-3">
+                  <div className="tile is-vertical">
                     <div className="tile">
                       <div className="tile is-parent is-vertical jobDetails">
                         {job.manager.companyPicture &&

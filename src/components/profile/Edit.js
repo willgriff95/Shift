@@ -29,14 +29,14 @@ class ProfileEdit extends React.Component {
   };
 
 
-    componentDidMount() {
-      const { id } = this.props.match.params;
-      axios
-        .get(`/api/profile/${id}`, {
-          headers: { Authorization: `Bearer ${Auth.getToken()}`}
-        })
-        .then(res => this.setState( res.data ));
-    }
+  componentDidMount() {
+    const { id } = this.props.match.params;
+    axios
+      .get(`/api/profile/${id}`, {
+        headers: { Authorization: `Bearer ${Auth.getToken()}`}
+      })
+      .then(res => this.setState( res.data ));
+  }
 
   // handleChange = ({ target: { name, value }}) => {
   //   this.setState({ user: {[name]: value} }, () => console.log(this.state));
