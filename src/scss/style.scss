@@ -14,11 +14,11 @@ li:active {
   font-family: "circe rounded";
 }
 .headerHomePage2 {
-    font-size: 41px;
-    font-weight: 300;
-    color: black;
-    margin-bottom: 40px;
-    text-align: center;
+  font-size: 41px;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 40px;
+  text-align: center;
 }
 #firstName3 {
   color: #3399FF;
@@ -98,12 +98,12 @@ button{
   outline: none;
 }
 .deleteIcon2 {
-    width: 20px;
-    position: relative;
-    float: right;
-    right: 13px;
-    border: none;
-    top: 10px;
+  width: 20px;
+  position: relative;
+  float: right;
+  right: 13px;
+  border: none;
+  top: 10px;
 }
 #description{
   padding-top: 0;
@@ -119,18 +119,18 @@ button{
 }
 
 .iconProcess2 {
-    position: relative;
-    left: 0;
-    /* top: 74px; */
-    margin: 0 auto;
-    height: 70px;
-    width: 70px;
+  position: relative;
+  left: 0;
+  /* top: 74px; */
+  margin: 0 auto;
+  height: 70px;
+  width: 70px;
 }
 
 .spacingAbout2 {
-    padding: 30px 30px 30px 30px !important;
-    color: grey;
-    text-align: center;
+  padding: 30px 30px 30px 30px !important;
+  color: grey;
+  text-align: center;
 }
 .employerBackground{
   height: 100vh;
@@ -158,17 +158,17 @@ button{
   background-color: #f9fafc;
 }
 .logo {
-    position: absolute;
-    height: 30px;
-    top: 11px;
-    /* max-width: 100%; */
-    left: 50px;
+  position: absolute;
+  height: 30px;
+  top: 11px;
+  /* max-width: 100%; */
+  left: 50px;
 }
 
 img.shiftLogo {
-    position: relative;
-    height: 42px;
-    /* max-width: 100%; */
+  position: relative;
+  height: 42px;
+  /* max-width: 100%; */
 }
 .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
   background-color: white;
@@ -231,20 +231,20 @@ img.shiftLogo {
   background-size: cover;
 }
 .averageRatingBackground {
-  background-image: url('../assets/starRating-01.svg');
-      background-position: center;
-      background-repeat: repeat;
-      background-size: contain;
-      width: 68%;
-      position: absolute;
-      height: 100%;
-      bottom: 2px;
-      left: 25%;
-      /* right: 0; */
-      /* margin: 0 auto; */
-      justify-content: center;
-      z-index: 100;
-  }
+  background-image: url('../assets/starRating-01-01.svg');
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+  width: 89.4px;
+  position: absolute;
+  height: 16.8px;
+  bottom: 3px;
+  left: 35%;
+  /* right: 0; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  z-index: 100;
+}
 .averageRatingBackground2 {
   background-image: url('../assets/starRating-01.svg');
   background-position: center;
@@ -264,9 +264,9 @@ img.shiftLogo {
   background-color: #3399FF;
   width: 0;
   position: absolute;
-  height: 73.5%;
+  height: 14px;
   bottom: 4.5px;
-  left: 28%;
+  left: 35%;
   /* right: 0; */
   /* margin: 0 auto; */
   justify-content: center;
@@ -276,7 +276,7 @@ img.shiftLogo {
   background-color: #3399FF;
   width: 0;
   position: absolute;
-  height: 73.5%;
+  height: 14px;
   bottom: 4.5px;
   left: 94px;
   /* right: 0; */
@@ -294,46 +294,48 @@ img.shiftLogo {
   font-size: 9px;
 }
 .ratingSystem {
-  position: absolute;
-  width: 100%;
-  border-top: #F4F4F4 solid 1px;
-  height: 22%;
-  bottom: 0;
-  border-radius: 5px;
-  background-color: white;
-  left: 0;
-}
-.averageRating2 {
     position: relative;
-    left: 2.7%;
-    bottom: -20px;
-    text-align: left;
-    z-index: 0;
-    font-size: 14px;
+    width: 100%;
+    border-top: #F4F4F4 solid 1px;
+    height: 45px;
+    bottom: -4px;
+    border-radius: 5px;
+    background-color: white;
+    left: 0;
+}
+
+
+.averageRating2 {
+  position: relative;
+  left: 2.7%;
+  bottom: -20px;
+  text-align: left;
+  z-index: 0;
+  font-size: 14px;
 }
 .averageRatingNumber {
-  width: 25px;
-  left: 14%;
-  /* right: 0; */
-  z-index: 10000;
-  bottom: 0;
-  position: relative;
-}
-.averageRatingNumber2 {
     width: 25px;
-    left: 82px;
+    left: 23%;
     /* right: 0; */
     z-index: 10000;
     bottom: -1px;
     position: relative;
 }
+.averageRatingNumber2 {
+  width: 25px;
+  left: 82px;
+  /* right: 0; */
+  z-index: 10000;
+  bottom: -1px;
+  position: relative;
+}
 .averageRatingBarBackgroundColor {
   background-color: lightGray;
-  width: 62.5%;
+  width: 89.4px;
   position: absolute;
-  height: 73.5%;
+  height: 14px;
   bottom: 4.5px;
-  left: 28%;
+  left: 35%;
   /* right: 0; */
   /* margin: 0 auto; */
   justify-content: center;
@@ -652,18 +654,30 @@ img {
   width: 100px;
   border-radius: 5px;
 }
+.submitbuttonDisabled{
+  // border-radius: 20px;
+  background-color: rgba(255,255,255,0);
+  font-family: "circe rounded";
+  color: lightgrey;
+  border-color: lightgrey;
+  font-size: 14px;
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+}
+
 .requestbutton {
-    background-color: rgba(255, 255, 255, 0);
-    font-family: "circe rounded";
-    color: #3399FF;
-    border-color: #3399FF;
-    font-size: 14px;
-    height: 40px;
-    bottom: 28px;
-    left: 150px;
-    position: absolute;
-    width: 150px;
-    border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0);
+  font-family: "circe rounded";
+  color: #3399FF;
+  border-color: #3399FF;
+  font-size: 14px;
+  height: 40px;
+  bottom: 28px;
+  left: 150px;
+  position: absolute;
+  width: 150px;
+  border-radius: 5px;
 }
 .requestbutton:hover{
   // border-radius: 20px;
@@ -801,39 +815,39 @@ img {
   border-radius: 30px;
 }
 .applyForJobs {
-    background-color: rgba(255, 255, 255, 0);
-    border: solid 0px  rgba(255, 255, 255, 0);
-    margin: 30px;
-    border-width: 1px;
-    color: white;
-    text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 0px  rgba(255, 255, 255, 0);
+  margin: 30px;
+  border-width: 1px;
+  color: white;
+  text-decoration: underline;
 }
 .applyForJobs:hover {
-    background-color: rgba(255, 255, 255, 0);
-    border: solid 0px  rgba(255, 255, 255, 0);
-    margin: 30px;
-    border-width: 1px;
-    color: white;
-    text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 0px  rgba(255, 255, 255, 0);
+  margin: 30px;
+  border-width: 1px;
+  color: white;
+  text-decoration: underline;
 }
 
 .button.is-primary {
-    /* background-color: #00d1b2; */
-    border-color: transparent;
-    color: #fff;
+  /* background-color: #00d1b2; */
+  border-color: transparent;
+  color: #fff;
 }
 
 .amEmployer {
-    background-color:  rgba(0, 0, 0, 0);
-    border-color: white;
-    margin-left: 0 !important;
-    border-radius: 50px;
-    padding: 21px;
-    margin: 30px;
-    border-width: 1px;
-    color: white;
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.2);
+  background-color:  rgba(0, 0, 0, 0);
+  border-color: white;
+  margin-left: 0 !important;
+  border-radius: 50px;
+  padding: 21px;
+  margin: 30px;
+  border-width: 1px;
+  color: white;
+  -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.2);
 }
 .amEmployer:hover {
   background-color: #3399FF;
@@ -848,16 +862,16 @@ img {
   box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.2);
 }
 .hireForJobs {
-    background-color:  rgba(0, 0, 0, 0);
-    border-color: white;
-    margin-left: 0 !important;
-    border-radius: 50px;
-    padding: 21px;
-    margin: 30px;
-    border-width: 1px;
-    color: white;
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.2);
+  background-color:  rgba(0, 0, 0, 0);
+  border-color: white;
+  margin-left: 0 !important;
+  border-radius: 50px;
+  padding: 21px;
+  margin: 30px;
+  border-width: 1px;
+  color: white;
+  -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.2);
 }
 .hireForJobs:hover {
   background-color: #ff6581;
@@ -939,11 +953,11 @@ input[type=password]:focus, textarea:focus {
 
 }
 .iconProcess {
-    position: relative;
-    left: -88px;
-    top: 74px;
-    height: 70px;
-    width: 70px;
+  position: relative;
+  left: -88px;
+  top: 74px;
+  height: 70px;
+  width: 70px;
 }
 .icon {
   align-items: center;
@@ -958,14 +972,14 @@ input[type=password]:focus, textarea:focus {
 };
 
 .dayRate {
-    font-size: 40px;
-    font-weight: 600;
-    color: darkgrey;
-    top: 25%;
-    height: 50px;
-    position: relative;
-    text-align: center;
-    width: 100%;
+  font-size: 40px;
+  font-weight: 600;
+  color: darkgrey;
+  top: 25%;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
 .dayRateTextMoney {
   margin-bottom: 0;
@@ -975,11 +989,11 @@ input[type=password]:focus, textarea:focus {
   color: darkslategrey;
 }
 .dayRateText {
-    margin-bottom: 10px;
-    font-size: 10px;
-    top: 20%;
-    position: relative;
-    color: darkslategrey;
+  margin-bottom: 10px;
+  font-size: 10px;
+  top: 20%;
+  position: relative;
+  color: darkslategrey;
 }
 
 .dayRateText2 {
@@ -1240,9 +1254,9 @@ a {
 }
 
 .signUpButton {
-    background-color: rgba(255, 255, 255, 0);
-    border: solid 1px rgba(255,255,255,0);
-    color: white;
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 1px rgba(255,255,255,0);
+  color: white;
 }
 .signUpButton:hover{
   background-color: rgba(255,255,255, 0);
@@ -1251,24 +1265,24 @@ a {
 }
 
 .aboutPageContent {
-    width: 70%;
-    top: 27%;
-    z-index: 1000000;
-    margin: 0 auto;
-    height: 50%;
-    // background-color: red;
-    position: relative;
-    color: white;
+  width: 70%;
+  top: 27%;
+  z-index: 1000000;
+  margin: 0 auto;
+  height: 50%;
+  // background-color: red;
+  position: relative;
+  color: white;
 }
 
 .aboutHomePageContent {
-    width: 70%;
-    top: 15%;
-    z-index: 1000000;
-    margin: 0 auto;
-    height: 50%;
-    position: relative;
-    color: black;
+  width: 70%;
+  top: 15%;
+  z-index: 1000000;
+  margin: 0 auto;
+  height: 50%;
+  position: relative;
+  color: black;
 }
 
 .spacingAbout{
@@ -1277,31 +1291,31 @@ a {
 }
 
 .aboutheader {
-    margin-bottom: 20px;
-    font-size: 18px;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 .headerRegisterPage {
-    font-size: 41px;
-    font-weight: 300;
-    color: white;
+  font-size: 41px;
+  font-weight: 300;
+  color: white;
 }
 .headerHomePage {
-    font-size: 41px;
-    font-weight: 300;
-    color: black;
-    text-align: center;
+  font-size: 41px;
+  font-weight: 300;
+  color: black;
+  text-align: center;
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0);
-    min-height: 3.25rem;
-    position: absolute;
-    -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.02);
-    width: 100%;
-    z-index: 10000;
-    top: 0;
+  background-color: rgba(255, 255, 255, 0);
+  min-height: 3.25rem;
+  position: absolute;
+  -webkit-box-shadow: 0px 4px 29px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 49px 5px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  z-index: 10000;
+  top: 0;
 }
 .logOutButton {
   background-color: rgba(255, 255, 255, 0);
@@ -1418,20 +1432,20 @@ hr {
 }
 
 .emailDetailsComments {
-    font-size: 12px;
-    text-align: left;
-    left: 105px;
-    width: 70%;
-    top: 26px;
-    position: relative;
+  font-size: 12px;
+  text-align: left;
+  left: 105px;
+  width: 70%;
+  top: 26px;
+  position: relative;
 }
 .averageRating3 {
-    position: relative;
-    /* left: 2.7%; */
-    bottom: -3px;
-    text-align: left;
-    z-index: 0;
-    font-size: 14px;
+  position: relative;
+  /* left: 2.7%; */
+  bottom: -3px;
+  text-align: left;
+  z-index: 0;
+  font-size: 14px;
 }
 .hiringManager {
   color: #D3D3D3;
@@ -1444,12 +1458,12 @@ hr {
   position: relative;
 }
 .emailDetails {
-    font-size: 12px;
-    text-align: left;
-    left: 35%;
-    width: 70%;
-    top: 20px;
-    position: relative;
+  font-size: 12px;
+  text-align: left;
+  left: 35%;
+  width: 70%;
+  top: 20px;
+  position: relative;
 }
 .userNameNavbar {
   color: #3399FF;
@@ -1516,16 +1530,16 @@ hr {
   position: relative;
 }
 .jobshowmanagerProfilePicture {
-    height: 70px;
-    left: 10%;
-    width: 70px;
-    top: 10%;
-    border-radius: 50px;
-    z-index: 1000;
-    position: absolute;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    background-position: center;
-    background-size: cover;
+  height: 70px;
+  left: 10%;
+  width: 70px;
+  top: 10%;
+  border-radius: 50px;
+  z-index: 1000;
+  position: absolute;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  background-position: center;
+  background-size: cover;
 }
 .jobseditIconShow {
   width: 20px;
@@ -1542,9 +1556,9 @@ hr {
   /* top: 20px; */
 }
 .payDetails {
-    height: 75%;
-    padding: 1em;
-    background-color: #f9fafc;
+  height: 75%;
+  padding: 1em;
+  background-color: #f9fafc;
 }
 .companyRating {
   position: absolute;
@@ -1621,7 +1635,15 @@ hr {
   margin: 1%;
   width: 100%;
 }
-
+.companyLogoPicture{
+  background-image: url(http://static-assets.generalassemb.ly/logos/generalassembly-open-graph.png);
+  height: 120px;
+  position: relative;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+}
 .companyLogo5 {
   text-align: center;
   height: 100%;
@@ -1639,18 +1661,31 @@ hr {
   float: left;
   position: relative;
 }
-.requestPendingButton{
-  background-color: rgba(255, 255, 255, 0);
-  font-family: "circe rounded";
-  color: #FCC254;
-  border-color: #FCC254;
-  font-size: 14px;
-  height: 40px;
-  bottom: 20px;
-  left: 150px;
-  position: absolute;
-  width: 150px;
-  border-radius: 5px;
+.requestPendingButton {
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "circe rounded";
+    color: #FCC254;
+    border-color: #FCC254;
+    font-size: 14px;
+    height: 40px;
+    bottom: 29px;
+    left: 150px;
+    position: absolute;
+    width: 150px;
+    border-radius: 5px;
+}
+.requestAcceptedButton {
+    background-color: rgba(255, 255, 255, 0);
+    font-family: "circe rounded";
+    color: rgba(50, 205, 50, 0.6);
+    border-color: rgba(50, 205, 50, 0.6);
+    font-size: 14px;
+    height: 40px;
+    bottom: 29px;
+    left: 150px;
+    position: absolute;
+    width: 150px;
+    border-radius: 5px;
 }
 
 .userShowBio {
@@ -2092,8 +2127,8 @@ hr {
   border-radius: 4px 4px 0 0;
 }
 .tabs.is-boxed a:hover {
-    background-color: whitesmoke;
-    border-bottom: rgba(255,255,255, 0) solid 1px !important;
+  background-color: whitesmoke;
+  border-bottom: rgba(255,255,255, 0) solid 1px !important;
 }
 .is-active:hover {
   background-color: white !important;

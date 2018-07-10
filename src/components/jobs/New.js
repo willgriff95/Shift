@@ -3,7 +3,6 @@ import React from 'react';
 import axios from 'axios';
 import AutoComplete from '../common/AutoComplete';
 import Auth from '../../lib/Auth';
-import Navbar from '../Navbar';
 
 class JobsNew extends React.Component {
 

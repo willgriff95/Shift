@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import Auth from '../../lib/Auth';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar';
 
 class UsersShow extends React.Component {
   state = {
@@ -88,6 +87,7 @@ class UsersShow extends React.Component {
                 <div className="column is-four-fifths-desktop is-full-tablet is-mobile" key={job._id}>
                   {job.requests.map( request =>
                     <div key={request._id}>
+                      {/* {console.log(request.user._id)} */}
                       <div className="card usersShowRequests">
                         <div className="card-content">
                           <div className="media">

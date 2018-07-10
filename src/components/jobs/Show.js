@@ -14,28 +14,37 @@ class JobsShow extends React.Component {
     requestButtonClicked: false,
     averageRating: 0,
     averageRatingArray: [],
-    job: {}
+    job: {},
+    acceptedApplicants: [],
+    match: false
   }
 
   componentDidMount() {
     const averageRatingArray = [];
-    // console.log(this.props.match.params.id);
+    const acceptedApplicants = [];
     axios
       .get(`/api/jobs/${this.props.match.params.id}`)
       .then(res => this.setState({ job: res.data }, () => {
-        this.state.job.comments.map(comment =>
-          averageRatingArray.push(comment.rating)
-        );
+        this.state.job.comments.map(comment =>{
+          averageRatingArray.push(comment.rating);
+        });
+        this.state.job.requests.map(request =>{
+          if(request.status === 'accepted'){
+            acceptedApplicants.push(request.user);
+          }
+        });
+        this.setState({ acceptedApplicants: acceptedApplicants}, () => {
+          this.state.acceptedApplicants.map(accepted =>{
+            if(Auth.isCurrentUser(accepted)){
+              this.setState({ match: true});
+            }
+          });
+        });
         this.state.job.requests.map(request => {
           if(request.user === Auth.getPayload().sub){
-            // console.log('its true bitch', request);
             this.setState({ requestButtonClicked: true });
           }
-        }
-        );
-        // if (Auth.isCurrentUser(request.user)){
-        // }
-
+        });
         this.setState({averageRatingArray: this.state.averageRatingArray.concat([averageRatingArray])}, () => {
           var sum = 0;
           for( var i = 0; i < this.state.averageRatingArray[0].length; i++ ){
@@ -43,8 +52,6 @@ class JobsShow extends React.Component {
           }
           var avg = sum/this.state.averageRatingArray[0].length;
           this.setState({ averageRating: avg.toFixed(1)});
-          console.log(`${avg}=${sum}/${this.state.averageRatingArray[0].length}`);
-          console.log(this.state);
         });
       }));
   }
@@ -84,10 +91,7 @@ class JobsShow extends React.Component {
         }
         var avg = sum/this.state.averageRatingArray.length;
         this.setState({ averageRating: avg.toFixed(1) });
-      }, () => {
-        console.log(this.state);
-      }
-      );
+      });
   }
 
   handleCommentDelete = (commentId) => {
@@ -117,6 +121,10 @@ class JobsShow extends React.Component {
       }
       );
   }
+  mustBeLoggedIn = () => {
+    console.log('must be logged in');
+    alert('You must be accepted for this role to be able to add a rating');
+  }
 
 
   handleRequestCreate = () => {
@@ -140,7 +148,7 @@ class JobsShow extends React.Component {
 
   render() {
     const { job } = this.state;
-    const styleNew = {width: `calc(62.5*${this.state.averageRating*2/10}%)`};
+    const styleNew = {width: `calc(89.4*${this.state.averageRating*2/10}px)`};
     console.log(this.state);
     if(!job) return null;
     return (
@@ -156,12 +164,13 @@ class JobsShow extends React.Component {
                     <div className="tile">
                       <div className="tile is-parent is-vertical jobDetails">
                         {job.manager.companyPicture &&
-                          <div className="tile is-child notification companyLogo" style={{ backgroundImage: `url(${job.manager.companyPicture})`}}>
+                          <div className="tile is-child companyLogo" >
                             {(isNaN(this.state.averageRating) === false ) &&
                                 <div>
+                                  <div className="companyLogoPicture" style={{ backgroundImage: `url(${job.manager.companyPicture})`, padding: '0 !important'}}></div>
+                                  <hr/>
                                   <div className="ratingSystem">
                                     <div className="averageRating3">
-                                      {/* <hr/> */}
                                       <div className="averageRatingNumber">{this.state.averageRating}</div>
                                       <div className="averageRatingBarBackgroundColor"></div>
                                       <div className="averageRatingBar" style={styleNew}></div>
@@ -175,23 +184,24 @@ class JobsShow extends React.Component {
                                   </div>
                                 </div>
                             }
-                            {(isNaN(this.state.averageRating) === true || (this.state.averageRating === 0) ) &&
-                                <div>
-                                  <div className="ratingSystem">
-                                    <div className="averageRating3">
-                                      {/* <hr/> */}
-                                      <div className="averageRatingNumber">0</div>
-                                      <div className="averageRatingBarBackgroundColor"></div>
-                                      <div className="averageRatingBar" ></div>
-                                      <div className="averageRatingBackground"></div>
-                                      <div className="companyRating">
-                                      </div>
-                                    </div>
-                                    <div className="averageRating">
-                                      <i className="fas fa-user"></i> 0 reviews
+                            {(isNaN(this.state.averageRating) === true || (this.state.averageRating === 0)) &&
+                              <div>
+                                <div className="companyLogoPicture" style={{ backgroundImage: `url(${job.manager.companyPicture})`, padding: '0 !important'}}></div>
+                                <hr/>
+                                <div className="ratingSystem">
+                                  <div className="averageRating3">
+                                    <div className="averageRatingNumber">0</div>
+                                    <div className="averageRatingBarBackgroundColor"></div>
+                                    <div className="averageRatingBar"></div>
+                                    <div className="averageRatingBackground"></div>
+                                    <div className="companyRating">
                                     </div>
                                   </div>
+                                  <div className="averageRating">
+                                    <i className="fas fa-user"></i> 0 reviews
+                                  </div>
                                 </div>
+                              </div>
                             }
                           </div>
                         }
@@ -206,7 +216,7 @@ class JobsShow extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="tile is-parent is-5">
+                  <div className="tile is-parent">
                     <div className="tile is-child">
                       <div className="mapCard">
                         <Map
@@ -215,7 +225,7 @@ class JobsShow extends React.Component {
                       </div>
                     </div>
                   </div>
-                  <div className="tile is-parent is-4">
+                  <div className="tile is-parent is-5">
                     <div className="tile is-child notification companyLogo">
                       <div className="managerDetails">
                         {!Auth.isCurrentUser(job.manager._id)&&
@@ -257,6 +267,7 @@ class JobsShow extends React.Component {
                         handleRequestCreate={this.handleRequestCreate}
                         handleCommentDelete={this.handleCommentDelete}
                         job={this.state}
+                        mustBeLoggedIn={this.mustBeLoggedIn}
                         handleCommentChange={this.handleCommentChange}
                         handleCommentSubmit={this.handleCommentSubmit}
                       />
