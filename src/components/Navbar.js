@@ -45,6 +45,7 @@ class Navbar extends React.Component {
         backgroundImage: `url(${this.state.user.picture})`
       };
     }
+    console.log(this.state.user.picture);
     return (
       <div className="columns is-fullheight sideBarMain">
         {Auth.isAuthenticated() &&
@@ -83,25 +84,20 @@ class Navbar extends React.Component {
                   <div className="listItem"> Browse<br/>Contracts</div>
                 </li>
               </Link>
-              {Auth.isAuthenticated() &&
-                <Link to={`/profile/${Auth.getPayload().sub}`}>
-                  <li className="iconSidebar">
-                    <i className="fas fa-user listIcon">
-                    </i>
-                    <br/>
-                    <div className="listItem">
-                    Account</div>
-                  </li>
-                </Link>
-              }
-              {Auth.isAuthenticated() &&
-
+              <Link to={`/profile/${Auth.getPayload().sub}`}>
+                <li className="iconSidebar">
+                  <i className="fas fa-user listIcon">
+                  </i>
+                  <br/>
+                  <div className="listItem">
+                  Account</div>
+                </li>
+              </Link>
               <li className="iconSidebar" onClick={this.handleLogout}>
                 <i className="fas fa-sign-out-alt listIcon"></i>
                 <br/>
                 <div className="listItem">Log Out</div>
               </li>
-              }
               {/* <img className="logo" src="https://i.imgur.com/b1yhImo.png" /> */}
             </ul>
           </aside>
