@@ -45,7 +45,7 @@ class Navbar extends React.Component {
         backgroundImage: `url(${this.state.user.picture})`
       };
     }
-    console.log(this.state.user.picture);
+    // console.log(this.state.user.picture);
     return (
       <div className="columns is-fullheight sideBarMain">
         {Auth.isAuthenticated() &&
