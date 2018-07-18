@@ -665,7 +665,7 @@ img {
   width: 100px;
   border-radius: 5px;
 }
-  .noneResponsive{
+.noneResponsive {
     display: none;
     background-color: white;
     width: 100vw;
@@ -675,8 +675,8 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 10000;
-  }
+    z-index: 100000000;
+}
   .underConstruction {
       position: absolute;
       top: 49%;
