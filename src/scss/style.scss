@@ -11,7 +11,7 @@ li:active {
   background-color: #F9FAFC;
 }
 *{
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
 }
 .headerHomePage2 {
   font-size: 41px;
@@ -635,7 +635,7 @@ img {
 .submitbutton{
   // border-radius: 20px;
   background-color: rgba(255,255,255,0);
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: $blue3;
   border-color: $blue3;
   font-size: 14px;
@@ -646,7 +646,7 @@ img {
 .submitbutton:hover{
   // border-radius: 20px;
   background-color: $blue3;
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: white;
   border-color: $blue3;
   font-size: 14px;
@@ -657,7 +657,7 @@ img {
 .submitbuttonDisabled{
   // border-radius: 20px;
   background-color: rgba(255,255,255,0);
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: lightgrey;
   border-color: lightgrey;
   font-size: 14px;
@@ -693,7 +693,7 @@ img {
 }
 .requestbutton {
   background-color: rgba(255, 255, 255, 0);
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: #3399FF;
   border-color: #3399FF;
   font-size: 14px;
@@ -707,7 +707,7 @@ img {
 .requestbutton:hover{
   // border-radius: 20px;
   background-color: $blue3;
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: white;
   border-color: $blue3;
   font-size: 14px;
@@ -717,7 +717,7 @@ img {
 }
 .acceptRequestbutton {
   /* background-color: rgba(255, 255, 255, 0); */
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: limegreen;
   /* border-color: #3399FF; */
   font-size: 16px;
@@ -735,7 +735,7 @@ img {
 }
 .acceptRequestbutton:hover {
   /* background-color: rgba(255, 255, 255, 0); */
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: limegreen;
   /* border-color: #3399FF; */
   font-size: 16px;
@@ -753,7 +753,7 @@ img {
 }
 .rejectRequestbutton {
   /* background-color: rgba(255, 255, 255, 0); */
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: #D3D3D3;
   cursor: default;
   font-size: 16px;
@@ -771,7 +771,7 @@ img {
 }
 .rejectedRequestbutton {
   /* background-color: rgba(255, 255, 255, 0); */
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: red;
   cursor: default;
   font-size: 16px;
@@ -789,7 +789,7 @@ img {
 }
 .rejectRequestbutton:hover {
   /* background-color: rgba(255, 255, 255, 0); */
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: #D3D3D3;
   cursor: default;
   font-size: 16px;
@@ -807,7 +807,7 @@ img {
 }
 .pendingRequestbutton {
   /* background-color: rgba(255, 255, 255, 0); */
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: #D3D3D3;
   font-size: 16px;
   padding-top: 8px;
@@ -824,7 +824,7 @@ img {
 }
 .pendingRequestbutton:hover {
   /* background-color: rgba(255, 255, 255, 0); */
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: limegreen;
   font-size: 16px;
   padding-top: 8px;
@@ -922,7 +922,7 @@ img {
 }
 
 select{
-  font-family: "circe rounded", sans-serif;
+  font-family: "circe-rounded", sans-serif;
 
 }
 
@@ -1127,7 +1127,7 @@ input[type=password]:focus, textarea:focus {
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.0);
   max-width: 100%;
   width: 100%;
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
 }
 a {
   color: #4a4a4a;
@@ -1159,7 +1159,7 @@ a {
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0);
   max-width: 100%;
   width: 400px;
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
 }
 
 
@@ -1344,7 +1344,7 @@ a {
 }
 .logOutButton {
   background-color: rgba(255, 255, 255, 0);
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: #3399FF;
   border-color: #3399FF;
   font-size: 14px;
@@ -1358,7 +1358,7 @@ a {
 .logOutButton:hover{
   // border-radius: 20px;
   background-color: $blue3;
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: white;
   border-color: $blue3;
   font-size: 14px;
@@ -1688,7 +1688,7 @@ hr {
 }
 .requestPendingButton {
   background-color: rgba(255, 255, 255, 0);
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: #FCC254;
   border-color: #FCC254;
   font-size: 14px;
@@ -1701,7 +1701,7 @@ hr {
 }
 .requestAcceptedButton {
   background-color: rgba(255, 255, 255, 0);
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
   color: rgba(50, 205, 50, 0.6);
   border-color: rgba(50, 205, 50, 0.6);
   font-size: 14px;
@@ -1902,7 +1902,7 @@ hr {
   a {
     color: white;
     cursor: pointer;
-    font-family: "circe rounded";
+    font-family: "circe-rounded";
     text-decoration: none;
   }
   position: absolute;
@@ -1913,7 +1913,7 @@ hr {
   /* margin: 0 auto; */
   color: white;
   font-size: 13px;
-  font-family: "circe rounded";
+  font-family: "circe-rounded";
 }
 .indexList {
   position: relative;
